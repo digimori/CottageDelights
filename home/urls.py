@@ -1,6 +1,6 @@
-from home.views import tester
+from . import views
+
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('tester/', views.tester, name='tester'),
+    path('', views.index, name='home'),
 ]

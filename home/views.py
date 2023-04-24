@@ -1,5 +1,8 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, request
 
 
-def tester(request):
-    return HttpResponse("Hello, This is a test")
+def index(request):
+    """
+    A view to return the index page
+    """
+    return render(request, 'home/index.html')
