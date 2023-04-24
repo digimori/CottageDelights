@@ -1,0 +1,11 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/elaine-howlin-FEpNmWh1fMc-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgb(247, 235, 235);
+    height: calc(100vh - 164px);
+
+}
