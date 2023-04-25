@@ -3,9 +3,37 @@ html {
 }
 
 body {
-    background: url('/media/elaine-howlin-FEpNmWh1fMc-unsplash.jpg') no-repeat center center fixed;
+    background-image: url('/static/media/elaine-howlin-FEpNmWh1fMc-unsplash.jpg');
     background-size: cover;
     background-color: rgb(247, 235, 235);
     height: calc(100vh - 164px);
+}
 
+div.mainwrapper {
+    background-color: antiquewhite;
+}
+
+.btn-black {
+background: black;
+color: white;
+}
+
+
+div.indexintros {
+padding: 30px;
+}
+
+div#indexhandpicked {
+    background-image: url('/static/media/handpicked.jpg');
+    background-size: cover;
+    background-color: brown;
+    height: 300px;
+    padding-right: 10px;
+}
+
+div#indexwho {
+    background-image: url('/static/media/indeximagery.jpg');
+    background-size: cover;
+    background-color: brown;
+    height: 300px;
 }
