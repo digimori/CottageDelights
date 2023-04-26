@@ -1,0 +1,65 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "loose_tea",
+            "friendly_name": "Loose Leaf Teas"
+        }
+        
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "special_teas",
+            "friendly_name": "Special Teas"
+        }
+        
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "cakes_brownies",
+            "friendly_name": "Cakes & Brownies"
+        }
+        
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "biscuits_cookies",
+            "friendly_name": "Biscuits & Cookies"
+        }
+        
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "new_arrivals",
+            "friendly_name": "New Arrivals"
+        }
+        
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "sale",
+            "friendly_name": "Sale & Clearance"
+        }
+        
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "hampers_gifts",
+            "friendly_name": "Hampers & Gifts"
+        }
+        
+    }
+]
