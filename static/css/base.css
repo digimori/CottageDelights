@@ -13,6 +13,17 @@ body {
     height: calc(76vh - 164px);
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+
 .header-container {
     padding-top: 164px;
     width: 100%;

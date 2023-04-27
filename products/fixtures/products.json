@@ -5,7 +5,7 @@
     "fields": {
       "sku": "Blac-loos-tea-regu",
       "name": "Black Forest Tea",
-      "description": "Choco creamy tea with full notes of cherry",
+      "description": "Our Black Forest flavour is a combination of rich chocolate, sweet and juicy cherries, and a hint of smokiness that brings to mind the German Black Forest region from which it gets its name. The chocolate flavor is usually dark and decadent, while the cherries add a fruity, slightly tart taste that balances out the richness of the chocolate. A delicate, yet perfect balance of sweet and savoury.",
       "ingredients": "12345",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -124,7 +124,7 @@
     "fields": {
       "sku": "Hone-loos-tea-regu",
       "name": "Honey and Apricot Tea",
-      "description": "324",
+      "description": "Our Honey and Apricot tea blends the sweetness of Honey and the tangy tartness of Apricots. Combined, these flavors create a balanced and harmonious taste that is both satisfying and refreshing. The sweetness of the honey enhances the natural sweetness of the apricot, and the tanginess of the apricot cuts through the richness of the honey, creating a delightful taste experience.",
       "ingredients": "2354",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -141,9 +141,9 @@
     "fields": {
       "sku": "Earl-loos-tea-regu",
       "name": "Earl Grey Tea",
-      "description": "The classics",
-      "ingredients": "200g",
-      "weight": "",
+      "description": "Earl Grey tea is a timeless classic British tea enjoyed by tea lovers for its distinct and refreshing citrusy aroma and taste. Made from a blend of black tea leaves, infused with oil from the rind of bergamot oranges. The bergamot flavour gives Earl Grey tea a slightly spicy and floral taste, which makes it stand out from other types of tea.",
+      "ingredients": "",
+      "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 2.99,
       "category": 1,
@@ -175,7 +175,7 @@
     "fields": {
       "sku": "Assa-loos-tea-regu",
       "name": "Assam Tea",
-      "description": "235",
+      "description": "Assam tea has a strong, malty and slightly astringent flavor. It is bold and full-bodied with a distinctive aroma that makes it an ideal choice for breakfast teas. The tea has a rich, dark hue and a sweet aftertaste that is often described as being reminiscent of caramel or honey. A perfectly robust tea ideal for any time of day.",
       "ingredients": "253",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -192,7 +192,7 @@
     "fields": {
       "sku": "Ceyl-loos-tea-regu",
       "name": "Ceylon Tea",
-      "description": "266",
+      "description": "Ceylon tea, also known as Sri Lankan tea, is known for its robust yet smooth and mellow flavour. It has a medium to full body with a hint of sweetness and a slightly astringent aftertaste. Ceylon tea also has a bright and golden color when brewed. ",
       "ingredients": "2456",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -209,7 +209,7 @@
     "fields": {
       "sku": "Clas-loos-tea-regu",
       "name": "Classic English Breakfast Tea",
-      "description": "3456",
+      "description": "English breakfast tea is often enjoyed as a morning pick-me-up or with a traditional English breakfast of eggs, bacon, and toast. This timeless classic is diverse enough to be enjoyed at any time of day, regardless of the 'Breakfast' in which it gets its name.",
       "ingredients": "456",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -243,7 +243,7 @@
     "fields": {
       "sku": "Pump-loos-tea-regu",
       "name": "Pumpkin Spice Tea",
-      "description": "2457",
+      "description": "Pumpkin spice is a delightful and aromatic blend of warm and comforting spices that are commonly associated with the autumn season. This exquisite spice mixture includes cinnamon, nutmeg, ginger, allspice, and cloves, which combine to create a sweet and earthy flavour profile that is perfect for a range of baked goods and beverages.",
       "ingredients": "57657",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -362,7 +362,7 @@
     "fields": {
       "sku": "Scal-loos-tea-spec",
       "name": "Scaly Wood Mushroom Tea",
-      "description": "356",
+      "description": "Our unusual Scaly Wood Mushroom blend has a distinctly mild and nutty flavour, outlined with earthy and only slightly sweet notes. Whilst commonly found in soups and stews for its 'umami' flavour, this beverage is ideally consumed warm on a cold winters day, much like one would a soup or stew without all of the additional prep work.",
       "ingredients": "356",
       "weight": "100g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
@@ -379,7 +379,7 @@
     "fields": {
       "sku": "Medu-loos-tea-spec",
       "name": "Medusa Fennel Tea",
-      "description": "356",
+      "description": "One of our Cottage Core Speciality teas, presenting the Medusa Fennel tea. Created with the Medusa's head mushroom and a fine blend of fennel, this earthy concoction will have you curious for more when hit with the aftertaste of cooling anise.",
       "ingredients": "3568",
       "weight": "100g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
