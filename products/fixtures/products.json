@@ -1,733 +1,733 @@
 [
-    {
-      "pk": 1,
-      "model": "products.product",
-      "fields": {
-        "sku": "Blac-loos-tea-regu",
-        "name": "Black Forest Tea",
-        "description": "Choco creamy tea with full notes of cherry",
-        "ingredients": "",
-        "weight": "200g",
-        "storage": "Once opened, store in an airtight container in a cool, dry place.",
-        "price": 3.99,
-        "category": 2,
-        "rating": 3.8,
-        "image_url": "https://images.unsplash.com/photo-1604093592830-3e54e8d4c439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "image": "/media/blackforesttea.jpg"
-      }
-    },
-    {
-        "pk": 2,
-        "model": "products.product",
-        "fields": {
-          "sku": "Lave-loos-tea-regu",
-          "name": "Lavender Lemon Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 1,
-          "rating": 4.3,
-          "image_url": "https://images.pexels.com/photos/5988312/pexels-photo-5988312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "lavender.jpg"
-        }
-      },
-      {
-        "pk": 3,
-        "model": "products.product",
-        "fields": {
-          "sku": "Figa-loos-tea-spec",
-          "name": "Fig and Rose Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 2,
-          "rating": 4.0,
-          "image_url": "https://images.pexels.com/photos/6087394/pexels-photo-6087394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "figtea.jpg"
-        }
-      },
-      {
-        "pk": 4,
-        "model": "products.product",
-        "fields": {
-          "sku": "Summ-loos-tea-regu",
-          "name": "Summer Berry Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 1,
-          "rating": 4.5,
-          "image_url": "https://images.unsplash.com/photo-1608036586781-26f0d5debbee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "summerberriestea.jpg"
-        }
-      },
-      {
-        "pk": 5,
-        "model": "products.product",
-        "fields": {
-          "sku": "Blue-loos-tea-regu",
-          "name": "Blueberry Apple Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.6,
-          "image_url": "https://images.unsplash.com/photo-1454678993613-d4fc4bd5f496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          "image": "blueberryroseapple.jpg"
-        }
-      },
-      {
-        "pk": 6,
-        "model": "products.product",
-        "fields": {
-          "sku": "Appl-loos-tea-regu",
-          "name": "Apple and Marigold Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.6,
-          "image_url": "https://images.unsplash.com/photo-1543060895-03f57478a710?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80",
-          "image": "appleandmarigold.jpg"
-        }
-      },
-      {
-        "pk": 7,
-        "model": "products.product",
-        "fields": {
-          "sku": "Viol-loos-tea-regu",
-          "name": "Violet Mulberry Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 3.8,
-          "image_url": "https://images.pexels.com/photos/5501118/pexels-photo-5501118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "roselily.jpg"
-        }
-      },
-      {
-        "pk": 8,
-        "model": "products.product",
-        "fields": {
-          "sku": "Hone-loos-tea-regu",
-          "name": "Honey and Apricot Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 3,
-          "image_url": "",
-          "image": ""
-        }
-      },
-      {
-        "pk": 9,
-        "model": "products.product",
-        "fields": {
-          "sku": "Earl-loos-tea-regu",
-          "name": "Earl Grey Tea",
-          "description": "The classics",
-          "ingredients": "200g",
-          "weight": "",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.2,
-          "image_url": "",
-          "image": ""
-        }
-      },
-      {
-        "pk": 10,
-        "model": "products.product",
-        "fields": {
-          "sku": "Ruby-loos-tea-spec",
-          "name": "Ruby Bolete Rose Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.59,
-          "category": 2,
-          "rating": 4.1,
-          "image_url": "https://images.pexels.com/photos/5987947/pexels-photo-5987947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "roseandberries.jpg"
-        }
-      },
-      {
-        "pk": 11,
-        "model": "products.product",
-        "fields": {
-          "sku": "Assa-loos-tea-regu",
-          "name": "Assam Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.6,
-          "image_url": "https://images.pexels.com/photos/6087518/pexels-photo-6087518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "assam.jpg"
-        }
-      },
-      {
-        "pk": 12,
-        "model": "products.product",
-        "fields": {
-          "sku": "Ceyl-loos-tea-regu",
-          "name": "Ceylon Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.7,
-          "image_url": "https://images.pexels.com/photos/6087517/pexels-photo-6087517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "ceylon.jpg"
-        }
-      },
-      {
-        "pk": 13,
-        "model": "products.product",
-        "fields": {
-          "sku": "Clas-loos-tea-regu",
-          "name": "Classic English Breakfast Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.99,
-          "category": 1,
-          "rating": 4.1,
-          "image_url": "https://images.unsplash.com/photo-1606163017137-888c0177b3dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "englishbreakfasttea.jpg"
-        }
-      },
-      {
-        "pk": 14,
-        "model": "products.product",
-        "fields": {
-          "sku": "Vani-loos-tea-regu",
-          "name": "Vanilla Earth Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.29,
-          "category": 1,
-          "rating": 4.3,
-          "image_url": "https://images.pexels.com/photos/5988177/pexels-photo-5988177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "vanilla.jpg"
-        }
-      },
-      {
-        "pk": 15,
-        "model": "products.product",
-        "fields": {
-          "sku": "Pump-loos-tea-regu",
-          "name": "Pumpkin Spice Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.59,
-          "category": 1,
-          "rating": 3.9,
-          "image_url": "https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-          "image": "pumpkinspicetea.jpg"
-        }
-      },
-      {
-        "pk": 16,
-        "model": "products.product",
-        "fields": {
-          "sku": "Cham-loos-tea-regu",
-          "name": "Chamomile and Elderflower Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 2.49,
-          "category": 1,
-          "rating": 3.1,
-          "image_url": "https://images.unsplash.com/photo-1596343621063-c7a7aaf37aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
-          "image": "chamomiletea.jpg"
-        }
-      },
-      {
-        "pk": 17,
-        "model": "products.product",
-        "fields": {
-          "sku": "Cinn-loos-tea-regu",
-          "name": "Cinnamon Swirl Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "150g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 1,
-          "rating": 4.6,
-          "image_url": "https://images.unsplash.com/photo-1597620141633-81170e16af34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
-          "image": "cinnamonswirl.jpg"
-        }
-      },
-      {
-        "pk": 18,
-        "model": "products.product",
-        "fields": {
-          "sku": "Drea-loos-tea-spec",
-          "name": "Dreamtime Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 2,
-          "rating": 4.4,
-          "image_url": "https://images.unsplash.com/photo-1516715043227-1cdf27bcd09a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "dreamtimetea.jpg"
-        }
-      },
-      {
-        "pk": 19,
-        "model": "products.product",
-        "fields": {
-          "sku": "Mang-loos-tea-spec",
-          "name": "Mango Lychee Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "150g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.49,
-          "category": 2,
-          "rating": 4.2,
-          "image_url": "https://images.unsplash.com/photo-1604697976842-d36fa5a1b2ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "mango.jpg"
-        }
-      },
-      {
-        "pk": 20,
-        "model": "products.product",
-        "fields": {
-          "sku": "Senc-loos-tea-regu",
-          "name": "Classic Sencha Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 5.99,
-          "category": 1,
-          "rating": 4.7,
-          "image_url": "https://images.unsplash.com/photo-1627894006066-b45786537103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917&q=80",
-          "image": "sencha.jpg"
-        }
-      },
-      {
-        "pk": 21,
-        "model": "products.product",
-        "fields": {
-          "sku": "Spri-loos-tea-spec",
-          "name": "Spring Meadow Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 2,
-          "rating": 4.1,
-          "image_url": "https://images.unsplash.com/photo-1596344084757-b83f2081da8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
-          "image": "summermeadow.jpg"
-        }
-      },
-      {
-        "pk": 22,
-        "model": "products.product",
-        "fields": {
-          "sku": "Scal-loos-tea-spec",
-          "name": "Scaly Wood Mushroom Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 4.99,
-          "category": 2,
-          "rating": 4.0,
-          "image_url": "https://images.unsplash.com/photo-1607655892518-265705ba1f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=683&q=80",
-          "image": "scalywoodmushroomtea.jpg"
-        }
-      },
-      {
-        "pk": 23,
-        "model": "products.product",
-        "fields": {
-          "sku": "Medu-loos-tea-spec",
-          "name": "Medusa Fennel Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 4.99,
-          "category": 2,
-          "rating": 4.8,
-          "image_url": "https://images.unsplash.com/photo-1609424572655-dcfd2f960fbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          "image": "medusafennel.jpg"
-        }
-      },
-      {
-        "pk": 24,
-        "model": "products.product",
-        "fields": {
-          "sku": "Bota-loos-tea-spec",
-          "name": "Botanical Brew",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 2,
-          "rating": 4.9,
-          "image_url": "https://images.pexels.com/photos/6787017/pexels-photo-6787017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "botanicaltea.jpg"
-        }
-      },
-      {
-        "pk": 25,
-        "model": "products.product",
-        "fields": {
-          "sku": "Drag-loos-tea-spec",
-          "name": "Dragon's Pearl Tea",
-          "description": "",
-          "ingredients": "",
-          "weight": "50g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 6.99,
-          "category": 2,
-          "rating": 4.1,
-          "image_url": "https://images.pexels.com/photos/6787016/pexels-photo-6787016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": ""
-        }
-      },
-      {
-        "pk": 26,
-        "model": "products.product",
-        "fields": {
-          "sku": "Rose-cake-pack-mult",
-          "name": "Rose and Raspberry Hearts",
-          "description": "",
-          "ingredients": "",
-          "weight": "Pack size: 6",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.50,
-          "category": 3,
-          "rating": 4.9,
-          "image_url": "https://images.unsplash.com/photo-1612797773425-786d594c88eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-          "image": "roseandraspberrycake.jpg"
-        }
-      },
-      {
-        "pk": 27,
-        "model": "products.product",
-        "fields": {
-          "sku": "Blue-cake-slic-sing",
-          "name": "Blueberry Cinnamon Swirl",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 5,
-          "image_url": "https://images.unsplash.com/photo-1675274544987-a9aada7cd02a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80",
-          "image": "blueberrycinnamonswirl.jpg"
-        }
-      },
-      {
-        "pk": 28,
-        "model": "products.product",
-        "fields": {
-          "sku": "Fore-cake-slic-sing",
-          "name": "Forest Feastival Cake",
-          "description": "",
-          "ingredients": "",
-          "weight": "120g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 2,
-          "rating": 4.9,
-          "image_url": "https://images.unsplash.com/photo-1505976378723-9726b54e9bb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "forestfeastivalcak.jpg"
-        }
-      },
-      {
-        "pk": 29,
-        "model": "products.product",
-        "fields": {
-          "sku": "Stra-cake-slic-sing",
-          "name": "Strawberry Dream Cake",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.6,
-          "image_url": "https://images.unsplash.com/photo-1551879400-111a9087cd86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "strawberrydreamcake.jpg"
-        }
-      },
-      {
-        "pk": 30,
-        "model": "products.product",
-        "fields": {
-          "sku": "Summ-cake-squa-sing",
-          "name": "Summer Berries Square",
-          "description": "",
-          "ingredients": "",
-          "weight": "75g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.3,
-          "image_url": "https://images.unsplash.com/photo-1530648672449-81f6c723e2f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1089&q=80",
-          "image": "summerberriescake.jpg"
-        }
-      },
-      {
-        "pk": 31,
-        "model": "products.product",
-        "fields": {
-          "sku": "Choc-cake-pack-mult",
-          "name": "Choco Mint Cupcake",
-          "description": "",
-          "ingredients": "",
-          "weight": "75g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.1,
-          "image_url": "https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "chocomintcupcake.jpg"
-        }
-      },
-      {
-        "pk": 32,
-        "model": "products.product",
-        "fields": {
-          "sku": "Eigh-cake-slic-sing",
-          "name": "Eight Layer Cake",
-          "description": "",
-          "ingredients": "",
-          "weight": "150g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 3.9,
-          "image_url": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "eightlayercake.jpg"
-        }
-      },
-      {
-        "pk": 19,
-        "model": "products.product",
-        "fields": {
-          "sku": "Blac-cake-pack-sing",
-          "name": "Blackberry Citrus Tarte",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.2,
-          "image_url": "https://images.unsplash.com/photo-1560180474-e8563fd75bab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "blueberrycitrustarte.jpg"
-        }
-      },
-      {
-        "pk": 33,
-        "model": "products.product",
-        "fields": {
-          "sku": "Fren-cake-pack-mult",
-          "name": "French Macaron Assortment",
-          "description": "",
-          "ingredients": "",
-          "weight": "72g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 7 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.0,
-          "image_url": "https://images.unsplash.com/photo-1634118520179-0c78b72df69a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "macarons.jpg"
-        }
-      },
-      {
-        "pk": 34,
-        "model": "products.product",
-        "fields": {
-          "sku": "Blac-cake-pack-mult",
-          "name": "Black Forest Cupcake",
-          "description": "",
-          "ingredients": "",
-          "weight": "89g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.3,
-          "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
-          "image": "blackforestcupcake.jpg"
-        }
-      },
-      {
-        "pk": 35,
-        "model": "products.product",
-        "fields": {
-          "sku": "Summ-cake-slic-sing",
-          "name": "Summer Fruit Cake",
-          "description": "",
-          "ingredients": "",
-          "weight": "100g",
-          "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
-          "price": 3.99,
-          "category": 3,
-          "rating": 4.1,
-          "image_url": "https://images.unsplash.com/photo-1575919361890-69028a013637?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "summerfruitcake.jpg"
-        }
-      },
-      {
-        "pk": 36,
-        "model": "products.product",
-        "fields": {
-          "sku": "Hone-cook-pack-mult",
-          "name": "Honey Heart Cookies",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.2,
-          "image_url": "https://images.unsplash.com/photo-1577110633170-873dbc1bf2bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-          "image": "honeyheartcookies.jpg"
-        }
-      },
-      {
-        "pk": 37,
-        "model": "products.product",
-        "fields": {
-          "sku": "Ging-cook-pack-mult",
-          "name": "Ginger Nut Sugar Cookies",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.4,
-          "image_url": "https://images.unsplash.com/photo-1608070734765-55797bf9c53c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "gingernutsugarcookies.jpg"
-        }
-      },
-      {
-        "pk": 38,
-        "model": "products.product",
-        "fields": {
-          "sku": "Doub-cook-pack-sing",
-          "name": "Double Chocolate Soft Bakes",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.6,
-          "image_url": "https://images.unsplash.com/photo-1606312619318-184aeeb6f7b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "doublechocsoftbakes.jpg"
-        }
-      },
-      {
-        "pk": 39,
-        "model": "products.product",
-        "fields": {
-          "sku": "Mini-cook-pack-mult",
-          "name": "Mini Cookie Assortment",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.0,
-          "image_url": "https://images.unsplash.com/photo-1609506487859-98edb99b9b74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-          "image": "minicookieassortment.jpg"
-        }
-      },
-      {
-        "pk": 40,
-        "model": "products.product",
-        "fields": {
-          "sku": "Ging-Almo-pack-mult",
-          "name": "Ginger Almond Cookies",
-          "description": "",
-          "ingredients": "",
-          "weight": "200g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 3.9,
-          "image_url": "https://images.unsplash.com/photo-1593759608179-014a7dec4e7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-          "image": "gingeralmondcookies.jpg"
-        }
-      },
-      {
-        "pk": 41,
-        "model": "products.product",
-        "fields": {
-          "sku": "Linz-cook-pack-mult",
-          "name": "Linzer Cookies - Raspberry Filled",
-          "description": "",
-          "ingredients": "",
-          "weight": "300g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.5,
-          "image_url": "https://images.pexels.com/photos/14887822/pexels-photo-14887822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "linzercookies.jpg"
-        }
-      },
-      {
-        "pk": 42,
-        "model": "products.product",
-        "fields": {
-          "sku": "Dais-cook-pack-mult",
-          "name": "Daisy Sugar Cookies",
-          "description": "",
-          "ingredients": "",
-          "weight": "150g",
-          "storage": "Once opened, store in an airtight container in a cool, dry place.",
-          "price": 3.99,
-          "category": 4,
-          "rating": 4.7,
-          "image_url": "https://images.pexels.com/photos/302539/pexels-photo-302539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "image": "daisysugarcookies.jpg"
-        }
-      }
-    ]
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "Blac-loos-tea-regu",
+      "name": "Black Forest Tea",
+      "description": "Choco creamy tea with full notes of cherry",
+      "ingredients": "12345",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 3.8,
+      "image_url": "https://images.unsplash.com/photo-1604093592830-3e54e8d4c439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "image": "blackforesttea.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "Lave-loos-tea-regu",
+      "name": "Lavender Lemon Tea",
+      "description": "12345",
+      "ingredients": "123345",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 1,
+      "rating": 4.3,
+      "image_url": "https://images.pexels.com/photos/5988312/pexels-photo-5988312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "lavender.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "Figa-loos-tea-spec",
+      "name": "Fig and Rose Tea",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 4,
+      "image_url": "https://images.pexels.com/photos/6087394/pexels-photo-6087394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "figtea.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "Summ-loos-tea-regu",
+      "name": "Summer Berry Tea",
+      "description": "12345",
+      "ingredients": "12345",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 1,
+      "rating": 4.5,
+      "image_url": "https://images.unsplash.com/photo-1608036586781-26f0d5debbee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "summerberriestea.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "Blue-loos-tea-regu",
+      "name": "Blueberry Apple Tea",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://images.unsplash.com/photo-1454678993613-d4fc4bd5f496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "image": "blueberryroseapple.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "Appl-loos-tea-regu",
+      "name": "Apple and Marigold Tea",
+      "description": "12345",
+      "ingredients": "12345",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://images.unsplash.com/photo-1543060895-03f57478a710?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80",
+      "image": "appleandmarigold.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "Viol-loos-tea-regu",
+      "name": "Violet Mulberry Tea",
+      "description": "12334",
+      "ingredients": "12342",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 3.8,
+      "image_url": "https://images.pexels.com/photos/5501118/pexels-photo-5501118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "roselily.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "Hone-loos-tea-regu",
+      "name": "Honey and Apricot Tea",
+      "description": "324",
+      "ingredients": "2354",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 3,
+      "image_url": "12345",
+      "image": "12345"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "Earl-loos-tea-regu",
+      "name": "Earl Grey Tea",
+      "description": "The classics",
+      "ingredients": "200g",
+      "weight": "",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.2,
+      "image_url": "12345",
+      "image": "12345"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "Ruby-loos-tea-spec",
+      "name": "Ruby Bolete Rose Tea",
+      "description": "12345",
+      "ingredients": "12345",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.59,
+      "category": 2,
+      "rating": 4.1,
+      "image_url": "https://images.pexels.com/photos/5987947/pexels-photo-5987947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "roseandberries.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "Assa-loos-tea-regu",
+      "name": "Assam Tea",
+      "description": "235",
+      "ingredients": "253",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://images.pexels.com/photos/6087518/pexels-photo-6087518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "assam.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "Ceyl-loos-tea-regu",
+      "name": "Ceylon Tea",
+      "description": "266",
+      "ingredients": "2456",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.7,
+      "image_url": "https://images.pexels.com/photos/6087517/pexels-photo-6087517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "ceylon.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "Clas-loos-tea-regu",
+      "name": "Classic English Breakfast Tea",
+      "description": "3456",
+      "ingredients": "456",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.99,
+      "category": 1,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1606163017137-888c0177b3dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "englishbreakfasttea.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "Vani-loos-tea-regu",
+      "name": "Vanilla Earth Tea",
+      "description": "24567",
+      "ingredients": "245",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.29,
+      "category": 1,
+      "rating": 4.3,
+      "image_url": "https://images.pexels.com/photos/5988177/pexels-photo-5988177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "vanilla.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "Pump-loos-tea-regu",
+      "name": "Pumpkin Spice Tea",
+      "description": "2457",
+      "ingredients": "57657",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.59,
+      "category": 1,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "image": "pumpkinspicetea.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "Cham-loos-tea-regu",
+      "name": "Chamomile and Elderflower Tea",
+      "description": "2457",
+      "ingredients": "2457",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 2.49,
+      "category": 1,
+      "rating": 3.1,
+      "image_url": "https://images.unsplash.com/photo-1596343621063-c7a7aaf37aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+      "image": "chamomiletea.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "Cinn-loos-tea-regu",
+      "name": "Cinnamon Swirl Tea",
+      "description": "4572",
+      "ingredients": "324576",
+      "weight": "150g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://images.unsplash.com/photo-1597620141633-81170e16af34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+      "image": "cinnamonswirl.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "Drea-loos-tea-spec",
+      "name": "Dreamtime Tea",
+      "description": "34567",
+      "ingredients": "3457",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 4.4,
+      "image_url": "https://images.unsplash.com/photo-1516715043227-1cdf27bcd09a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "dreamtimetea.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "Mang-loos-tea-spec",
+      "name": "Mango Lychee Tea",
+      "description": "35467",
+      "ingredients": "3657",
+      "weight": "150g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.49,
+      "category": 2,
+      "rating": 4.2,
+      "image_url": "https://images.unsplash.com/photo-1604697976842-d36fa5a1b2ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "mango.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "Senc-loos-tea-regu",
+      "name": "Classic Sencha Tea",
+      "description": "3567",
+      "ingredients": "3567",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 5.99,
+      "category": 1,
+      "rating": 4.7,
+      "image_url": "https://images.unsplash.com/photo-1627894006066-b45786537103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917&q=80",
+      "image": "sencha.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "Spri-loos-tea-spec",
+      "name": "Spring Meadow Tea",
+      "description": "3568",
+      "ingredients": "3568",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1596344084757-b83f2081da8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+      "image": "summermeadow.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "Scal-loos-tea-spec",
+      "name": "Scaly Wood Mushroom Tea",
+      "description": "356",
+      "ingredients": "356",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 4.99,
+      "category": 2,
+      "rating": 4,
+      "image_url": "https://images.unsplash.com/photo-1607655892518-265705ba1f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=683&q=80",
+      "image": "scalywoodmushroomtea.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "Medu-loos-tea-spec",
+      "name": "Medusa Fennel Tea",
+      "description": "356",
+      "ingredients": "3568",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 4.99,
+      "category": 2,
+      "rating": 4.8,
+      "image_url": "https://images.unsplash.com/photo-1609424572655-dcfd2f960fbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "image": "medusafennel.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "Bota-loos-tea-spec",
+      "name": "Botanical Brew",
+      "description": "35678",
+      "ingredients": "35678",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 4.9,
+      "image_url": "https://images.pexels.com/photos/6787017/pexels-photo-6787017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "botanicaltea.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "Drag-loos-tea-spec",
+      "name": "Dragon's Pearl Tea",
+      "description": "35678",
+      "ingredients": "3567",
+      "weight": "50g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 6.99,
+      "category": 2,
+      "rating": 4.1,
+      "image_url": "https://images.pexels.com/photos/6787016/pexels-photo-6787016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": ""
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "Rose-cake-pack-mult",
+      "name": "Rose and Raspberry Hearts",
+      "description": "35678",
+      "ingredients": "3567",
+      "weight": "Pack size: 6",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.5,
+      "category": 3,
+      "rating": 4.9,
+      "image_url": "https://images.unsplash.com/photo-1612797773425-786d594c88eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "image": "roseandraspberrycake.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "Blue-cake-slic-sing",
+      "name": "Blueberry Cinnamon Swirl",
+      "description": "356",
+      "ingredients": "35678",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 5,
+      "image_url": "https://images.unsplash.com/photo-1675274544987-a9aada7cd02a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80",
+      "image": "blueberrycinnamonswirl.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "Fore-cake-slic-sing",
+      "name": "Forest Feastival Cake",
+      "description": "35678",
+      "ingredients": "35678",
+      "weight": "120g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 2,
+      "rating": 4.9,
+      "image_url": "https://images.unsplash.com/photo-1505976378723-9726b54e9bb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "forestfeastivalcak.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "Stra-cake-slic-sing",
+      "name": "Strawberry Dream Cake",
+      "description": "truye",
+      "ingredients": "rtuyet",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": "https://images.unsplash.com/photo-1551879400-111a9087cd86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "strawberrydreamcake.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "Summ-cake-squa-sing",
+      "name": "Summer Berries Square",
+      "description": "wertu",
+      "ingredients": "wretu",
+      "weight": "75g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.3,
+      "image_url": "https://images.unsplash.com/photo-1530648672449-81f6c723e2f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1089&q=80",
+      "image": "summerberriescake.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "Choc-cake-pack-mult",
+      "name": "Choco Mint Cupcake",
+      "description": "ertu",
+      "ingredients": "uew",
+      "weight": "75g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "chocomintcupcake.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "Eigh-cake-slic-sing",
+      "name": "Eight Layer Cake",
+      "description": "ewru",
+      "ingredients": "wrtu",
+      "weight": "150g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "eightlayercake.jpg"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "Blac-cake-pack-sing",
+      "name": "Blackberry Citrus Tarte",
+      "description": "ewrtu",
+      "ingredients": "ertu",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.2,
+      "image_url": "https://images.unsplash.com/photo-1560180474-e8563fd75bab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "blueberrycitrustarte.jpg"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "Fren-cake-pack-mult",
+      "name": "French Macaron Assortment",
+      "description": "",
+      "ingredients": "",
+      "weight": "72g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 7 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4,
+      "image_url": "https://images.unsplash.com/photo-1634118520179-0c78b72df69a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "macarons.jpg"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "Blac-cake-pack-mult",
+      "name": "Black Forest Cupcake",
+      "description": "",
+      "ingredients": "",
+      "weight": "89g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.3,
+      "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+      "image": "blackforestcupcake.jpg"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "Summ-cake-slic-sing",
+      "name": "Summer Fruit Cake",
+      "description": "",
+      "ingredients": "",
+      "weight": "100g",
+      "storage": "Once opened, store in an airtight container in a refrigerator and consume within 3 days.",
+      "price": 3.99,
+      "category": 3,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1575919361890-69028a013637?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "summerfruitcake.jpg"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "Hone-cook-pack-mult",
+      "name": "Honey Heart Cookies",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4.2,
+      "image_url": "https://images.unsplash.com/photo-1577110633170-873dbc1bf2bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+      "image": "honeyheartcookies.jpg"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "Ging-cook-pack-mult",
+      "name": "Ginger Nut Sugar Cookies",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4.4,
+      "image_url": "https://images.unsplash.com/photo-1608070734765-55797bf9c53c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "gingernutsugarcookies.jpg"
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "Doub-cook-pack-sing",
+      "name": "Double Chocolate Soft Bakes",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4.6,
+      "image_url": "https://images.unsplash.com/photo-1606312619318-184aeeb6f7b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "doublechocsoftbakes.jpg"
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "Mini-cook-pack-mult",
+      "name": "Mini Cookie Assortment",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4,
+      "image_url": "https://images.unsplash.com/photo-1609506487859-98edb99b9b74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "image": "minicookieassortment.jpg"
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": "Ging-Almo-pack-mult",
+      "name": "Ginger Almond Cookies",
+      "description": "",
+      "ingredients": "",
+      "weight": "200g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1593759608179-014a7dec4e7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "image": "gingeralmondcookies.jpg"
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": "Linz-cook-pack-mult",
+      "name": "Linzer Cookies - Raspberry Filled",
+      "description": "",
+      "ingredients": "",
+      "weight": "300g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4.5,
+      "image_url": "https://images.pexels.com/photos/14887822/pexels-photo-14887822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "linzercookies.jpg"
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": "Dais-cook-pack-mult",
+      "name": "Daisy Sugar Cookies",
+      "description": "",
+      "ingredients": "",
+      "weight": "150g",
+      "storage": "Once opened, store in an airtight container in a cool, dry place.",
+      "price": 3.99,
+      "category": 4,
+      "rating": 4.7,
+      "image_url": "https://images.pexels.com/photos/302539/pexels-photo-302539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "daisysugarcookies.jpg"
+    }
+  }
+]
