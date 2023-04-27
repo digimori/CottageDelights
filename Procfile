@@ -1,0 +1,1 @@
+web: gunicorn cottagedelights.wsgi:application
