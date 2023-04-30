@@ -21,10 +21,10 @@ class Product(models.Model):
         'category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=100)
     name = models.CharField(max_length=250, null=True, blank=True)
+    description = models.TextField()
     ingredients = models.CharField(max_length=450)
     weight = models.CharField(max_length=10, null=True, blank=True)
     storage = models.TextField(null=True, blank=True)
-    description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
