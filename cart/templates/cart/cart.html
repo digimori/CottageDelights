@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+      <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"> Shopping cart heading</div>
+    </div>
+    <div class="row">
+        <div class="col">table for cart contents goes in here
+            {% if cart_items %}
+            <div class="table-responsive rounded">
+                {% else %}
+                <p class="lead mb-5">Your Shopping Cart is empty</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <span class="text-uppercase">Return to store</span></a>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

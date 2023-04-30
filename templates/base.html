@@ -33,7 +33,7 @@
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
         <div class="free-shipping bg-black text-white my-auto row gx-0 mx-0">
     <div class="col-12 col-md-6 pt-1 mx-auto">
-        <span><h6 class="text-center">Thing for shipping here</h6></span>
+        <span><h6 class="text-center">{{ free_delivery_threshold }}</h6></span>
     </div>
     </div>
         <div class="row pt-lg-2 d-lg-flex gx-0 mx-0">
@@ -80,7 +80,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
