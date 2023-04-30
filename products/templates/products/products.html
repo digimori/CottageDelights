@@ -15,8 +15,8 @@
 <div class="container-fluid">
     <div class="row">
         {% for product in products %}
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card h-60 border-0">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 cardcontainer mt-3 d-flex justify-content-evenly">
+                <div class="card productcards h-60 rounded">
                     {% if product.image %}
                     <a href="{% url 'productdetails' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -71,6 +71,7 @@
                 </div>
             {% endif %}
         {% endfor %}
+    </div>
     </div>
 
 

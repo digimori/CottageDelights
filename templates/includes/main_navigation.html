@@ -17,9 +17,9 @@
                 Teas &amp; Specialities 
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="teas-specials">
-                <a href="" class="dropdown-item">Loose Leaf Teas</a>
-                <a href="" class="dropdown-item">Specialities</a>
-                <a href="" class="dropdown-item">All Teas</a>
+                <a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Loose Leaf Teas</a>
+                <a href="{% url 'products' %}?category=special_teas" class="dropdown-item">Specialities</a>
+                <a href="{% url 'products' %}?category=special_teas,loose_tea" class="dropdown-item">All Teas</a>
             </ul>
         </li>
 
@@ -28,9 +28,9 @@
                 Cookies &amp; Cakes
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="cookies-cakes">
-                <a href="" class="dropdown-item">Cookies and Brownies</a>
-                <a href="" class="dropdown-item">Cupcakes and Slices</a>
-                <a href="" class="dropdown-item">All Cookies and Cakes</a>
+                <a href="{% url 'products' %}?category=biscuits_cookies" class="dropdown-item">Cookies and Brownies</a>
+                <a href="{% url 'products' %}?category=cakes_brownies" class="dropdown-item">Cupcakes and Slices</a>
+                <a href="{% url 'products' %}?category=cakes_brownies,biscuits_cookies" class="dropdown-item">All Cookies and Cakes</a>
             </ul>
         </li>
 
@@ -39,9 +39,9 @@
                 Hampers and Gifts 
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="hampers-gifts">
-                <a href="" class="dropdown-item">Choose Your Own</a>
-                <a href="" class="dropdown-item">Gifts</a>
-                <a href="" class="dropdown-item">All Hampers and Gifts</a>
+                <a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Choose Your Own</a>
+                <a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Gifts</a>
+                <a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Hampers and Gifts</a>
             </ul>
         </li>
         <li class="nav-item dropdown">
@@ -49,8 +49,8 @@
                 Discover 
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="sale-clearance">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Sale and Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=Sale & Clearance" class="dropdown-item">Sale and Clearance</a>
             </ul>
         </li>
     </ul>

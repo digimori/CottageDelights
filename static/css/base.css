@@ -109,6 +109,15 @@ div#indexwho {
     background-position-y: bottom;
 }
 
+img.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+div.productcards {
+    width: 20rem;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -144,3 +153,5 @@ div#indexwho {
           height: calc(76vh - 116px);
       }
   }
+
+  /*1400 upwards, I need to shrink the margin between cards as it starts going too much gap*/
