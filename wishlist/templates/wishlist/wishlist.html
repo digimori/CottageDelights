@@ -22,7 +22,7 @@
     </div>
 
     <div class="row">
-        put an if wishlist statement here
+        {% if cart_items %}
         <div class="col">
 <table class="table table-sm table-borderless">
     <thead class="text-black">
@@ -75,7 +75,8 @@
                     </div>
                 </form>
                 <a class="update-link text-info"><small>Update</small></a>
-                <a class="update-link text-info"><small>Add to Cart</small></a>
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
             </td>
             <td class="py-3">

@@ -49,15 +49,7 @@ def remove_from_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    try:
-        if item_id in list(cart.keys()):
-            cart = request.session.get('cart', {})
-        else:
-            cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your cart')
+    cart.pop(item_id)
+    messages.success(request, f'Removed {product.name} from your cart')
 
-        request.session['cart'] = cart
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        return HttpResponse(status=500)
+    return redirect(reverse('view_cart'))
