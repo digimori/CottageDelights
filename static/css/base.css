@@ -119,6 +119,30 @@ div.productcards {
     width: 20rem;
 }
 
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
