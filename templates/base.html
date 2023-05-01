@@ -32,13 +32,13 @@
     <header class="container-fluid header-bg fixed-top mt-0 mb-3 pt-0 gx-0 mx-0">
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
         <div class="free-shipping bg-black text-white my-auto row gx-0 mx-0">
-    <div class="col-12 col-md-6 pt-1 mx-auto">
-        <span><h6 class="text-center">{{ free_delivery_threshold }}</h6></span>
-    </div>
+            <div class="col-12 col-md-6 pt-1 mx-auto">
+                <span><h6 class="text-center">{{ free_delivery_threshold }}</h6></span>
+            </div>
     </div>
         <div class="row pt-lg-2 d-lg-flex gx-0 mx-0">
         <div class="row">
-             <div class="col-md-4 col-lg-3 py-1 py-lg-0 mt-3 d-block d-sm-none d-md-block">
+             <div class="col-md-4 col-lg-3 py-1 py-lg-0 mt-3 d-sm-none d-md-block d-lg-block">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-4" type="text" name="q" placeholder="Search our site">
@@ -96,13 +96,11 @@
                     </li>
                 </ul>
             </div>
-            </div>
+            </div></div>
 
         <div class="row header-bg">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            
                 {% include 'includes/mobile_navigation.html' %}
                 {% include 'includes/main_navigation.html' %}
             </nav>
