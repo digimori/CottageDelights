@@ -1,6 +1,9 @@
-from django.urls import path
-from . import views
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
+from django.views.decorators.http import require_POST
+from django.contrib import messages
+from django.conf import settings
 
-urlpatterns = [
-    path('', views.checkout, name='checkout'),
-]
+
+def checkout(request):
+    return render('checkout/checkout.html')
