@@ -17,6 +17,7 @@ class OrderRecord(models.Model):
     address_line_2 = models.CharField(max_length=80, null=True, blank=True)
     town_city = models.CharField(max_length=40, null=False, blank=False)
     county = models.CharField(max_length=40, null=True, blank=True)
+    country = models.CharField(max_length=40, null=False, blank=False)
     postcode = models.CharField(max_length=10, null=False, blank=False)
     shopping_cart = models.TextField(null=False, blank=False, default='')
     order_total = models.DecimalField(
