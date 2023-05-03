@@ -7,7 +7,7 @@ class OrderForm(forms.ModelForm):
         model = OrderRecord
         fields = ('full_name', 'email', 'mobile_number',
                   'home_number', 'house_name',
-                  'address_line_1', 'address_line_2', 'towncity',
+                  'address_line_1', 'address_line_2', 'town_city',
                   'postcode', 'country', 'county')
 
     def __init__(self, *args, **kwargs):
@@ -19,12 +19,12 @@ class OrderForm(forms.ModelForm):
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
-            'mobile_number': 'Home Number',
+            'home_number': 'Home Number',
             'mobile_number': 'Mobile Number',
             'house_name': 'House Name',
             'address_line_1': 'Address Line 1',
             'address_line_2': 'Address Line 2',
-            'towncity': 'Town or City',
+            'town_city': 'Town or City',
             'county': 'County or State',
             'postcode': 'Postcode/Zip Code',
             'country': 'Country'
