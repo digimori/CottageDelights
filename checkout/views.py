@@ -10,10 +10,13 @@ from products.models import Product
 from cart.contexts import cart_contents
 
 import json
+import stripe
 
 
 def checkout(request):
     """ A view to return the checkout page """
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -30,22 +33,64 @@ def checkout(request):
             'address_line_2': request.POST['address_line_2'],
             'county': request.POST['county'],
         }
+        order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.shopping_cart = json.dumps(cart)
             order.save()
+            for item_id, item_data in cart.items():
+                try:
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                except Product.DoesNotExist:
+                    messages.error(request, (
+                        "One of the items in your cart is not in our database."
+                        "It may have been discontinued or out of stock."
+                        "Please e-mail us to rectify this issue.")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_cart'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was a problem with your form. \
+                Please check your information and try again.')
+    else:
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(request, "There's nothing in your cart.")
+            return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
-    order_form = OrderForm()
+        order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Is it set in your Environment Variables?')
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
