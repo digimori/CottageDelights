@@ -13,6 +13,23 @@ import json
 import stripe
 
 
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'cart': json.dumps(request.session.get('cart', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
+
 def checkout(request):
     """ A view to return the checkout page """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -77,7 +94,7 @@ def checkout(request):
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
+            currency=settings.STRIPE_CURRENCY
         )
 
         order_form = OrderForm()
@@ -91,6 +108,27 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(OrderRecord, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)

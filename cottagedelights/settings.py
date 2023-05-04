@@ -174,6 +174,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 5
+# Stripe Setup Keys:
+STRIPE_CURRENCY = 'gpb'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 if 'USE_AWS' in os.environ:
     # AWS Cache Control:
@@ -198,11 +202,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
-    # Stripe Setup:
-    STRIPE_CURRENCY = 'gbp'
-    STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-    STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
