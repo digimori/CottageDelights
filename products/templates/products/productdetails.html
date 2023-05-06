@@ -90,7 +90,10 @@
                                     <div class="col-12 mt-2">
                                         <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Wishlist">
                                     </div>
-                                    <input type="hidden" name="redirect_url_wish" value="{{ request.path }}">
+                    
+                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
+                                                name="quantity" value="1" min="1" max="99"
+                                                data-item_id="{{ product.id }}"><input type="hidden" name="redirect_url_wish" value="{{ request.path }}">
                                 </div>
                                 </form>
     
