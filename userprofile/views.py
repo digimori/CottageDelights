@@ -6,7 +6,7 @@ from .forms import UserProfileForm
 
 
 # Create your views here.
-def userprofile(request):
+def user_profile(request):
     """ View to return a profile page """
     profile = get_object_or_404(UserProfile, user=request.user)
 
