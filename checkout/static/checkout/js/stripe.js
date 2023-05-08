@@ -71,6 +71,7 @@ form.addEventListener('submit', function(ev) {
                 home_number: $.trim(form.home_number.value),
                 mobile_number: $trim(form.mobile_number.value),
                 address: {
+                    house_name: $.trim(form.house_name.value),
                     line1: $.trim(form.address_line_1.value),
                     line2: $.trim(form.address_line_2.value),
                     city: $.trim(form.town_city.value),
@@ -85,6 +86,7 @@ form.addEventListener('submit', function(ev) {
                 home_number: $.trim(form.home_number.value),
                 mobile_number: $trim(form.mobile_number.value),
                 address: {
+                    house_name: $.trim(form.house_name.value),
                     line1: $.trim(form.address_line_1.value),
                     line2: $.trim(form.address_line_2.value),
                     city: $.trim(form.town_city.value),
