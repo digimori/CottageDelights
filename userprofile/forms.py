@@ -16,6 +16,7 @@ class UserProfileForm(forms.ModelForm):
         placeholders = {
             'default_home_number': 'Home Number',
             'default_mobile_number': 'Mobile Number',
+            'default_house_name': 'House Name',
             'default_postcode': 'Postal Code',
             'default_town_city': 'Town or City',
             'default_address_line_1': 'Address Line 1',
