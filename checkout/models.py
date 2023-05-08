@@ -4,10 +4,14 @@ from django.db.models import Sum
 from django.conf import settings
 
 from products.models import Product
+from userprofile.models import UserProfile
 
 
 class OrderRecord(models.Model):
     order_number = models.CharField(max_length=50, null=False, editable=False)
+    user_profile = models.ForeignKey(
+        UserProfile, on_delete=models.SET_NULL,
+        null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=65, null=False, blank=False)
     email = models.EmailField(max_length=300, null=False, blank=False)
     mobile_number = models.CharField(max_length=20, null=True, blank=True)
