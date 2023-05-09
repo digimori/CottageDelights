@@ -39,7 +39,7 @@ def webhook(request):
 
     # Map webhook events to relevant handler functions
     event_map = {
-        'payment_intent.success': handler.handle_payment_success,
+        'payment_intent.succeeded': handler.handle_payment_success,
         'payment_intent.payment_failed': handler.handle_payment_failed,
     }
 
