@@ -7,6 +7,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import OrderRecord, OrderLineItem
 from products.models import Product
+from userprofile.models import UserProfile
+from userprofile.forms import UserProfileForm
 from cart.contexts import cart_contents
 
 import json
@@ -97,7 +99,26 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'home_number': profile.default_home_number,
+                    'mobile_number': profile.default_mobile_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_city': profile.default_town_city,
+                    'house_name': profile.default_house_name,
+                    'address_line_1': profile.default_address_line_1,
+                    'address_line_2': profile.default_address_line_2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -127,20 +148,20 @@ def checkout_success(request, order_number):
         order.save()
 
     # Saving the user information to the profile
-    if save_info:
-        profile_data = {
-                'default_home_number': order.home_number,
-                'default_mobile_number': order.mobile_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
-                'default_county': order.county,
-        }
-        userprofileform = UserProfileForm(profile_data, instance=profile)
-        if userprofileform.is_valid():
-            userprofileform.save()
+        if save_info:
+            profile_data = {
+                    'default_home_number': order.home_number,
+                    'default_mobile_number': order.mobile_number,
+                    'default_country': order.country,
+                    'default_postcode': order.postcode,
+                    'default_town_or_city': order.town_or_city,
+                    'default_street_address1': order.street_address1,
+                    'default_street_address2': order.street_address2,
+                    'default_county': order.county,
+            }
+            userprofileform = UserProfileForm(profile_data, instance=profile)
+            if userprofileform.is_valid():
+                userprofileform.save()
 
     """
     TOAST MESSAGE TEMPLATE
