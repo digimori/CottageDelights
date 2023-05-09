@@ -27,3 +27,16 @@ def userprofile(request):
     }
 
     return render(request, template, context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(OrderRecord, order_number=order_number)
+
+    # Toast message here confirming order numbers
+
+    template = 'checkout/checkoutcomplete.html'
+    context = {
+        'order': order,
+        'from_profile': True
+    }
+    return render(request, template, context)
