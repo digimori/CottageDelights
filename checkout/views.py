@@ -119,9 +119,35 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(OrderRecord, order_number=order_number)
+
+    # Checking user authentication and attaching profile to user
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        order.userprofile = profile
+        order.save()
+
+    # Saving the user information to the profile
+    if save_info:
+        profile_data = {
+                'default_home_number': order.home_number,
+                'default_mobile_number': order.mobile_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+        }
+        userprofileform = UserProfileForm(profile_data, instance=profile)
+        if userprofileform.is_valid():
+            userprofileform.save()
+
+    """
+    TOAST MESSAGE TEMPLATE
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+    """
 
     if 'cart' in request.session:
         del request.session['cart']
