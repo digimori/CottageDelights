@@ -4,6 +4,9 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from .models import Product, Category
+from .forms import ProductForm
+
 
 def all_products(request):
     products = Product.objects.all()
@@ -63,3 +66,14 @@ def productdetails(request, product_id):
     }
 
     return render(request, 'products/productdetails.html', context)
+
+
+def addProducts(request):
+    form = ProductForm()
+    template = 'products/addproducts.html'
+    context = {
+        'form': form,
+
+    }
+
+    return render(request, template, context)
