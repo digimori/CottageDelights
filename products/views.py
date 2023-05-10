@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .models import Product, Category
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -80,7 +81,7 @@ def addproducts(request):
             messages.error(request, 'Failed to add product.')
     else:
         form = ProductForm()
- 
+
     template = 'products/addproducts.html'
     context = {
         'form': form,
@@ -89,8 +90,13 @@ def addproducts(request):
     return render(request, template, context)
 
 
+@login_required
 def editproducts(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, '')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -113,9 +119,14 @@ def editproducts(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def deleteproducts(request, product_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'This function is only available to admins.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    # DEFENSIVE PROGRAM THIS
-    # Add a toast confirming deletion
-    return redirect('products')
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
