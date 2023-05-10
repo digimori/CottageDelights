@@ -68,7 +68,7 @@ def productdetails(request, product_id):
     return render(request, 'products/productdetails.html', context)
 
 
-def addProducts(request):
+def addproducts(request):
     form = ProductForm()
     template = 'products/addproducts.html'
     context = {
