@@ -18,8 +18,12 @@ def userprofile(request):
         if form.is_valid():
             form.save()
             # Toast message here
-
-    form = UserProfileForm(instance=profile)
+        else:
+            messages.error(request, 'Failed to Add')
+            # Generic Toast handler
+    else:
+        form = UserProfileForm(instance=profile)
+    
     orders = profile.orders.all()
 
     template = 'userprofile/profile.html'

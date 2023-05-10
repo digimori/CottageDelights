@@ -69,11 +69,34 @@ def productdetails(request, product_id):
 
 
 def addproducts(request):
-    form = ProductForm()
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('addproducts'))
+        else:
+            messages.error(request, 'Failed to add product.')
+    else:
+        form = ProductForm()
+        
     template = 'products/addproducts.html'
     context = {
         'form': form,
+    }
 
+    return render(request, template, context)
+
+
+def editproduct(request):
+    product = get_object_or_404(Product, pk=product_id)
+    form = ProductForm(instance=product)
+    # Toast for editing warning
+    template = 'products/editproducts.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
