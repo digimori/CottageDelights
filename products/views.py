@@ -70,6 +70,9 @@ def productdetails(request, product_id):
 
 
 def addproducts(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'GET TOAST WORKING.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -94,7 +97,7 @@ def addproducts(request):
 def editproducts(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, '')
+        messages.error(request, 'GET THE TOASTS')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

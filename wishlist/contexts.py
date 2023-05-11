@@ -7,6 +7,7 @@ from products.models import Product
 def wishlist_contents(request):
 
     wishlist_items = []
+    total = 0
     product_quant = 0
     wishlist = request.session.get('wishlist', {})
 
@@ -25,6 +26,7 @@ def wishlist_contents(request):
     context = {
         'wishlist_items': wishlist_items,
         'product_quant': product_quant,
+        'total': total,
     }
 
     return context
