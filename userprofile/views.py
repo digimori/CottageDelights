@@ -24,7 +24,7 @@ def userprofile(request):
             # Generic Toast handler
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     template = 'userprofile/profile.html'

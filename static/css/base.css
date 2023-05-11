@@ -24,6 +24,13 @@ body {
     position: fixed;
 }
 
+.toast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 9999999999;
+}
+
 
 .header-container {
     padding-top: 164px;
