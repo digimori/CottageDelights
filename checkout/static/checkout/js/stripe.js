@@ -68,31 +68,25 @@ form.addEventListener('submit', function(ev) {
                 card: card,
                 billing_details: {
                     name: $.trim(form.full_name.value),
-                home_number: $.trim(form.home_number.value),
-                mobile_number: $trim(form.mobile_number.value),
                 address: {
-                    house_name: $.trim(form.house_name.value),
                     line1: $.trim(form.address_line_1.value),
                     line2: $.trim(form.address_line_2.value),
                     city: $.trim(form.town_city.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
-                    county: $.trim(form.county.value),
+                    state: $.trim(form.county.value),
                     }
                 }
             },
             shipping: {
                 name: $.trim(form.full_name.value),
-                home_number: $.trim(form.home_number.value),
-                mobile_number: $trim(form.mobile_number.value),
                 address: {
-                    house_name: $.trim(form.house_name.value),
                     line1: $.trim(form.address_line_1.value),
                     line2: $.trim(form.address_line_2.value),
                     city: $.trim(form.town_city.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
-                    county: $.trim(form.county.value),
+                    state: $.trim(form.county.value),
                 }
             },
         }).then(function(result) {
@@ -109,12 +103,12 @@ form.addEventListener('submit', function(ev) {
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
-                    //form.submit();
+                    form.submit();
                 }
             }
         });
     }).fail(function () {
         // just reload the page, the error will be in django messages
-        location.reload();
+        //location.reload();
     })
 });

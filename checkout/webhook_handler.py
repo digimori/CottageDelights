@@ -7,6 +7,7 @@ from userprofile.models import UserProfile
 
 import json
 import time
+import stripe
 
 
 class StripeHandler:
@@ -34,9 +35,12 @@ class StripeHandler:
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        billing_details = intent.charges.data[0].billing_details
+        # Get the Charge object
+        stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
+
+        billing_details = stripe_charge.billing_details  # updated
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        grand_total = round(stripe_charge.amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -47,15 +51,15 @@ class StripeHandler:
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            profile.default_profile = UserProfile.objects.get(
+            profile = UserProfile.objects.get(
                 user__username=username)
             if save_info:
-                profile.default_home_number = shipping_details.home_phone
-                profile.default_mobile_number = shipping_details.mobile_phone
+                profile.default_home_number = shipping_details.home_number
+                profile.default_mobile_number = shipping_details.mobile_number
                 profile.default_house_name = shipping_details.house_name
                 profile.default_address_line_1 = shipping_details.address.line1
                 profile.default_address_line_2 = shipping_details.address.line2
-                profile.default_profile.default_town_city = shipping_details.address.city
+                profile.default_town_city = shipping_details.address.city
                 profile.default_county = shipping_details.address.county
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
@@ -84,7 +88,7 @@ class StripeHandler:
                 )
                 order_exists = True
                 break
-            except Order.DoesNotExist:
+            except OrderRecord.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:

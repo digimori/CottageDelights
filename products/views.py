@@ -135,3 +135,14 @@ def deleteproducts(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+"""
+def createyourown(request):
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/createyourown.html', context)
+    """

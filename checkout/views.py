@@ -43,7 +43,7 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'mobile_number': request.POST['mobile_number'],
+            # 'mobile_number': request.POST['mobile_number'],
             'home_number': request.POST['home_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
@@ -82,6 +82,7 @@ def checkout(request):
             return redirect(
                 reverse('checkout_success', args=[order.order_number]))
         else:
+            print(order_form.errors)
             messages.error(request, 'There was a problem with your form. \
                 Please check your information and try again.')
     else:
@@ -89,15 +90,6 @@ def checkout(request):
         if not cart:
             messages.error(request, "There's nothing in your cart.")
             return redirect(reverse('products'))
-
-        current_cart = cart_contents(request)
-        total = current_cart['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY
-        )
 
         if request.user.is_authenticated:
             try:
@@ -120,6 +112,14 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
+    current_cart = cart_contents(request)
+    total = current_cart['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY
+        )
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Is it set in your Environment Variables?')

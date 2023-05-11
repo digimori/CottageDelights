@@ -2,7 +2,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-
+from django_countries.fields import CountryField
 from products.models import Product
 from userprofile.models import UserProfile
 
@@ -21,7 +21,7 @@ class OrderRecord(models.Model):
     address_line_2 = models.CharField(max_length=80, null=True, blank=True)
     town_city = models.CharField(max_length=40, null=False, blank=False)
     county = models.CharField(max_length=40, null=True, blank=True)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=10, null=False, blank=False)
     shopping_cart = models.TextField(null=False, blank=False, default='')
     order_total = models.DecimalField(
