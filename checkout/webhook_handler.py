@@ -54,8 +54,7 @@ class StripeHandler:
             profile = UserProfile.objects.get(
                 user__username=username)
             if save_info:
-                profile.default_home_number = shipping_details.home_number
-                profile.default_mobile_number = shipping_details.mobile_number
+                profile.default_phone_number = shipping_details.phone_number
                 profile.default_house_name = shipping_details.house_name
                 profile.default_address_line_1 = shipping_details.address.line1
                 profile.default_address_line_2 = shipping_details.address.line2
@@ -73,8 +72,7 @@ class StripeHandler:
                     full_name__iexact=shipping_details.name,
                     userprofile=userprofile,
                     email__iexact=billing_details.email,
-                    mobile_number__iexact=shipping_details.mobile_phone,
-                    home_number__iexact=shipping_details.home_phone,
+                    phone_number__iexact=shipping_details.phone_number,
                     house_name__iexact=shipping_details.house_name,
                     address_line_1__iexact=shipping_details.address.line1,
                     address_line_2__iexact=shipping_details.address.line2,
@@ -101,8 +99,7 @@ class StripeHandler:
                 order = OrderRecord.objects.create(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
-                    mobile_number__iexact=shipping_details.mobile_phone,
-                    home_number__iexact=shipping_details.home_phone,
+                    phone_number__iexact=shipping_details.phone_number,
                     house_name__iexact=shipping_details.house_name,
                     address_line_1__iexact=shipping_details.address.line1,
                     address_line_2__iexact=shipping_details.address.line2,

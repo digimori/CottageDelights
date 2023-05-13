@@ -43,8 +43,7 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            # 'mobile_number': request.POST['mobile_number'],
-            'home_number': request.POST['home_number'],
+            'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_city': request.POST['town_city'],
@@ -97,8 +96,7 @@ def checkout(request):
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
-                    'home_number': profile.default_home_number,
-                    'mobile_number': profile.default_mobile_number,
+                    'phone_number': profile.default_phone_number,
                     'country': profile.default_country,
                     'postcode': profile.default_postcode,
                     'town_city': profile.default_town_city,
@@ -150,8 +148,7 @@ def checkout_success(request, order_number):
     # Saving the user information to the profile
         if save_info:
             profile_data = {
-                    'default_home_number': order.home_number,
-                    'default_mobile_number': order.mobile_number,
+                    'default_phone_number': order.phone_number,
                     'default_country': order.country,
                     'default_postcode': order.postcode,
                     'default_town_city': order.town_city,

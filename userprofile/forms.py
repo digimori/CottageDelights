@@ -14,8 +14,7 @@ class UserProfileForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'default_home_number': 'Home Number',
-            'default_mobile_number': 'Mobile Number',
+            'default_phone_number': 'Phone Number',
             'default_house_name': 'House Name',
             'default_postcode': 'Postal Code',
             'default_town_city': 'Town or City',
@@ -24,7 +23,7 @@ class UserProfileForm(forms.ModelForm):
             'default_county': 'County or State',
         }
 
-        self.fields['default_home_number'].widget.attrs['autofocus'] = True
+        self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'default_country':
                 if self.fields[field].required:
