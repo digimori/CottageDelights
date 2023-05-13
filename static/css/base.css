@@ -24,19 +24,11 @@ body {
     position: fixed;
 }
 
-.toast {
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    z-index: 9999999999;
-}
-
 
 .header-container {
     padding-top: 164px;
     width: 100%;
 }
-
 
 header.header-bg {
     background-color: antiquewhite;
@@ -165,7 +157,7 @@ div.productcards {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -180,6 +172,32 @@ div.productcards {
 }
 
 
+/*----- Widgets ----*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;   
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 2px;
+    border-color: red;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: red;
+    border-color: red;
+    border-radius: 2px;
+}
 
 /* -------------------------------- Media Queries */
 
