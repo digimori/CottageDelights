@@ -24,7 +24,6 @@ body {
     position: fixed;
 }
 
-
 .header-container {
     padding-top: 164px;
     width: 100%;
@@ -81,6 +80,39 @@ div.free-shipping {
     z-index: 9000;
     font-family: 'Arbutus Slab', serif;
     font-weight: 400;
+}
+
+div#testimonialimage1 {
+    background-image: url('/media/indeximagery.jpg');
+    background-size: cover;
+    background-color: brown;
+    height: 200px;
+    background-position-x: center;
+    width: 200px;
+    background-position-y: bottom;
+    border-radius: 50%;
+}
+
+div#testimonialimage2 {
+    background-image: url('/media/indeximagery.jpg');
+    background-size: cover;
+    background-color: brown;
+    height: 200px;
+    background-position-x: center;
+    width: 200px;
+    background-position-y: bottom;
+    border-radius: 50%;
+}
+
+div#testimonialimage3 {
+    background-image: url('/media/indeximagery.jpg');
+    background-size: cover;
+    background-color: brown;
+    height: 200px;
+    background-position-x: center;
+    width: 200px;
+    background-position-y: bottom;
+    border-radius: 50%;
 }
 
 
