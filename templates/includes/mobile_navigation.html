@@ -6,7 +6,6 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -17,18 +16,18 @@
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %} 
               <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'account_logout' %}">Product Management</a>
+    <a class="nav-link active" aria-current="page" href="{% url 'addproducts' %}">Product Management</a>
   </li>
   {% endif %}
           <ul class="navbar-nav justify-content-end flex-grow-1">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'account_logout' %}">My Account</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'userprofile' %}">My Account</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>
               {% else %}
               <li class="nav-item">

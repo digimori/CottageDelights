@@ -234,4 +234,10 @@ div.productcards {
       }
   }
 
-  /*1400 upwards, I need to shrink the margin between cards as it starts going too much gap*/
+@media (max-width: 768px) {
+    div.product-container {
+        margin-top: 130px;
+    }
+}
+
+

@@ -4,7 +4,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <ul class="dropdown-menu border-0" aria-labelledby="all-products">
+            <ul class="dropdown-menu border-0" aria-label="all-products">
                 <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
                 <li><a href="{% url 'products' %}?rating&direction=desc" class="dropdown-item ">By Rating</a></li>
                 <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
@@ -16,7 +16,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=loose_tea,special_teas" id="teas-specials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Teas &amp; Specialities 
             </a>
-            <ul class="dropdown-menu border-0" aria-labelledby="teas-specials">
+            <ul class="dropdown-menu border-0" aria-label="teas-specials">
                 <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Loose Leaf Teas</a></li>
                 <li><a href="{% url 'products' %}?category=special_teas" class="dropdown-item">Specialities</a></li>
                 <li><a href="{% url 'products' %}?category=special_teas,loose_tea" class="dropdown-item">All Teas</a></li>
@@ -27,7 +27,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="cookies-cakes-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cookies &amp; Cakes
             </a>
-            <ul class="dropdown-menu border-0" aria-labelledby="cookies-cakes">
+            <ul class="dropdown-menu border-0" aria-label="cookies-cakes">
                 <li><a href="{% url 'products' %}?category=biscuits_cookies" class="dropdown-item">Cookies and Brownies</a></li>
                 <li><a href="{% url 'products' %}?category=cakes_brownies" class="dropdown-item">Cupcakes and Slices</a></li>
                 <li><a href="{% url 'products' %}?category=cakes_brownies,biscuits_cookies" class="dropdown-item">All Cookies and Cakes</a></li>
@@ -38,7 +38,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="hampers-gifts-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hampers and Gifts 
             </a>
-            <ul class="dropdown-menu border-0" aria-labelledby="hampers-gifts">
+            <ul class="dropdown-menu border-0" aria-label="hampers-gifts">
                 <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Choose Your Own</a></li>
                 <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Gifts</a></li>
                 <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Hampers and Gifts</a></li>
@@ -48,7 +48,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="sale-clearance-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Discover 
             </a>
-            <ul class="dropdown-menu border-0" aria-labelledby="sale-clearance">
+            <ul class="dropdown-menu border-0" aria-label="sale-clearance">
                 <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
                 <li><a href="{% url 'products' %}?category=Sale & Clearance" class="dropdown-item">Sale and Clearance</a></li>
             </ul>
