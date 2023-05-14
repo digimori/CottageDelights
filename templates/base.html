@@ -35,7 +35,7 @@
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
         <div class="free-shipping bg-black text-white my-auto row gx-0 mx-0">
             <div class="col-12 col-md-6 pt-1 mx-auto">
-                <span><h6 class="text-center">{{ free_delivery_threshold }}</h6></span>
+                <span><div class="text-center">{{ free_delivery_threshold }}</div></span>
             </div>
     </div>
         <div class="row pt-lg-2 d-lg-flex gx-0 mx-0">
@@ -88,7 +88,7 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        £{{ grand_total|floatformat:2 }}
                                     {% else %}
                                         $0.00
                                     {% endif %}
@@ -124,7 +124,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script type="javascript">
         $('.toast').toast('show');
     </script>
     {% endblock %}
