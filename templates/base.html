@@ -67,7 +67,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-label="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'addproducts' %}" class="dropdown-item">Product Management</a>

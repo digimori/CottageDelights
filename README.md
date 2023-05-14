@@ -1,108 +1,258 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Cottage Delights - Cottagecore Themed Afternoon Tea E-Commerce App
 
-Welcome digimori,
+### About the Project:
+---
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- [Live Preview]()
+- [Github Repository]()
 
-## Gitpod Reminders
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[AmIResponsive]()
+![Image for AmIResponsive]()   
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Table of Contents  
+- [About The Project](#about-the-project)  
+- [Technologies Used](#technologies-used)   
+- [Developer Goals](#developer-goals)
+- [User Stories](#user-stories)
+- [Design Choices](#design-choices-fonts-colours-and-images-cards-and-hamburger-menus)
+- [Wireframes](#wireframes)
+- [Database Schema](#database-schema)
+- [Features](#features-and-navigation)
+- [Navigation](#navigation)
+- [Testing And Validation](#testing-and-validation)
+- [Deployment](#deployment-github-and-heroku)
+- [Credits](#credits)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+***
 
-Another blue button should appear to click: _Open Browser_.
+### Technologies used:
+---
+- HTML
+- CSS (Bootstrap 5 library)
+- JavaScript (jQuery)
+- Django Frameworks
+- Python3 (Back-end application)
+- PostgreSQL (Relational Database)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Developer Goals:
+---
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories:
+---
+PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+### Design Choices (Fonts, Colours and images, cards and hamburger menus):
+---
+#### Font and Colours:
 
-## Release History
+### Wireframes
+---
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<details>
+  <summary>Wireframes (Adobe Photoshop):</summary>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ ####  Desktop, Tablet, Mobile
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Index page (Not Logged in and Registration page are laid out the same):
+![Index - Not logged in/Registration](/readmeimages/Wireframesprelogin.jpg)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Profile Page (Once Logged in, cannot be accessed prior to login):
+![Profile - Logged in]()
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Add-Products page (Superuser/Admin must be logged in):
+![Add Products]()
+</details>
 
 ---
 
-Happy coding!
+### Database Schema
+---
+
+
+### Features and Navigation
+---
+
+#### Login/Logout/Register
+
+
+<details>
+<summary>Logged In Index and Registration</summary>
+
+![Logged in Nav-bar - Index]() 
+![Registration Page]()
+
+</details>
+
+<details>
+<summary>Logout page</summary>
+
+![Logout]()
+
+</details>
+
+#### Profile
+
+<details>
+<summary>Profile Page</summary>
+
+![Full Profile Page]()
+</details>
+
+
+<details>
+<summary>Search Bar</summary>
+
+
+![Search Bar]()
+![No Results]()
+
+</details>
+
+<details>
+<summary>Product Cards</summary>
+
+</details>
+
+
+### Adding books
+
+<details>
+<summary>Add Product Form</summary>
+
+</details>
+
+
+### Editing Products
+
+<details>
+<summary>Edit Form for Product Management</summary>
+
+
+</details>
+
+
+#### Deleting Products
+
+<details>
+<summary>Product Deletion</summary>
+
+</details>
+
+### Testing and Validation:
+--- 
+
+###  Validation (HTML, CSS, Python PEP8)
+---
+<details>
+<summary>HTML</summary>
+
+
+</details>
+
+<details>
+<summary>CSS, jQuery and Python PEP8</summary>
+
+[CSS Validation using Jigsaw](https://validator.w3.org/)
+![CSS Validation]()
+
+[PEP8 Validation using CI's Linter](https://pep8ci.herokuapp.com/)
+![Python PEP8]()
+
+[jQuery Validation using JSHint](https://jshint.com/)
+![jQuery]()
+</details>
+
+
+#### Manual Testing - User Testing
+
+| Test | Expectation | Pass/Fail |
+| ----------- | ----------- | ----------- |
+|  | |  |
+
+
+### Media Queries
+
+I used the Chrome Dev tools to implement changes in real time before performing a final commit on the code itself.  
+This was also used to test the responsiveness as I could change the breakpoints as I edited each line of code.
+
+
+### Bugs and Fixes
+---
+| Bug/Issue | Explanation | Fix Implemented |
+| ----------- | ----------- | ----------- |
+||  | |
+
+
+### Deployment (Github and Heroku):
+---
+
+#### Github into Gitpod/Local Code Editor/IDE:
+
+#### To deploy and run locally via an IDE:
+
+- Use the Chrome browser
+- Create a Gitpod account at [this link](https://www.gitpod.io/)
+- Download and install the Gitpod browser extension for Google Chrome.
+- Restart browser after installation has completed.
+- Log into Gitpod using your Github username and password. If you don't already have a GitHub account, [create one here](https://github.com/signup?source=login)
+- Navigate into your desired Gitpod repository 
+- This project's repository can be found both at the top of this README, [and here](https://github.com/digimori/CottageDelights)
+- Click the green "Gitpod" button on the top right of the repository file section.
+[image goes here]
+
+- This will open the project into a Gitpod workspace and can then be worked on in a local setting, such as VSCode.
+
+#### Clone and Fork:
+
+-Follow [This link](https://github.com/digimori/CottageDelights) back to the Github project respository.
+- Select the menu item above the repository files labelled "Code".
+- To clone: Select the appropriate url or open to Git Desktop.
+- To view on a web IDE: Click the dropdown labelled "Open in Web IDE" on the top right of the repository, and choose the appropriate IDE.
+- This dropdown can also be used to clone the code into VSCode IDE.
+- To clone into the Local IDE - in the terminal, type 'git clone' followed by the URL that can be copied from the aforementioned Code URL.
+- To fork - Follow the instructions as outlined in the Github Docs here.
+
+
+#### To deploy to Heroku:
+
+Create an account with [Heroku](https://id.heroku.com/login)
+Login with username/password (This requires multi-factor authentication through an external device such as the [Salesforce app](https://www.salesforce.com/solutions/mobile/app-suite/security/))
+- Click on "New" > "Create App"
+- Use "Europe" as the host
+- Implement a distinct name for the app
+- Click "Create App"
+- Click on the app's name to open the settings and deployment section
+
+- Open the Settings tab and find the section "Config Vars"
+- Click "Reveal Config Vars"
+- Input the following Key-Value Pairs (This is an example sample set and can be found under 'example.py' in this repository, you will need to configure it with your own settings placed inside the angle brackets - Remove the angle brackets once the information is placed inside them): 
+
+| Key | Value | Explanation |
+| ----------- | ----------- | ----------- |
+| IP | 0.0.0.0 | Local IP |
+| PORT | |  |
+| SECRET_KEY | Any secret key | A password for access |
+|  |  | Connection to Database |
+|  | <database_name> | Database name |
+| DEVELOPMENT | FALSE | Turns the workspace off of the development state |
+| DEBUG | FALSE | Turns the Debugger off for the workspace |
+
+
+- Once those are saved, navigate to the Deploy tab
+- On Deployment method", click "Github"
+- Search the Repo (In this case, for this particular project, type in 'CottageDelights' and select the repo.)
+- Enable Automatic deploys
+- on Manual Deploy, select the Main branch and click "Deploy Branch"
+
+
+### Credits
+--- 
+#### Code and libraries
