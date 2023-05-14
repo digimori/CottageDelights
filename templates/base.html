@@ -30,12 +30,11 @@
 
 <body>
 
-</div>
     <header class="container-fluid header-bg fixed-top mt-0 mb-3 pt-0 gx-0 mx-0">
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
         <div class="free-shipping bg-black text-white my-auto row gx-0 mx-0">
             <div class="col-12 col-md-6 pt-1 mx-auto">
-                <span><div class="text-center">{{ free_delivery_threshold }}</div></span>
+                <span class="text-center">{{ free_delivery_threshold }}</span>
             </div>
     </div>
         <div class="row pt-lg-2 d-lg-flex gx-0 mx-0">
@@ -106,7 +105,7 @@
                 {% include 'includes/mobile_navigation.html' %}
                 {% include 'includes/main_navigation.html' %}
             </nav>
-        </div>
+        </div></div>
     </header>
 
     {% if messages %}
@@ -124,7 +123,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="javascript">
+    <script type="text/javascript">
         $('.toast').toast('show');
     </script>
     {% endblock %}
