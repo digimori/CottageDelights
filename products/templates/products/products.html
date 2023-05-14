@@ -47,11 +47,11 @@
                 <div class="card productcards h-60 rounded">
                     {% if product.image %}
                     <a href="{% url 'productdetails' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                     {% else %}
                     <a href="{% url 'productdetails' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
                     <div class="card-body pb-0">
@@ -64,20 +64,21 @@
                                 {% if product.category %}
                                 <p class="small mt-1 mb-0">
                                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        <i class="fas fa-tag me-1"></i>{{ product.category.friendly_name }}
                                     </a>
                                 </p>
                                 {% endif %}
                                 {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                    <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
                                 {% else %}
                                     <small class="text-muted">No Rating</small>
                                 {% endif %}
                                 {% if request.user.is_superuser %}
-                                <small class="ml-3">
+                                <p class="mt-1 mb-0">
+                                <small class="ms-0 pt-1">
                                     <a href="{% url 'editproducts' product.id %}" class="">Edit</a>
                                     <a href="{% url 'deleteproducts' product.id %}" class="text-danger">Delete</a>
-                                </small>
+                                </small></p>
                                 {% endif %}
                             </div>
                         </div>
@@ -85,22 +86,22 @@
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
+                <div class="col-12 d-sm-none my-3">
                     <hr>
                 </div>
             {% endif %}                        
             {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none my-3">
                     <hr>
                 </div>
             {% endif %}
             {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <div class="col-12 d-none d-lg-block d-xl-none my-3">
                     <hr>
                 </div>
             {% endif %}
             {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
+                <div class="col-12 d-none d-xl-block my-3">
                     <hr>
                 </div>
             {% endif %}

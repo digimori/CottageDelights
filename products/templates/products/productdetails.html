@@ -27,24 +27,24 @@
                 {% endif %}
             </div>
             <div class="col-12 col-md-6">
-                    <div class="productdetails-cont mb-5 mt-md-5">
+                    <div class="productdetails-cont mb-4 mt-4 mt-md-5">
                         <p class="mb-0">{{ product.name }}</p>
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                <i class="fas fa-tag me-1"></i>{{ product.category.friendly_name }}
                             </a>
                         
                         {% endif %}
                         {% if product.rating %}
-                            <span class="mx-2"><small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small></span>
+                            <span class="mx-2"><small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small></span>
                         {% else %}
-                            <small class="text-muted">No Rating</small></p>
-                        {% endif %}
+                            <small class="text-muted">No Rating</small>
+                        {% endif %}</p>
                         <p class="mt-3">{{ product.description }}</p> 
                         <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                         {% if request.user.is_superuser %}
-                        <small class="ml-3">
+                        <small class="ms-1">
                             <a href="{% url 'editproducts' product.id %}" class="">Edit</a>
                             <a href="{% url 'deleteproducts' product.id %}" class="text-danger">Delete</a>
                         </small>
