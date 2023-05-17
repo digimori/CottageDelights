@@ -33,6 +33,12 @@ header.header-bg {
     background-color: antiquewhite;
 }
 
+.toast-body {
+    z-index: 999999;
+    border-radius: 5px;
+    
+}
+
 div.mainwrapper {
     width: 100%;
     background-color: antiquewhite;

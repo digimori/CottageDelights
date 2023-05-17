@@ -160,12 +160,9 @@ def checkout_success(request, order_number):
             if userprofileform.is_valid():
                 userprofileform.save()
 
-    """
-    TOAST MESSAGE TEMPLATE
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
-    """
+            Your order number is {order_number}. A confirmation \
+            email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']

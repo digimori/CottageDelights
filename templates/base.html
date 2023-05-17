@@ -109,11 +109,21 @@
     </header>
 
     {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-                    {% include 'includes/toasts/toastsuccess.html' %}
-        {% endfor %}
-    </div>
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toastsuccess.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toastsuccess.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toastsuccess.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toastsuccess' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -124,8 +134,9 @@
 
     {% block postloadjs %}
     <script>
-        $('.toast').toast('show');
-    </script>
+$('#toast').delay(5000).fadeOut('slow');
+
+        </script>
     {% endblock %}
 </body>
 </html>
