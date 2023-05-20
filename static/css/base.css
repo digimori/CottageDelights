@@ -1,8 +1,10 @@
+/* -- Base CSS -- */
+
 html {
     height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    width: 100%;
 }
 
 body {
@@ -24,6 +26,18 @@ body {
     position: fixed;
 }
 
+div.mainwrapper {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.header-container {
+    padding-top: 164px;
+    width: 100%;
+  }
+
+/* ----------------------- Headers and Nav Bars -----------------------  */
+
 .header-container {
     padding-top: 164px;
     width: 100%;
@@ -33,34 +47,8 @@ header.header-bg {
     background-color: antiquewhite;
 }
 
-.quant-form {
-    padding-left: 40px;
-}
-
-.imgcontainer {
-padding-left: 90px;
-}
-
-button.wishicon {
-    border: none;
-    background-color: transparent;
-    color: rgb(99, 87, 100);
-}
-
 .offcanvastop {
     z-index: 77777777;
-}
-
-.toast-body {
-    z-index: 999999;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-}
-
-div.mainwrapper {
-    width: 100%;
-    background-color: antiquewhite;
 }
 
 div.bannerlogo {
@@ -78,33 +66,16 @@ a.nav-link {
     font-weight: 700;
 }
 
-.page-text {
-    font-family: 'Arbutus Slab', serif;
-    font-weight: 400;
-}
-
-p.page-text {
-    margin-top: 60px;
-    margin-bottom: 1rem;
-}
-
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.btn-black {
-background: rgb(99, 87, 100);
-color: white;
-}
-
 div.free-shipping {
     z-index: 9000;
     font-family: 'Arbutus Slab', serif;
     font-weight: 400;
+}
+
+/* ----------------------- Image CSS ----------------------- */
+
+.imgcontainer {
+    padding-left: 90px;
 }
 
 div#testimonialimage1 {
@@ -140,11 +111,6 @@ div#testimonialimage3 {
     border-radius: 50%;
 }
 
-
-div.indexintros {
-padding: 30px;
-}
-
 div#indexhandpicked {
     background-image: url('/media/handpicked.jpg');
     background-size: cover;
@@ -175,7 +141,57 @@ div.productcards {
     width: 20rem;
 }
 
-/* Allauth form formatting */
+/* ----------------------- Toast CSS ----------------------- */
+
+.toast-body {
+    z-index: 999999;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ----------------------- Icons and Text ----------------------- */
+
+.quant-form {
+    padding-left: 40px;
+}
+
+div.indexintros {
+padding: 30px;
+}
+
+.page-text {
+    font-family: 'Arbutus Slab', serif;
+    font-weight: 400;
+}
+
+p.page-text {
+    margin-top: 60px;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+button.wishicon {
+    border: none;
+    background-color: transparent;
+    color: rgb(99, 87, 100);
+}
+
+/* ----------------------- Buttons ----------------------- */
+
+.btn-black {
+background: rgb(99, 87, 100);
+color: white;
+}
+
+/* ----------------------- Allauth form formatting ----------------------- */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -213,7 +229,7 @@ div.productcards {
     line-height: 1.5;
     border-radius: 0;
 
-    /* standard bootstrap btn transitions */
+    /* Standard bootstrap btn transitions */
     transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -229,7 +245,7 @@ div.productcards {
 }
 
 
-/*----- Widgets ----*/
+/* ----------------------- Widgets ----------------------- */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -256,40 +272,33 @@ div.productcards {
     border-radius: 2px;
 }
 
-/* -------------------------------- Media Queries */
+/* ----------------------- Media Queries ----------------------- */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+/* ----------------------- Slightly larger container on XL screens ----------------------- */
+@media (min-width: 768px) {
     .container {
-      max-width: 80%;
+      width: 100%;
     }
   }
   
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
+/* ----------------------- Fixed top navbar only on medium screens and upwards ----------------------- */
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
   
-      .header-container {
-          padding-top: 164px;
-      }
+    .header-container {
+      padding-top: 164px;
+    }
   }
   
-  /* pad the top a bit when navbar is collapsed on mobile */
-  @media (max-width: 991px) {
-      .header-container {
-          padding-top: 116px;
-      }
-  
-      body {
-          height: calc(76vh - 116px);
-      }
-  }
+  /* ----------------------- Pad the top when navbar is collapsed on mobile ----------------------- */
+
 
 @media (max-width: 768px) {
     div.product-container {
@@ -297,4 +306,18 @@ div.productcards {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1755px) {
+    html {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+    }
+    div.container {
+        width: 100%;
+    }
+}
 
+
+
+/* 768px to 1755px is where it starts going wonky */
