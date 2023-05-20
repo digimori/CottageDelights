@@ -47,6 +47,10 @@ button.wishicon {
     color: rgb(99, 87, 100);
 }
 
+.offcanvastop {
+    z-index: 77777777;
+}
+
 .toast-body {
     z-index: 999999;
     border-radius: 5px;

@@ -14,7 +14,7 @@
 <div class="overlay"></div>
 <div class="container-fluid mt-2">
     <div class=" container-fluid row mt-2">
-        <div class="imgcontainer col-sm-12 col-md-3 offset-3 me-0 mt-2">
+        <div class="imgcontainer col-sm-12 col-md-6 col-lg-4 offset-3 me-0 mt-2">
             <div class="col-sm-12 w-100 image-container my-5">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -26,7 +26,7 @@
                 </a>
                 {% endif %}
             </div></div>
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="productdetails-cont mb-4 mt-4 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     {% if product.category %}

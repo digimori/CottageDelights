@@ -32,9 +32,9 @@
 
     <header class="container-fluid header-bg fixed-top mt-0 mb-3 pt-0 gx-0 mx-0">
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
-        <div class="free-shipping bg-black text-white my-auto row gx-0 mx-0">
-            <div class="col-12 col-md-6 pt-1 mx-auto">
-                <span class="text-center">{{ free_delivery_threshold }}</span>
+        <div class="free-shipping text-white my-auto row gx-0 mx-0">
+            <div class="text-dark col-sm-6 offset-3 ps-5 pt-1 mx-auto">
+                <span class="text-center">Free delivery on all orders over £{{ free_delivery_threshold }}!</span>
             </div>
     </div>
         <div class="row pt-lg-2 d-lg-flex gx-0 mx-0">
@@ -58,7 +58,7 @@
                     <h2 class="logo-font text-black my-0">Cottage Delights</h2>
                 </a>
             </div>
-            <div class="col-lg-3 my-auto py-1 py-lg-0 d-sm-none d-md-block">
+            <div class="col-lg-3 my-auto py-1 py-lg-0 d-none d-sm-none d-md-none d-lg-block">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="{% url 'userprofile' %}" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
