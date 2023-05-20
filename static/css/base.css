@@ -33,10 +33,25 @@ header.header-bg {
     background-color: antiquewhite;
 }
 
+.quant-form {
+    padding-left: 40px;
+}
+
+.imgcontainer {
+padding-left: 90px;
+}
+
+button.wishicon {
+    border: none;
+    background-color: transparent;
+    color: rgb(99, 87, 100);
+}
+
 .toast-body {
     z-index: 999999;
     border-radius: 5px;
-    
+    background-color: #fff;
+    color: #000;
 }
 
 div.mainwrapper {
@@ -78,7 +93,7 @@ p.page-text {
 }
 
 .btn-black {
-background: black;
+background: rgb(99, 87, 100);
 color: white;
 }
 
