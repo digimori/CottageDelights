@@ -21,8 +21,8 @@ def add_items(request, item_id):
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
         messages.success(request, (
-            f'Updated {product.name}'
-            f'quantity to {cart[item_id]}'))
+            f'Updated  {product.name} '
+            f'quantity in cart to {cart[item_id]}'))
     else:
         cart[item_id] = quantity
         messages.success(request, f'Added {product.name} to your cart')

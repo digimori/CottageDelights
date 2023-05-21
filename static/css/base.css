@@ -148,6 +148,9 @@ div.productcards {
     border-radius: 5px;
     background-color: #fff;
     color: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 400px;
 }
 
 /* ----------------------- Icons and Text ----------------------- */
@@ -321,3 +324,17 @@ color: white;
 
 
 /* 768px to 1755px is where it starts going wonky */
+
+
+/* Unorganised CSS */
+
+a.update-link,
+a.remove-item {
+    cursor: pointer;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
