@@ -32,8 +32,8 @@
 
     <header class="container-fluid header-bg fixed-top mt-0 mb-3 pt-0 gx-0 mx-0">
         <div id="topnav" class="row d-lg-flex headingdiv gx-0 mx-0">
-        <div class="free-shipping text-white my-auto row gx-0 mx-0">
-            <div class="text-dark col-sm-6 offset-3 ps-5 pt-1 mx-auto">
+        <div class="free-shipping col-12 my-auto">
+            <div class="text-dark col-12 pt-1">
                 <span class="text-center">Free delivery on all orders over £{{ free_delivery_threshold }}!</span>
             </div>
     </div>
@@ -134,7 +134,8 @@
 
     {% block postloadjs %}
     <script>
-$('#toast').delay(5000).fadeOut('slow');
+/*$('#toast').delay(5000).fadeOut('slow');*/
+$('.toast').show().delay(10000).fadeOut('slow');
 
         </script>
     {% endblock %}

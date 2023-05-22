@@ -338,3 +338,15 @@ a.remove-item {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+@media screen and (max-width: 400px) {
+    div.free-shipping {
+        font-size: 13px;
+        margin-left: 10px;
+        padding-top: 12px;
+    }
+}
+
+button.navbar-toggler {
+    z-index: 2222;
+}
