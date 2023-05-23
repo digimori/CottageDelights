@@ -405,3 +405,7 @@ p.lead {
     font-weight: 500;
     font-family: "Arbutus Slab", serif;
 }
+
+p.page-handpicked-text {
+    font-size: 0.9em;
+}
