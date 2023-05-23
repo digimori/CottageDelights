@@ -409,3 +409,16 @@ p.lead {
 p.page-handpicked-text {
     font-size: 0.9em;
 }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div.header-container {
+        margin-bottom: -30px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    div.header-container {
+        margin-bottom: -100px;
+    }
+}
+
