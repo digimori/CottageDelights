@@ -350,3 +350,27 @@ a.remove-item {
 button.navbar-toggler {
     z-index: 2222;
 }
+
+p.page-text {
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-family: 'Petrona', serif;
+    color: #000000;
+}
+
+div.bannerlogo::after {
+  background-color: antiquewhite;
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+a.clickerbtn {
+    text-decoration: none;
+}
