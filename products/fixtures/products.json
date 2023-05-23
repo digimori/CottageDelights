@@ -259,7 +259,7 @@
     "model": "products.product",
     "fields": {
       "sku": "Cham-loos-tea-regu",
-      "name": "Chamomile and Elderflower Tea",
+      "name": "Chamomile Elderflower Tea",
       "description": "Chamomile and elderflower tea is a soothing and fragrant blend that combines the sweet, honey-like flavor of chamomile with the delicate, floral taste of elderflower.  Overall, chamomile and elderflower tea is a calming and comforting beverage that can be enjoyed both hot or cold.",
       "ingredients": "White tea, Chamomile flowers.",
       "weight": "200g",

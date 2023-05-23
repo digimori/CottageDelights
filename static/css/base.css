@@ -385,3 +385,23 @@ div.card-footer {
     background-color: transparent;
     border: none;
 }
+
+p.product-name {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Arbutus Slab", serif;
+}
+
+div.card-body {
+    margin-bottom: 0;
+}
+
+a.text-muted {
+    text-decoration: none;
+}
+
+p.lead {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Arbutus Slab", serif;
+}
