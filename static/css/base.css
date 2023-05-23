@@ -374,3 +374,14 @@ div.bannerlogo::after {
 a.clickerbtn {
     text-decoration: none;
 }
+
+p.testimonial-text {
+    padding: 0 20px;
+
+}
+
+div.card,
+div.card-footer {
+    background-color: transparent;
+    border: none;
+}
