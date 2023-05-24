@@ -422,3 +422,15 @@ p.page-handpicked-text {
     }
 }
 
+@media screen and (max-width: 768px) {
+    div.heading-text {
+        padding-top: 80px;
+
+    }
+}
+
+@media screen and (min-width: 769px) {
+    div.clickformore {
+        margin-top: 300px;
+    }
+}
