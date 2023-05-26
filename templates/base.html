@@ -98,20 +98,21 @@
                 </ul>
             </div>
             </div></div>
+            <div class="row header-bg d-sm-none d-md-none">
+                <nav class="navbar d-md-none d-lg-none navbar-light w-100">
+                    {% include 'includes/secondarynav.html' %}
+                </nav>
+            </div>
 
         <div class="row header-bg d-none d-sm-block">
             <nav class="navbar d-none d-sm-block navbar-expand-md navbar-expand-lg navbar-light w-100">
                 {% include 'includes/main_navigation.html' %}
             </nav>
         </div>
+        
         <div class="row header-bg">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 {% include 'includes/mobile_navigation.html' %}
-            </nav>
-        </div>
-        <div class="row header-bg d-md-none">
-            <nav class="navbar d-md-none d-lg-none navbar-light w-100">
-                {% include 'includes/secondarynav.html' %}
             </nav>
         </div>
     </div>
