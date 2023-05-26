@@ -348,7 +348,7 @@ a.remove-item {
 }
 
 button.navbar-toggler {
-    z-index: 2222;
+    z-index: 99999;
 }
 
 p.page-text {
@@ -439,4 +439,21 @@ p.page-handpicked-text {
 div.heading-text {
     padding-top: 200px;
 }
+}
+
+@media screen and (max-width: 576px) {
+    div.header-bg-second {
+        margin-top: -65px;
+        z-index: 99999;
+    }
+    div.free-shipping {
+        width: 100%;
+        margin: 5px 50px;
+    }
+    button.second-nav {
+        z-index: 999999;
+    }
+    .secondary-menu {
+        margin-top: 60px;
+    }
 }
