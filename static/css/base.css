@@ -181,6 +181,12 @@ p.page-text {
     width: 1.5rem;
 }
 
+p.secondary-page-text {
+    font-family: "Arbutus Slab", serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 /* ----------------------- Buttons ----------------------- */
 
 a.btn-black {
@@ -515,5 +521,34 @@ div.carticon {
     div.detailcontainer, 
     div.imgcontainer {
         margin: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    p.page-text {
+        font-size: 36px;
+    }
+    p.secondary-page-text {
+        font-size: 17px;
+        font-weight: 600;
+        font-family: "Arbutus Slab", serif;
+        letter-spacing: 1px;
+    }
+    }
+
+@media screen and (min-width: 320px) and (max-width: 566px) {
+    p.page-text {
+        margin-top: 0px;
+        margin-bottom: 1rem;
+    }
+}
+
+.dropdown-menu {
+    background-color: antiquewhite;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .order-md-first { 
+        margin-top: 60px;
     }
 }
