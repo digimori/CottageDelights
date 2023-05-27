@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'products',
     'storages',
     'cart',
-    'wishlist',
     'checkout',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -73,7 +72,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
-                'wishlist.contexts.wishlist_contents',
                 'django.template.context_processors.media',
             ],
             'builtins': [

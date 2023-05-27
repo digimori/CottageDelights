@@ -136,6 +136,7 @@ def deleteproducts(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
+
 """
 def createyourown(request):
     product = get_object_or_404(Product, pk=product_id)
