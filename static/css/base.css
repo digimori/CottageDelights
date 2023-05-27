@@ -494,3 +494,26 @@ div.carticon {
 .cart-total {
     color: rgb(99, 87, 100);
 }
+
+@media screen and (min-width: 567px) and (max-width: 992px) {
+    img.card-img-top {
+    width: 100%;
+        height: 30vw;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 566px) {
+    img.card-img-top {
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+    div.detailcontainer, 
+    div.imgcontainer {
+        margin: auto;
+    }
+}
