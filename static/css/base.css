@@ -181,18 +181,19 @@ p.page-text {
     width: 1.5rem;
 }
 
-button.wishicon {
-    border: none;
-    background-color: transparent;
-    color: rgb(99, 87, 100);
-}
-
 /* ----------------------- Buttons ----------------------- */
 
-.btn-black {
+a.btn-black {
 background: rgb(99, 87, 100);
 color: white;
 }
+
+button.btn-black {
+    background: rgb(99, 87, 100);
+    color: white;
+    }
+
+
 
 /* ----------------------- Allauth form formatting ----------------------- */
 
@@ -225,12 +226,12 @@ color: white;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: rgb(99, 87, 100);
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 5px;
 
     /* Standard bootstrap btn transitions */
     transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -244,7 +245,7 @@ color: white;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #fff; /* text-info */
 }
 
 
@@ -437,7 +438,7 @@ p.page-handpicked-text {
 
 @media screen and (max-width: 768px) {
 div.heading-text {
-    padding-top: 200px;
+    padding-top: 100px;
 }
 }
 
@@ -452,8 +453,44 @@ div.heading-text {
     }
     button.second-nav {
         z-index: 999999;
+        margin-top: 10px;
     }
     .secondary-menu {
         margin-top: 60px;
     }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    h2.logo-font {
+        font-family: 'Dancing Script', serif;
+        font-weight: 700;
+        font-size: 1.8em;
+        padding-left: 25px;
+    }
+}
+
+ul.secondarydropdown {
+    background-color: antiquewhite;
+}
+
+.offcanvas-body,
+.offcanvas-top,
+.offcanvas-header {
+    background-color: antiquewhite;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+div.carticon {
+    padding-left: 10px;
+}
+
+.fa-shopping-bag {
+    color: rgb(99, 87, 100);
+}
+
+.cart-total {
+    color: rgb(99, 87, 100);
 }

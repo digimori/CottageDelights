@@ -11,12 +11,12 @@
         <div class="offcanvas-body">
             <form class="d-flex mt-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-black" type="submit">Search</button>
               </form>
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %} 
-              <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'addproducts' %}">Product Management</a>
+              <li class="nav-item mt-4">
+    <a class="nav-link" aria-current="page" href="{% url 'addproducts' %}">Product Management</a>
   </li>
   {% endif %}
           <ul class="navbar-nav justify-content-end flex-grow-1">
@@ -36,13 +36,13 @@
      {% endif %}
      <li class="list-inline-item">
       <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-sm-block d-lg-none" href="{% url 'view_cart' %}">
-          <div class="text-center">
-              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-              <p class="my-0">
+          <div class="cartcontent">
+              <div class="carticon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <p class="my-0 cart-total">
                   {% if grand_total %}
-                      ${{ grand_total|floatformat:2 }}
+                      £{{ grand_total|floatformat:2 }}
                   {% else %}
-                      $0.00
+                      £0.00
                   {% endif %}
               </p>
           </div>
