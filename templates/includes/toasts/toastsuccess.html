@@ -1,7 +1,6 @@
 
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-body position-fixed top-0 end-0 p-3" id="toast">
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       <div class="row">
         <div class="col">
             {{ message }}
@@ -12,7 +11,7 @@
       <div class="cart-notification-wrapper">
         {% for item in cart_items %}
             <div class="row">
-                <div class="col-3 my-1">
+                <div class="col-3 my-1 rounded">
                     <img class="w-50" src="{{ item.product.image.url }}">
                 </div>
                 <div class="col-4">

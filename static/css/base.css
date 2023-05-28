@@ -36,7 +36,39 @@ div.mainwrapper {
     width: 100%;
   }
 
+/* ----------------------- Links -----------------------  */
+
+a.text-muted {
+    text-decoration: none;
+}
+
+a.nav-link {
+    font-family: 'Petrona', serif;
+    font-weight: 700;
+}
+
+a.update-link,
+a.remove-item {
+    cursor: pointer;
+}
+
+a.clickerbtn {
+    text-decoration: none;
+}
+
 /* ----------------------- Headers and Nav Bars -----------------------  */
+
+div.bannerlogo::after {
+  background-color: antiquewhite;
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
 
 .header-container {
     padding-top: 164px;
@@ -61,15 +93,38 @@ h2.logo-font {
     font-size: 3em;
 }
 
-a.nav-link {
-    font-family: 'Petrona', serif;
-    font-weight: 700;
+ul.secondarydropdown {
+    background-color: antiquewhite;
+}
+
+.offcanvas-body,
+.offcanvas-top,
+.offcanvas-header {
+    background-color: antiquewhite;
+}
+
+.nav-item {
+    list-style: none;
 }
 
 div.free-shipping {
     z-index: 9000;
     font-family: 'Arbutus Slab', serif;
     font-weight: 400;
+}
+
+button.navbar-toggler {
+    z-index: 99999;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dropdown-menu {
+    background-color: antiquewhite;
 }
 
 /* ----------------------- Image CSS ----------------------- */
@@ -181,12 +236,61 @@ p.page-text {
     width: 1.5rem;
 }
 
+div.card,
+div.card-footer {
+    background-color: transparent;
+    border: none;
+}
+
+p.product-name {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Arbutus Slab", serif;
+}
+
+div.card-body {
+    margin-bottom: 0;
+}
+
 p.secondary-page-text {
     font-family: "Arbutus Slab", serif;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
+p.lead {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Arbutus Slab", serif;
+}
+
+p.page-handpicked-text {
+    font-size: 0.9em;
+}
+
+div.carticon {
+    padding-left: 10px;
+}
+
+.fa-shopping-bag {
+    color: rgb(99, 87, 100);
+}
+
+.cart-total {
+    color: rgb(99, 87, 100);
+}
+
+p.page-text {
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-family: 'Petrona', serif;
+    color: #000000;
+}
+
+p.testimonial-text {
+    padding: 0 20px;
+}
 /* ----------------------- Buttons ----------------------- */
 
 a.btn-black {
@@ -198,8 +302,6 @@ button.btn-black {
     background: rgb(99, 87, 100);
     color: white;
     }
-
-
 
 /* ----------------------- Allauth form formatting ----------------------- */
 
@@ -330,21 +432,8 @@ button.btn-black {
 
 
 
-/* 768px to 1755px is where it starts going wonky */
-
-
 /* Unorganised CSS */
 
-a.update-link,
-a.remove-item {
-    cursor: pointer;
-}
-
-.cart-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
 @media screen and (max-width: 400px) {
     div.free-shipping {
@@ -352,69 +441,6 @@ a.remove-item {
         margin-left: 10px;
         padding-top: 12px;
     }
-}
-
-button.navbar-toggler {
-    z-index: 99999;
-}
-
-p.page-text {
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 1px;
-    font-family: 'Petrona', serif;
-    color: #000000;
-}
-
-div.bannerlogo::after {
-  background-color: antiquewhite;
-  content: "";
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
-
-a.clickerbtn {
-    text-decoration: none;
-}
-
-p.testimonial-text {
-    padding: 0 20px;
-
-}
-
-div.card,
-div.card-footer {
-    background-color: transparent;
-    border: none;
-}
-
-p.product-name {
-    font-weight: 500;
-    font-size: 14px;
-    font-family: "Arbutus Slab", serif;
-}
-
-div.card-body {
-    margin-bottom: 0;
-}
-
-a.text-muted {
-    text-decoration: none;
-}
-
-p.lead {
-    font-size: 13px;
-    font-weight: 500;
-    font-family: "Arbutus Slab", serif;
-}
-
-p.page-handpicked-text {
-    font-size: 0.9em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -475,31 +501,6 @@ div.heading-text {
     }
 }
 
-ul.secondarydropdown {
-    background-color: antiquewhite;
-}
-
-.offcanvas-body,
-.offcanvas-top,
-.offcanvas-header {
-    background-color: antiquewhite;
-}
-
-.nav-item {
-    list-style: none;
-}
-
-div.carticon {
-    padding-left: 10px;
-}
-
-.fa-shopping-bag {
-    color: rgb(99, 87, 100);
-}
-
-.cart-total {
-    color: rgb(99, 87, 100);
-}
 
 @media screen and (min-width: 567px) and (max-width: 992px) {
     img.card-img-top {
@@ -543,9 +544,7 @@ div.carticon {
     }
 }
 
-.dropdown-menu {
-    background-color: antiquewhite;
-}
+
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .order-md-first { 
