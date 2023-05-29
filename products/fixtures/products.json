@@ -27,7 +27,7 @@
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 3.99,
-      "category": 1,
+      "category": 5,
       "rating": 4.3,
       "image_url": "https://images.pexels.com/photos/5988312/pexels-photo-5988312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "image": "lavender.jpg"
@@ -44,7 +44,7 @@
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 3.99,
-      "category": 2,
+      "category": 6,
       "rating": 4,
       "image_url": "https://images.pexels.com/photos/6087394/pexels-photo-6087394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "image": "figtea.jpg"
@@ -146,7 +146,7 @@
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 2.99,
-      "category": 1,
+      "category": 5,
       "rating": 4.2,
       "image_url": "12345",
       "image": "12345"
@@ -163,7 +163,7 @@
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 3.59,
-      "category": 2,
+      "category": 6,
       "rating": 4.1,
       "image_url": "https://images.pexels.com/photos/5987947/pexels-photo-5987947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "image": "roseandberries.jpg"
@@ -265,7 +265,7 @@
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 2.49,
-      "category": 1,
+      "category": 5,
       "rating": 3.1,
       "image_url": "https://images.unsplash.com/photo-1596343621063-c7a7aaf37aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
       "image": "chamomiletea.jpg"
@@ -282,7 +282,7 @@
       "weight": "150g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 3.99,
-      "category": 1,
+      "category": 6,
       "rating": 4.6,
       "image_url": "https://images.unsplash.com/photo-1597620141633-81170e16af34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
       "image": "cinnamonswirl.jpg"
@@ -729,5 +729,158 @@
       "image_url": "https://images.pexels.com/photos/302539/pexels-photo-302539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "image": "daisysugarcookies.jpg"
     }
+  },
+  {
+  "pk": 44,
+  "model": "products.product",
+  "fields": {
+    "sku": "tea-pot-gift-fanc",
+    "name": "Golden Teal Teapot",
+    "description": "Descriptionhere",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 15.99,
+    "category": 7,
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1620903374676-bc5145ca6d43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80",
+    "image": "teapot1.jpg"
   }
+},
+{
+"pk": 45,
+"model": "products.product",
+"fields": {
+  "sku": "tea-pot-gift-patt",
+  "name": "Patterned Cast Iron Teapot",
+  "description": "Description for pot",
+  "ingredients": "",
+  "weight": "",
+  "storage": "",
+  "price": 21.99,
+  "category": 7,
+  "rating": 4.9,
+  "image_url": "https://images.unsplash.com/photo-1557735621-7d6290915328?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+  "image": "teapot2.jpg"
+}
+},
+{
+  "pk": 46,
+  "model": "products.product",
+  "fields": {
+    "sku": "tea-kett-gift-iron",
+    "name": "Black Cast Iron Tea Kettle",
+    "description": "Description",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 19.99,
+    "category": 7,
+    "rating": 4.8,
+    "image_url": "https://images.unsplash.com/photo-1601043966939-687b89dc6f9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=716&q=80",
+    "image": "teapot3.jpg"
+  }
+},
+{
+  "pk": 47,
+  "model": "products.product",
+  "fields": {
+    "sku": "tea-set-gift-flor",
+    "name": "Floral China Tea Set",
+    "description": "descriptionforset",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 25.99,
+    "category": 7,
+    "rating": 4.5,
+    "image_url": "https://images.unsplash.com/photo-1551051828-9ef7b1303a05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "teaset1.jpg"
+  }
+},
+{
+  "pk": 48,
+  "model": "products.product",
+  "fields": {
+    "sku": "tea-set-gift-cera",
+    "name": "Traditional Tea Ceremony Set",
+    "description": "descriptionforset",
+    "ingredients": "",
+    "weight": "",
+    "storage": " dry place.",
+    "price": 28.99,
+    "category": 7,
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1633107939685-2e7105a8f01d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "teaset2.jpg"
+  }
+},
+{
+  "pk": 49,
+  "model": "products.product",
+  "fields": {
+    "sku": "ta-cup-gift-flor",
+    "name": "Floral Teacup (Set of 2)",
+    "description": "descript",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 12.99,
+    "category": 7,
+    "rating": 4.8,
+    "image_url": "https://images.unsplash.com/photo-1560228083-e0fd2410ce25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    "image": "teacup1.jpg"
+  }
+},
+{
+  "pk": 50,
+  "model": "products.product",
+  "fields": {
+    "sku": "ta-cup-gift-bron",
+    "name": "Bronze Teacup (Set of 2)",
+    "description": "descr",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 12.99,
+    "category": 7,
+    "rating": 4.7,
+    "image_url": "https://images.unsplash.com/photo-1660408160611-70aa2846e254?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+    "image": "teacup2.jpg"
+  }
+},
+{
+  "pk": 51,
+  "model": "products.product",
+  "fields": {
+    "sku": "ta-cup-gift-pile",
+    "name": "Floral Teacup (Set of 4)",
+    "description": "desc",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 15.99,
+    "category": 6,
+    "rating": 4.8,
+    "image_url": "https://images.unsplash.com/photo-1560228022-f1a3298022e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "image": "teacup3.jpg"
+  }
+},
+{
+  "pk": 52,
+  "model": "products.product",
+  "fields": {
+    "sku": "ta-cup-gift-gree",
+    "name": "Green Teacup Set (Set of 2)",
+    "description": "descr",
+    "ingredients": "",
+    "weight": "",
+    "storage": "",
+    "price": 16.99,
+    "category": 7,
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1447949122973-9711a09951d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+    "image": "teacup4.jpg"
+  }
+}
 ]
