@@ -501,7 +501,6 @@ div.heading-text {
     }
 }
 
-
 @media screen and (min-width: 567px) and (max-width: 992px) {
     img.card-img-top {
     width: 100%;
@@ -544,10 +543,26 @@ div.heading-text {
     }
 }
 
-
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .order-md-first { 
         margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .productmanage { 
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 499px) {
+    .productmanage {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .productmanage {
+        margin-top: 105px;
     }
 }
