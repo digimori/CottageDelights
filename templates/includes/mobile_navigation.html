@@ -13,6 +13,9 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-black" type="submit">Search</button>
               </form>
+
+              <hr class="my-2">
+
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %} 
               <li class="nav-item mt-4">
@@ -21,7 +24,7 @@
   {% endif %}
           <ul class="navbar-nav justify-content-end flex-grow-1">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'userprofile' %}">My Account</a>
+              <a class="nav-link" aria-current="page" href="{% url 'userprofile' %}">My Account</a>
             </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -50,65 +53,68 @@
     </li>
 
           </ul>
+        
+          <hr class="my-2">
 
 
 <!--Secondary nav here-->
 
-      <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <ul class="dropdown-menu secondarydropdown border-0" aria-label="all-products">
-                <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
-                <li><a href="{% url 'products' %}?rating&direction=desc" class="dropdown-item ">By Rating</a></li>
-                <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
-            </ul>
-        </li>
+
+<ul class="navbar-nav w-auto mx-auto">
+  <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All Products
+      </a>
+      <ul class="dropdown-menu secondarydropdown border-0" aria-label="all-products">
+          <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+          <li><a href="{% url 'products' %}?rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+          <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+      </ul>
+  </li>
 
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=loose_tea,special_teas" id="teas-specials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Teas &amp; Specialities 
-            </a>
-            <ul class="dropdown-menu secondarydropdown border-0" aria-label="teas-specials">
-                <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Loose Leaf Teas</a></li>
-                <li><a href="{% url 'products' %}?category=special_teas" class="dropdown-item">Specialities</a></li>
-                <li><a href="{% url 'products' %}?category=special_teas,loose_tea" class="dropdown-item">All Teas</a></li>
-            </ul>
-        </li>
+  <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=loose_tea,special_teas" id="teas-specials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Teas &amp; Specialities 
+      </a>
+      <ul class="dropdown-menu secondarydropdown border-0" aria-label="teas-specials">
+          <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Loose Leaf Teas</a></li>
+          <li><a href="{% url 'products' %}?category=special_teas" class="dropdown-item">Specialities</a></li>
+          <li><a href="{% url 'products' %}?category=special_teas,loose_tea" class="dropdown-item">All Teas</a></li>
+      </ul>
+  </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="cookies-cakes-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cookies &amp; Cakes
-            </a>
-            <ul class="dropdown-menu secondarydropdown border-0" aria-label="cookies-cakes">
-                <li><a href="{% url 'products' %}?category=biscuits_cookies" class="dropdown-item">Cookies and Brownies</a></li>
-                <li><a href="{% url 'products' %}?category=cakes_brownies" class="dropdown-item">Cupcakes and Slices</a></li>
-                <li><a href="{% url 'products' %}?category=cakes_brownies,biscuits_cookies" class="dropdown-item">All Cookies and Cakes</a></li>
-            </ul>
-        </li>
+  <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black" href="#" id="cookies-cakes-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cookies &amp; Cakes
+      </a>
+      <ul class="dropdown-menu secondarydropdown border-0" aria-label="cookies-cakes">
+          <li><a href="{% url 'products' %}?category=biscuits_cookies" class="dropdown-item">Cookies and Brownies</a></li>
+          <li><a href="{% url 'products' %}?category=cakes_brownies" class="dropdown-item">Cupcakes and Slices</a></li>
+          <li><a href="{% url 'products' %}?category=cakes_brownies,biscuits_cookies" class="dropdown-item">All Cookies and Cakes</a></li>
+      </ul>
+  </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="hampers-gifts-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Hampers and Gifts 
-            </a>
-            <ul class="dropdown-menu secondarydropdown border-0" aria-label="hampers-gifts">
-                <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Choose Your Own</a></li>
-                <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Gifts</a></li>
-                <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Hampers and Gifts</a></li>
-            </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="sale-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Discover 
-            </a>
-            <ul class="dropdown-menu secondarydropdown border-0" aria-label="sale">
-                <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
-                <li><a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale and Clearance</a></li>
-            </ul>
-        </li>
-    </ul>
+  <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black" href="#" id="hampers-gifts-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hampers and Gifts 
+      </a>
+      <ul class="dropdown-menu secondarydropdown border-0" aria-label="hampers-gifts">
+          <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Choose Your Own</a></li>
+          <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Gifts</a></li>
+          <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Hampers and Gifts</a></li>
+      </ul>
+  </li>
+  <li class="nav-item dropdown">
+      <a class="logo-font font-weight-bold nav-link text-black" href="#" id="sale-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Discover 
+      </a>
+      <ul class="dropdown-menu secondarydropdown border-0" aria-label="sale">
+          <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
+          <li><a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale and Clearance</a></li>
+      </ul>
+  </li>
+</ul>
 
 
 <!-- Secondary nav end-->

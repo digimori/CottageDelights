@@ -43,7 +43,7 @@ a.text-muted {
 }
 
 a.nav-link {
-    font-family: 'Petrona', serif;
+    font-family: 'Arbutus Slab', serif;
     font-weight: 700;
 }
 
@@ -105,6 +105,8 @@ ul.secondarydropdown {
 
 .nav-item {
     list-style: none;
+    font-family: 'Arbutus Slab', serif;
+    font-weight: 700;
 }
 
 div.free-shipping {
@@ -515,6 +517,10 @@ div.heading-text {
         height: 50vw;
         object-fit: cover;
     }
+    h4.managementfont {
+        font-size: 2em;
+        padding-left: 2px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 991px) {
@@ -547,9 +553,6 @@ div.heading-text {
     .order-md-first { 
         margin-top: 60px;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
     .productmanage { 
         margin-top: 60px;
     }
