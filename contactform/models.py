@@ -2,7 +2,7 @@ from django.db import models
 
 
 class ContactForm(models.Model):
-    name = models.CharField(max_length=30, null=False, blank=False)
+    name = models.CharField(max_length=30)
     email = models.EmailField(null=False, blank=False)
     order_number = models.CharField(max_length=30)
     description = models.TextField(null=False, blank=False)
