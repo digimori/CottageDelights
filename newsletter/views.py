@@ -3,6 +3,9 @@ from django.contrib import messages
 from .models import Newsletter, MailMessage
 from .forms import NewsletterForm, MailMessageForm
 from django.core.mail import send_mail
+from django.core import mail
+from django.core.mail.message import EmailMessage
+from django.conf import settings
 
 # Create your views here.
 
@@ -26,11 +29,30 @@ def Newsletter(request):
 
 
 def MailMessage(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'You must be an admin to access this page.')
+        return redirect(reverse('home'))
+
     form = MailMessageForm()
+
     if request.method == "POST":
         form = MailMessageForm(request.POST)
         if form.is_valid():
             form.save()
+            from_email = settings.EMAIL_HOST_USER
+            connection = mail.get_connection()
+            connection.open()
+            email_message = mail.EmailMessage(
+                f'Email from {name}',
+                f'Email: {email}\nOrder Number: {order_number}',
+                f'QUERY : {description}',
+                from_email, ['digitamori@gmail.com'], connection=connection)
+            email_client = mail.EmailMessage(
+                'Email Response', 'Thanks for messaging us\n',
+                from_email, [email], connection=connection)
+
+            connection.send_messages([email_message, email_client])
+            connection.close()
             messages.info(
                 request,
                 "Message has been sent to subscribers!")
