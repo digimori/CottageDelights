@@ -295,15 +295,19 @@ p.testimonial-text {
 }
 /* ----------------------- Buttons ----------------------- */
 
-a.btn-black {
+a.btn-black,
+button.btn-black,
+input.btn-black {
 background: rgb(99, 87, 100);
 color: white;
 }
 
-button.btn-black {
-    background: rgb(99, 87, 100);
-    color: white;
-    }
+input.btn-black {
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
 
 /* ----------------------- Allauth form formatting ----------------------- */
 
