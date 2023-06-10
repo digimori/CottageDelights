@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, reverse
 from django.contrib import messages
 from .models import Newsletter, MailMessage
 from .forms import NewsletterForm, MailMessageForm

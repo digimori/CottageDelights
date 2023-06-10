@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '*')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cottagedelights.herokuapp.com', 'localhost', '8000-digimori-cottagedelight-6q31rs7tzsb.ws-eu98.gitpod.io']
+ALLOWED_HOSTS = ['cottagedelights.herokuapp.com', 'localhost', '8000-digimori-cottagedelight-6q31rs7tzsb.ws-eu99.gitpod.io']
 
 
 # Application definition
@@ -209,7 +209,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email setup
+# Email setup - SMTP
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'cottagedelights@example.com'
