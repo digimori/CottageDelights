@@ -18,10 +18,11 @@ def userprofile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            # Toast message here
+            messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Failed to Add')
-            # Generic Toast handler
+            messages.error(request,
+                           ('Update failed. Please ensure '
+                            'the form is valid.'))
     else:
         form = UserProfileForm(instance=profile)
 
@@ -41,7 +42,10 @@ def userprofile(request):
 def order_history(request, order_number):
     order = get_object_or_404(OrderRecord, order_number=order_number)
 
-    # Toast message here confirming order numbers
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
 
     template = 'checkout/checkoutcomplete.html'
     context = {

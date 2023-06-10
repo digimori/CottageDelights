@@ -46,7 +46,7 @@ def MailMessage(request):
                 f'Email from {name}',
                 f'Email: {email}\nOrder Number: {order_number}',
                 f'QUERY : {description}',
-                from_email, ['digitamori@gmail.com', 'cielbendall@gmail.com'],
+                from_email, [os.environ.EMAIL_HOST],
                 connection=connection)
             connection.send_messages([email_message])
             connection.close()
