@@ -11,7 +11,6 @@
             </ul>
         </li>
 
-
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=loose_tea,special_teas" id="teas-specials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Teas &amp; Specialities 
@@ -51,6 +50,8 @@
             <ul class="dropdown-menu border-0" aria-label="sale">
                 <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
                 <li><a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale and Clearance</a></li>
+                <li><a href="{% url 'Newsletter' %}" class="dropdown-item">Newsletter</a></li>
+              <li><a href="{% url 'Contact_Form'}" class="dropdown-item">Contact Us</a></li>
             </ul>
         </li>
     </ul>
