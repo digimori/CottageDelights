@@ -46,12 +46,9 @@ def MailMessage(request):
                 f'Email from {name}',
                 f'Email: {email}\nOrder Number: {order_number}',
                 f'QUERY : {description}',
-                from_email, ['digitamori@gmail.com'], connection=connection)
-            email_client = mail.EmailMessage(
-                'Email Response', 'Thanks for messaging us\n',
-                from_email, [email], connection=connection)
-
-            connection.send_messages([email_message, email_client])
+                from_email, ['digitamori@gmail.com', 'cielbendall@gmail.com'],
+                connection=connection)
+            connection.send_messages([email_message])
             connection.close()
             messages.info(
                 request,
