@@ -21,6 +21,7 @@ class UserProfileForm(forms.ModelForm):
             'default_address_line_1': 'Address Line 1',
             'default_address_line_2': 'Address Line 2',
             'default_county': 'County or State',
+            'default_country': 'Country',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True

@@ -1,4 +1,4 @@
-<div class="navbar-collapse navbar-expand-sm ps-5" id="main-nav">
+<nav class="navbar-collapse navbar-expand-sm ps-5" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,9 +38,8 @@
                 Hampers and Gifts 
             </a>
             <ul class="dropdown-menu border-0" aria-label="hampers-gifts">
-                <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Choose Your Own</a></li>
-                <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Gifts</a></li>
-                <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Hampers and Gifts</a></li>
+                <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">Gifts</a></li>
+                <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Gifts</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">
@@ -51,8 +50,8 @@
                 <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
                 <li><a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale and Clearance</a></li>
                 <li><a href="{% url 'Newsletter' %}" class="dropdown-item">Newsletter</a></li>
-              <li><a href="{% url 'Contact_Form'}" class="dropdown-item">Contact Us</a></li>
+              <li><a href="{% url 'Contact_Form' %}" class="dropdown-item">Contact Us</a></li>
             </ul>
         </li>
     </ul>
-</div>
+</nav>
