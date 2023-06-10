@@ -9,7 +9,7 @@ html {
 
 body {
     width: 100%;
-    background-image: url('/media/elaine-howlin-FEpNmWh1fMc-unsplash.jpg');
+    background-image: url('/media/elaine-howlin-FEpNmWh1fMc-unsplash-min.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(247, 235, 235);
@@ -136,7 +136,7 @@ button.navbar-toggler {
 }
 
 div#testimonialimage1 {
-    background-image: url('/media/indeximagery.jpg');
+    background-image: url('/media/indeximagery-min.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -147,7 +147,7 @@ div#testimonialimage1 {
 }
 
 div#testimonialimage2 {
-    background-image: url('/media/indeximagery.jpg');
+    background-image: url('/media/indeximagery-min.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -158,7 +158,7 @@ div#testimonialimage2 {
 }
 
 div#testimonialimage3 {
-    background-image: url('/media/indeximagery.jpg');
+    background-image: url('/media/indeximagery-min.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -169,7 +169,7 @@ div#testimonialimage3 {
 }
 
 div#indexhandpicked {
-    background-image: url('/media/handpicked.jpg');
+    background-image: url('/media/handpicked-min.jpg');
     background-size: cover;
     background-color: brown;
     height: 300px;
@@ -179,7 +179,7 @@ div#indexhandpicked {
 }
 
 div#indexwho {
-    background-image: url('/media/indeximagery.jpg');
+    background-image: url('/media/indeximagery-min.jpg');
     background-size: cover;
     background-color: brown;
     height: 300px;
@@ -572,4 +572,19 @@ div.heading-text {
     .productmanage {
         margin-top: 105px;
     }
+}
+
+.contactform,
+.newsletter {
+    margin-top: 250px;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    border: 1px solid lightgrey;
+}
+
+h3.contactus,
+label.contactus,
+h4.newslettertitle {
+    font-weight: 500;
+    font-family: "Arbutus Slab", serif;
 }

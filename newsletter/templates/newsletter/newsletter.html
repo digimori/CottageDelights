@@ -4,11 +4,12 @@
 {% block content %}
 <div class="container mt-5 py-3">
     <div class="row mt-5 pt-5">
-        <div class="col-md-6 offset-md-3">
-            <div class="card bg-light">
+        <div class="col-2 col-sm-3 col-md-3"></div>
+        <div class="newsletter col-8 col-sm-6 col-md-6 py-3">
+            <div class="card">
                 <div class="card-body">
                     <p>Maybe put some images up here for prettiness sake?</p>
-                    <h4> Get latest offers blah blah blah all that spiel</h4>
+                    <h4 class="newslettertitle"> Get latest offers direct to your inbox!</h4>
                     <hr>
                     <form action="#" method="POST">
                         {% csrf_token %}
@@ -19,6 +20,7 @@
                 </div>
             </div>
         </div>
+        <div class="col-2 col-sm-3 col-md-3"></div>
     </div>
 </div>
 
