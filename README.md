@@ -53,6 +53,19 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 ---
 #### Font and Colours:
 
+* Fonts: 
+For the fonts, I chose and mix of "Libre Baskerville" and "Special Elite". The choices for these were ease of use for reading as I originally wanted to use something more cursive because they represent the styles put on antique books and type-writers. This was to match up with the overall theme of a library and to match the login/registration cover image of antique style library books.
+I eventually opted to disregard the cursive fonts as they are very difficult for those with dyxlexia to read and I wanted to maintain accessibility.
+
+* Colours:
+
+
+* Offcanvas Navigations:
+
+
+* Home page images:
+
+
 ### Wireframes
 ---
 
@@ -61,8 +74,18 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 
  ####  Desktop, Tablet, Mobile
 
-- Index page (Not Logged in and Registration page are laid out the same):
-![Index - Not logged in/Registration](/readmeimages/Wireframesprelogin.jpg)
+- Index page:
+![Index - Not logged in/Registration]()
+-- Put this in an accordian sectioned by desktop/mobile view for all pages
+
+- Sign in and Registration:
+![Signin Registration]()
+
+- Registration Confirmation:
+![Registration confirmation]()
+
+- Sign out confirmation page:
+![Sign out - Do you want to Log out?]()
 
 - Profile Page (Once Logged in, cannot be accessed prior to login):
 ![Profile - Logged in]()
@@ -71,10 +94,40 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 ![Add Products]()
 </details>
 
+- Edit Products page(Superuser/Admin must be logged in):
+![Edit Products]()
+
+- Delete Modal check(Superuser/Admin must be logged in):
+![Delete Modal]()
+
+- Shopping Cart page:
+![Shopping Cart]()
+
+- Payment Page:
+![Payment page]()
+
+- Order Confirmation page:
+![Order Confirmation]()
+
+- Newsletter Signup:
+![Newsletter signup]()
+
+- Contact Form:
+![Contact Form]()
+
+
 ---
 
 ### Database Schema
 ---
+Models:
+- Products
+- Categories
+- Cart and Checkout
+- Contact Form
+- Newsletter
+- Profile
+
 
 
 ### Features and Navigation
@@ -122,7 +175,7 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 </details>
 
 
-### Adding books
+### Adding Products
 
 <details>
 <summary>Add Product Form</summary>
@@ -146,10 +199,15 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 
 </details>
 
+#### Navigation compression on mobile
+<details>
+<summary>Off-Canvas navigation </summary>
+
+
 ### Testing and Validation:
 --- 
 
-###  Validation (HTML, CSS, Python PEP8)
+###  Validation (HTML, CSS, JSHint, Python PEP8)
 ---
 <details>
 <summary>HTML</summary>
@@ -175,7 +233,12 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 
 | Test | Expectation | Pass/Fail |
 | ----------- | ----------- | ----------- |
-|  | |  |
+| User Registration | User is able to register account | Pass |
+| Registration Confirmation | Confirmation Email send to user | Fail |
+| User Sign in/Out | User is able to sign in and sign back out to end session | Pass | 
+| Adding to cart | User is able to add products to cart, adjusting quantity on product page before doing so | Pass |
+| Updating cart | User is able to update and delete products from their cart page | Pass | 
+
 
 
 ### Media Queries
@@ -188,7 +251,12 @@ This was also used to test the responsiveness as I could change the breakpoints 
 ---
 | Bug/Issue | Explanation | Fix Implemented |
 | ----------- | ----------- | ----------- |
-||  | |
+| Product Redirection | Once a product has been added by the admin, the views do not seem to correctly redirect back to the product itself if an image was not uploaded, despite a placeholder being present.  | None yet |
+| SMTP Security Changes | SMTP security changes from Google now make the App password unable to link in as a third party so sending e-mails now takes too long to respond to the server in order to send | No fix yet | 
+| Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | None yet |
+| Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | Working on it | 
+| User Registration | User is able to register an account when running through Gitpod but not Heroku | Working on it | 
+
 
 
 ### Deployment (Github and Heroku):
