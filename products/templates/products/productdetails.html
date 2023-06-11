@@ -56,7 +56,35 @@
         {% if request.user.is_superuser %}
                     <small class="ms-1">
                         <a href="{% url 'editproducts' product.id %}" class="editbutton">Edit</a>
-                        <a href="{% url 'deleteproducts' product.id %}" class="deletebutton">Delete</a>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn deletebutton modal-trigger red darken-4 white-text" data-bs-toggle="modal" data-bs-target="#modal-{{ product.id }}">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-{{ product.id }}">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h4>CONTENT DELETION WARNING</h4>
+            <p>Are you sure that you want to delete this entry?</p>
+            <p>This cannot be undone</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <a href="{% url 'deleteproducts' product.id %}"
+          class="btn-small deletebutton">DELETE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
                     </small>
                     {% endif %}
                     </div>
