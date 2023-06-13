@@ -297,7 +297,8 @@ p.testimonial-text {
 
 a.btn-black,
 button.btn-black,
-input.btn-black {
+input.btn-black,
+a.editbutton {
 background: rgb(99, 87, 100);
 color: white;
 }
@@ -308,6 +309,11 @@ input.btn-black {
     padding: 5px 10px;
 }
 
+button.deletebutton,
+a.deletebutton {
+    background-color: red;
+    color: white;
+}
 
 /* ----------------------- Allauth form formatting ----------------------- */
 
