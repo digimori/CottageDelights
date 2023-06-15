@@ -28,6 +28,8 @@ def Newsletter(request):
     return render(request, 'newsletter/newsletter.html', context)
 
 
+"""
+
 def MailMessage(request):
     if not request.user.is_superuser:
         messages.error(request, 'You must be an admin to access this page.')
@@ -60,3 +62,5 @@ def MailMessage(request):
         'form': form,
     }
     return render(request, 'newsletter/mailmessage.html', context)
+
+    """

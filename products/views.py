@@ -97,7 +97,7 @@ def addproducts(request):
 def editproducts(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'GET THE TOASTS')
+        messages.error(request, 'Product could not be edited.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -135,15 +135,3 @@ def deleteproducts(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
-
-
-"""
-def createyourown(request):
-    product = get_object_or_404(Product, pk=product_id)
-
-    context = {
-        'product': product,
-    }
-
-    return render(request, 'products/createyourown.html', context)
-    """
