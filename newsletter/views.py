@@ -44,8 +44,7 @@ def MailMessage(request):
             connection.open()
             email_message = mail.EmailMessage(
                 f'Email from {name}',
-                f'Email: {email}\nOrder Number: {order_number}',
-                f'QUERY : {description}',
+                f'Newsletter : {description}',
                 from_email, [os.environ.EMAIL_HOST],
                 connection=connection)
             connection.send_messages([email_message])
