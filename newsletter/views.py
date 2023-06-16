@@ -43,8 +43,8 @@ def MailMessage(request):
             connection = mail.get_connection()
             connection.open()
             email_message = mail.EmailMessage(
-                f'Email from {name}',
-                f'Newsletter : {description}',
+                f'Newsletter : {title}',
+                f'Message : {message}',
                 from_email, [os.environ.EMAIL_HOST],
                 connection=connection)
             connection.send_messages([email_message])
