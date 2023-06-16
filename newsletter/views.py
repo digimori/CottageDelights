@@ -34,6 +34,8 @@ def MailMessage(request):
         return redirect(reverse('home'))
 
     form = MailMessageForm()
+    title = Newsletter.objects.get(title)
+    message = MailMessage.objects.get(message)
 
     if request.method == "POST":
         form = MailMessageForm(request.POST)

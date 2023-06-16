@@ -34,7 +34,7 @@ div.mainwrapper {
 .header-container {
     padding-top: 164px;
     width: 100%;
-  }
+}
 
 /* ----------------------- Links -----------------------  */
 
@@ -59,15 +59,15 @@ a.clickerbtn {
 /* ----------------------- Headers and Nav Bars -----------------------  */
 
 div.bannerlogo::after {
-  background-color: antiquewhite;
-  content: "";
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
+    background-color: antiquewhite;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .header-container {
@@ -217,7 +217,7 @@ div.productcards {
 }
 
 div.indexintros {
-padding: 30px;
+    padding: 30px;
 }
 
 .page-text {
@@ -293,14 +293,15 @@ p.page-text {
 p.testimonial-text {
     padding: 0 20px;
 }
+
 /* ----------------------- Buttons ----------------------- */
 
 a.btn-black,
 button.btn-black,
 input.btn-black,
 a.editbutton {
-background: rgb(99, 87, 100);
-color: white;
+    background: rgb(99, 87, 100);
+    color: white;
 }
 
 input.btn-black {
@@ -319,7 +320,7 @@ a.deletebutton {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    color: #6c757d; 
+    color: #6c757d;
 }
 
 .allauth-form-inner-content input {
@@ -337,7 +338,7 @@ a.deletebutton {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	display: inline-block;
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -354,18 +355,19 @@ a.deletebutton {
     border-radius: 5px;
 
     /* Standard bootstrap btn transitions */
-    transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: #000000; /* text-info */
+    color: #000000;
+    /* text-info */
 }
 
 
@@ -378,7 +380,7 @@ a.deletebutton {
 .btn-file input[type="file"] {
     position: absolute;
     min-width: 100%;
-    min-height: 100%;   
+    min-height: 100%;
     top: 0;
     right: 0;
     opacity: 0;
@@ -401,10 +403,10 @@ a.deletebutton {
 /* ----------------------- Slightly larger container on XL screens ----------------------- */
 @media (min-width: 768px) {
     .container {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}
+
 /* ----------------------- Fixed top navbar only on medium screens and upwards ----------------------- */
 
 @media (min-width: 992px) {
@@ -415,13 +417,13 @@ a.deletebutton {
         left: 0;
         z-index: 1030;
     }
-  
+
     .header-container {
-      padding-top: 164px;
+        padding-top: 164px;
     }
-  }
-  
-  /* ----------------------- Pad the top when navbar is collapsed on mobile ----------------------- */
+}
+
+/* ----------------------- Pad the top when navbar is collapsed on mobile ----------------------- */
 
 
 @media (max-width: 768px) {
@@ -434,9 +436,11 @@ a.deletebutton {
     html {
         width: 100%;
     }
+
     body {
         width: 100%;
     }
+
     div.container {
         width: 100%;
     }
@@ -481,9 +485,9 @@ a.deletebutton {
 }
 
 @media screen and (max-width: 768px) {
-div.heading-text {
-    padding-top: 100px;
-}
+    div.heading-text {
+        padding-top: 100px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -491,14 +495,17 @@ div.heading-text {
         margin-top: -65px;
         z-index: 99999;
     }
+
     div.free-shipping {
         width: 100%;
         margin: 5px 50px;
     }
+
     button.second-nav {
         z-index: 999999;
         margin-top: 10px;
     }
+
     .secondary-menu {
         margin-top: 60px;
     }
@@ -515,7 +522,7 @@ div.heading-text {
 
 @media screen and (min-width: 567px) and (max-width: 992px) {
     img.card-img-top {
-    width: 100%;
+        width: 100%;
         height: 30vw;
         object-fit: cover;
     }
@@ -527,6 +534,7 @@ div.heading-text {
         height: 50vw;
         object-fit: cover;
     }
+
     h4.managementfont {
         font-size: 2em;
         padding-left: 2px;
@@ -534,7 +542,8 @@ div.heading-text {
 }
 
 @media screen and (min-width: 320px) and (max-width: 991px) {
-    div.detailcontainer, 
+
+    div.detailcontainer,
     div.imgcontainer {
         margin: auto;
     }
@@ -544,13 +553,14 @@ div.heading-text {
     p.page-text {
         font-size: 36px;
     }
+
     p.secondary-page-text {
         font-size: 17px;
         font-weight: 600;
         font-family: "Arbutus Slab", serif;
         letter-spacing: 1px;
     }
-    }
+}
 
 @media screen and (min-width: 320px) and (max-width: 566px) {
     p.page-text {
@@ -560,10 +570,11 @@ div.heading-text {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    .order-md-first { 
+    .order-md-first {
         margin-top: 60px;
     }
-    .productmanage { 
+
+    .productmanage {
         margin-top: 60px;
     }
 }
@@ -593,4 +604,25 @@ label.contactus,
 h4.newslettertitle {
     font-weight: 500;
     font-family: "Arbutus Slab", serif;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    div.profilecontainer,
+    div.cartcontainer {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width: 576px) {
+    div.profilecontainer,
+    div.cartcontainer {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width: 499px) {
+    div.profilecontainer,
+    div.cartcontainer {
+        margin-top: 40px;
+    }
 }
