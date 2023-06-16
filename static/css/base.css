@@ -213,7 +213,7 @@ div.productcards {
 /* ----------------------- Icons and Text ----------------------- */
 
 .quant-form {
-    padding-left: 40px;
+    padding-left: 10px;
 }
 
 div.indexintros {
@@ -398,6 +398,23 @@ a.deletebutton {
     border-radius: 2px;
 }
 
+/* ----------------------- Contact Form and Newsletter --------------------- */
+
+.contactform,
+.newsletter {
+    margin-top: 250px;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    border: 1px solid lightgrey;
+}
+
+h3.contactus,
+label.contactus,
+h4.newslettertitle {
+    font-weight: 500;
+    font-family: "Arbutus Slab", serif;
+}
+
 /* ----------------------- Media Queries ----------------------- */
 
 /* ----------------------- Slightly larger container on XL screens ----------------------- */
@@ -446,10 +463,7 @@ a.deletebutton {
     }
 }
 
-
-
-/* Unorganised CSS */
-
+/* ------------------  Other Media Queries  ------------------ */
 
 @media screen and (max-width: 400px) {
     div.free-shipping {
@@ -463,6 +477,13 @@ a.deletebutton {
     div.header-container {
         margin-bottom: -30px;
     }
+    .order-md-first {
+        margin-top: 60px;
+    }
+
+    .productmanage {
+        margin-top: 60px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -471,12 +492,6 @@ a.deletebutton {
     }
 }
 
-@media screen and (max-width: 768px) {
-    div.heading-text {
-        padding-top: 80px;
-
-    }
-}
 
 @media screen and (min-width: 769px) {
     div.clickformore {
@@ -487,6 +502,10 @@ a.deletebutton {
 @media screen and (max-width: 768px) {
     div.heading-text {
         padding-top: 100px;
+    }    
+    div.heading-text {
+        padding-top: 80px;
+
     }
 }
 
@@ -511,33 +530,11 @@ a.deletebutton {
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 500px) {
-    h2.logo-font {
-        font-family: 'Dancing Script', serif;
-        font-weight: 700;
-        font-size: 1.8em;
-        padding-left: 25px;
-    }
-}
-
 @media screen and (min-width: 567px) and (max-width: 992px) {
     img.card-img-top {
         width: 100%;
         height: 30vw;
         object-fit: cover;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 566px) {
-    img.card-img-top {
-        width: 100%;
-        height: 50vw;
-        object-fit: cover;
-    }
-
-    h4.managementfont {
-        font-size: 2em;
-        padding-left: 2px;
     }
 }
 
@@ -567,15 +564,15 @@ a.deletebutton {
         margin-top: 0px;
         margin-bottom: 1rem;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .order-md-first {
-        margin-top: 60px;
+    img.card-img-top {
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
     }
 
-    .productmanage {
-        margin-top: 60px;
+    h4.managementfont {
+        font-size: 2em;
+        padding-left: 2px;
     }
 }
 
@@ -583,27 +580,24 @@ a.deletebutton {
     .productmanage {
         margin-top: 35px;
     }
+
+    div.profilecontainer,
+    div.cartcontainer {
+        margin-top: 40px;
+    }
+
+    h2.logo-font {
+        font-family: 'Dancing Script', serif;
+        font-weight: 700;
+        font-size: 1.8em;
+        padding-left: 25px;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
     .productmanage {
         margin-top: 105px;
     }
-}
-
-.contactform,
-.newsletter {
-    margin-top: 250px;
-    background-color: antiquewhite;
-    border-radius: 6px;
-    border: 1px solid lightgrey;
-}
-
-h3.contactus,
-label.contactus,
-h4.newslettertitle {
-    font-weight: 500;
-    font-family: "Arbutus Slab", serif;
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -620,9 +614,39 @@ h4.newslettertitle {
     }
 }
 
-@media screen and (min-width:320px) and (max-width: 499px) {
-    div.profilecontainer,
-    div.cartcontainer {
-        margin-top: 40px;
+/* Unorganised CSS */
+
+
+@media screen and (min-width: 576px) {
+    div.quantcontainer {
+        display: flex;
+        justify-content: end;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 885px) {
+    div.quantcontainer {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 884px) {
+    div.quantcontainer,
+    div.quantitytitle {
+        display: flex;
+        justify-content: flex-start;
+    }
+    div.quantitytitle {
+        padding-left: 15px;
+    }
+    div.addtocart {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 885px) {
+    div.quantitytitle {
+    display: flex;
+    justify-content: end;
+}
 }
