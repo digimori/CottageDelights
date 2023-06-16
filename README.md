@@ -46,7 +46,7 @@
 
 ### User Stories:
 ---
-PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
+[User Story Google Sheets](https://docs.google.com/spreadsheets/d/1655crCqeP7uN0QqolqXEPqaM7uZFYanWhCC3R0CrUDM/edit?usp=sharing)
 
 
 ### Design Choices (Fonts, Colours and images, cards and hamburger menus):
@@ -54,14 +54,15 @@ PORT THESE OVER FROM YOUR EXCEL SPREADSHEET!
 #### Font and Colours:
 
 * Fonts: 
-For the fonts, I chose and mix of "Libre Baskerville" and "Special Elite". The choices for these were ease of use for reading as I originally wanted to use something more cursive because they represent the styles put on antique books and type-writers. This was to match up with the overall theme of a library and to match the login/registration cover image of antique style library books.
-I eventually opted to disregard the cursive fonts as they are very difficult for those with dyxlexia to read and I wanted to maintain accessibility.
+For the fonts, I chose and mix of 
+I eventually opted to disregard the cursive fonts aside from large titles and logo fonts as they are very difficult for those with dyxlexia to read and I wanted to maintain accessibility.
 
 * Colours:
-
+As with previous projects, I went for a beige theme and found the default AntiqueWhite CSS to be perfect for it. Cottagecore is based in a lot of neutral and muted colours, embodying vintage themes and simple living, so I wanted to take that idea of keeping it simple and integrate it into my design.
+The button colours are a muted purple as I found it to be a nice contrast that wasn't too harsh on the eyes to read. 
 
 * Offcanvas Navigations:
-
+I chose to use Offcanvas for my mobile navigation as it doesn't have an effect on the overall content of the page and positioning compared to a collapsible nav. This makes media queries easier to separate out from a developer standpoint and gave me somewhere to comfortably put the search bar and account links without compromising the site's design.
 
 * Home page images:
 
@@ -121,12 +122,47 @@ I eventually opted to disregard the cursive fonts as they are very difficult for
 ### Database Schema
 ---
 Models:
-- Products
-- Categories
-- Cart and Checkout
-- Contact Form
-- Newsletter
-- Profile
+<details>
+<summary>Products</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>Categories</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>Cart</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>Checkout</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>User Profile</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>Contact Form</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
+
+<details>
+<summary>Newsletter</summary>
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+</details>
 
 
 
@@ -234,7 +270,7 @@ Models:
 | Test | Expectation | Pass/Fail |
 | ----------- | ----------- | ----------- |
 | User Registration | User is able to register account | Pass |
-| Registration Confirmation | Confirmation Email send to user | Fail |
+| Registration Confirmation | Confirmation Email send to user | Pass |
 | User Sign in/Out | User is able to sign in and sign back out to end session | Pass | 
 | Adding to cart | User is able to add products to cart, adjusting quantity on product page before doing so | Pass |
 | Updating cart | User is able to update and delete products from their cart page | Pass | 
@@ -251,11 +287,11 @@ This was also used to test the responsiveness as I could change the breakpoints 
 ---
 | Bug/Issue | Explanation | Fix Implemented |
 | ----------- | ----------- | ----------- |
-| Product Redirection | Once a product has been added by the admin, the views do not seem to correctly redirect back to the product itself if an image was not uploaded, despite a placeholder being present.  | None yet |
-| SMTP Security Changes | SMTP security changes from Google now make the App password unable to link in as a third party so sending e-mails now takes too long to respond to the server in order to send | No fix yet | 
-| Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | None yet |
-| Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | Working on it | 
-| User Registration | User is able to register an account when running through Gitpod but not Heroku | Working on it | 
+| Product Redirection | Once a product has been added by the admin, the views do not seem to correctly redirect back to the product itself if an image was not uploaded, despite a placeholder being present.  | This was a typo error, I had added a link to the if statement that linked back to the product image, which if none is going to be there aside a placeholder, it will error. Fixed. |
+| SMTP Security Changes | SMTP security changes from Google now make the App password unable to link in as a third party so sending e-mails now takes too long to respond to the server in order to send | Fixed by adding Logging into settings.py | 
+| Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | Fixed by adding Logging to settings.py |
+| Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | - Still Testing | 
+| User Registration | User is able to register an account when running through Gitpod but not Heroku | PostgreSQL migration issue, remigrated database to Heroku - Fixed | 
 
 
 

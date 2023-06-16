@@ -34,10 +34,10 @@ def MailMessage(request):
         return redirect(reverse('home'))
 
     form = MailMessageForm()
-    title = Newsletter.objects.get(title)
-    message = MailMessage.objects.get(message)
 
     if request.method == "POST":
+        title = request.POST.get('title')
+        message = request.POST.get('message')
         form = MailMessageForm(request.POST)
         if form.is_valid():
             form.save()
