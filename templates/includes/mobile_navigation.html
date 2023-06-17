@@ -62,33 +62,33 @@
               <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
               <li><a href="{% url 'products' %}?rating&direction=desc" class="dropdown-item ">By Rating</a></li>
               <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+              </ul>
 
 <hr class="my-2">
-
+<ul class="navbar-nav w-auto mx-auto">
               <li><a href="{% url 'products' %}?category=loose_tea" class="dropdown-item">Loose Leaf Teas</a></li>
               <li><a href="{% url 'products' %}?category=special_teas" class="dropdown-item">Specialities</a></li>
               <li><a href="{% url 'products' %}?category=special_teas,loose_tea" class="dropdown-item">All Teas</a></li>
-
+</ul>
               <hr class="my-2">
-
+              <ul class="navbar-nav w-auto mx-auto">
               <li><a href="{% url 'products' %}?category=biscuits_cookies" class="dropdown-item">Cookies and
                   Brownies</a></li>
               <li><a href="{% url 'products' %}?category=cakes_brownies" class="dropdown-item">Cupcakes and Slices</a>
               </li>
               <li><a href="{% url 'products' %}?category=cakes_brownies,biscuits_cookies" class="dropdown-item">All
                   Cookies and Cakes</a></li>
-<hr class="my-2">
-
+</ul>
+<ul class="navbar-nav w-auto mx-auto">
               <li><a href="{% url 'products' %}?category=hampers_gifts" class="dropdown-item">All Gifts</a>
               </li>
-
+</ul>
 <hr class="my-2">
-
+<ul class="navbar-nav w-auto mx-auto">
               <li><a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a></li>
               <li><a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale and Clearance</a></li>
               <li><a href="{% url 'Newsletter' %}" class="dropdown-item">Newsletter</a></li>
               <li><a href="{% url 'Contact_Form' %}" class="dropdown-item">Contact Us</a></li>
-
         </ul>
         <!-- Secondary nav end-->
       </div>

@@ -299,7 +299,8 @@ p.testimonial-text {
 a.btn-black,
 button.btn-black,
 input.btn-black,
-a.editbutton {
+a.editbutton,
+span.btn-black {
     background: rgb(99, 87, 100);
     color: white;
 }
