@@ -38,7 +38,7 @@
 
     {% for item in cart_items %}
         <tr>
-            <td class="p-3 w-25">
+            <td class="py-3 w-25">
                 {% if item.product.image %}
                 <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                 {% else %}
@@ -53,7 +53,7 @@
                 <p class="my-0">£{{ item.product.price }}</p>
             </td>
             <td class="py-3 w-25">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-lg-6">
                     {% include "cart/quantity-form.html" %}
                 </div>
             </td>
