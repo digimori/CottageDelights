@@ -47,7 +47,7 @@ def MailMessage(request):
             email_message = mail.EmailMessage(
                 f'Newsletter : {title}',
                 f'Message : {message}',
-                from_email, [EMAIL_HOST],
+                from_email,
                 connection=connection)
             connection.send_messages([email_message])
             connection.close()
