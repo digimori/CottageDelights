@@ -303,6 +303,7 @@ a.editbutton,
 span.btn-black {
     background: rgb(99, 87, 100);
     color: white;
+    text-decoration: none;
 }
 
 input.btn-black {

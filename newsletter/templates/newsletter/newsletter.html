@@ -22,6 +22,11 @@
         </div>
         <div class="col-2 col-sm-3 col-md-3"></div>
     </div>
+    {% if request.user.is_superuser %}
+    <div class="row col-6 mx-auto">
+            <button class="btn btn-black"><a href="{% url 'MailMessage' %}" class="mx-auto btn-black">Write Newsletter</a></button>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}

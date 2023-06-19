@@ -13,7 +13,7 @@
       "category": 2,
       "rating": 3.8,
       "image_url": "https://images.unsplash.com/photo-1604093592830-3e54e8d4c439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "image": "blackforesttea-min.jpg"
+      "image": "botanicalberries-min.jpg"
     }
   },
   {
@@ -131,8 +131,8 @@
       "price": 2.99,
       "category": 1,
       "rating": 3,
-      "image_url": "12345",
-      "image": "12345"
+      "image_url": "https://images.pexels.com/photos/2461314/pexels-photo-2461314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "honeyapricot.jpg"
     }
   },
   {
@@ -148,8 +148,8 @@
       "price": 2.99,
       "category": 5,
       "rating": 4.2,
-      "image_url": "12345",
-      "image": "12345"
+      "image_url": "https://images.pexels.com/photos/8330328/pexels-photo-8330328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image": "earlgrey.jpg"
     }
   },
   {
@@ -159,7 +159,7 @@
       "sku": "Ruby-loos-tea-spec",
       "name": "Ruby Bolete Rose Tea",
       "description": "Ruby bolete mushroom and rose tea is a unique and earthy blend that combines the rich, nutty flavor of ruby bolete mushrooms with the delicate floral taste of rose petals. When brewed, the tea will have a light brown color and a fragrant aroma that is reminiscent of forest mushrooms and sweet roses. However, it's worth noting that mushroom teas may not be suitable for everyone and should be consumed with caution, especially if you have any health conditions or take medication.",
-      "ingredients": "Blac tea, dried ruby bolete mushroom pieces, rose petals.",
+      "ingredients": "Black tea, dried ruby bolete mushroom pieces, rose petals.",
       "weight": "200g",
       "storage": "Once opened, store in an airtight container in a cool, dry place.",
       "price": 3.59,
@@ -251,7 +251,7 @@
       "category": 1,
       "rating": 3.9,
       "image_url": "https://images.unsplash.com/photo-1628153792464-21bffac488d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-      "image": "pumpkinspicetea.jpg"
+      "image": "pumpkinspicetea-min.jpg"
     }
   },
   {
@@ -421,7 +421,7 @@
       "category": 2,
       "rating": 4.1,
       "image_url": "https://images.pexels.com/photos/6787016/pexels-photo-6787016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "image": ""
+      "image": "dragonspearls.jpg"
     }
   },
   {
@@ -557,7 +557,7 @@
       "category": 3,
       "rating": 4.2,
       "image_url": "https://images.unsplash.com/photo-1560180474-e8563fd75bab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "image": "blueberrycitrustartemin.jpg"
+      "image": "blueberrycitrustarte-min.jpg"
     }
   },
   {
@@ -727,7 +727,7 @@
       "category": 4,
       "rating": 4.7,
       "image_url": "https://images.pexels.com/photos/302539/pexels-photo-302539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "image": "daisysugarcookies.jpg"
+      "image": "daisysugarcookies-min.jpg"
     }
   },
   {
@@ -736,7 +736,7 @@
   "fields": {
     "sku": "tea-pot-gift-fanc",
     "name": "Golden Teal Teapot",
-    "description": "Descriptionhere",
+    "description": "The Teal and Gold Elegant Tea Pot is not only a feast for the eyes but also a testament to quality and durability. It is meticulously crafted from high-quality materials, ensuring its longevity and resistance to heat. Whether you prefer delicate white teas or robust black blends, this tea pot will enhance the brewing process, allowing you to experience the full depth and complexity of each infusion.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -753,7 +753,7 @@
 "fields": {
   "sku": "tea-pot-gift-patt",
   "name": "Patterned Cast Iron Teapot",
-  "description": "Description for pot",
+  "description": "Our Patterned Cast Iron Teapot is not just a tea-brewing vessel; it is a statement piece that elevates your tea rituals and adds a touch of elegance to your home decor. Display it proudly on your kitchen counter or tea table, and let its timeless beauty become a conversation starter. The teapot's versatility makes it suitable for any occasion, from intimate tea sessions to entertaining guests.",
   "ingredients": "",
   "weight": "",
   "storage": "",
@@ -770,7 +770,7 @@
   "fields": {
     "sku": "tea-kett-gift-iron",
     "name": "Black Cast Iron Tea Kettle",
-    "description": "Description",
+    "description": "The Cast Iron Teapot features a stunning design that seamlessly blends form and function. Its graceful silhouette and intricate patterns pay homage to the traditional artistry of Japanese tea ceremonies, while the rich, glossy enamel finish adds a modern touch. The sturdy handle and ergonomic spout provide a comfortable grip and precise pour, allowing you to effortlessly serve your tea with grace and precision.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -787,7 +787,7 @@
   "fields": {
     "sku": "tea-set-gift-flor",
     "name": "Floral China Tea Set",
-    "description": "descriptionforset",
+    "description": "Introducing our exquisite Floral Tea Set, where elegance meets nature in a perfect harmony of taste and visual delight. This enchanting set is designed to elevate your tea-drinking experience to new heights, transforming an ordinary moment into a cherished ritual. Crafted with meticulous attention to detail, this tea set captures the essence of blooming gardens and infuses your tea time with a touch of natural beauty.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -804,7 +804,7 @@
   "fields": {
     "sku": "tea-set-gift-cera",
     "name": "Traditional Tea Ceremony Set",
-    "description": "descriptionforset",
+    "description": "Whether you're an avid tea enthusiast or a curious newcomer, our Traditional Tea Ceremony Set provides a gateway to a world of serenity and reverence. Engage all your senses as you prepare, serve, and savor each cup of tea, enveloped in the essence of tradition.",
     "ingredients": "",
     "weight": "",
     "storage": " dry place.",
@@ -821,7 +821,7 @@
   "fields": {
     "sku": "ta-cup-gift-flor",
     "name": "Floral Teacup (Set of 2)",
-    "description": "descript",
+    "description": "Our uniquely delicate set of two exquisite teacups, each one a miniature masterpiece in its own right. Embracing the same floral theme, these cups enchant with their captivating designs, as if holding a secret garden within their confines. The porcelain is smooth to the touch, and the gently flared rims make sipping from them a pleasurable experience, allowing the aromas and flavors of the tea to dance on your palate.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -838,7 +838,7 @@
   "fields": {
     "sku": "ta-cup-gift-bron",
     "name": "Bronze Teacup (Set of 2)",
-    "description": "descr",
+    "description": "Introducing our Copper-Colored Ceramic Tea Cup, where warmth and sophistication merge to create an enchanting tea-drinking experience. This exquisite cup combines the timeless beauty of copper with the delicate charm of ceramic, bringing a touch of elegance to every sip.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -855,7 +855,7 @@
   "fields": {
     "sku": "ta-cup-gift-pile",
     "name": "Floral Teacup (Set of 4)",
-    "description": "desc",
+    "description": "Our Floral Tea Set is not only a feast for the eyes but also a testament to quality and functionality. The porcelain used in its construction is known for its durability and heat retention properties, ensuring that your tea remains at the perfect temperature while enhancing its flavor profile. The set is also dishwasher-safe, making it convenient to clean and maintain.",
     "ingredients": "",
     "weight": "",
     "storage": "",
@@ -872,7 +872,7 @@
   "fields": {
     "sku": "ta-cup-gift-gree",
     "name": "Green Teacup Set (Set of 2)",
-    "description": "descr",
+    "description": "Our Green Coloured Tea Set not only captivates the eye but also embodies a commitment to quality and functionality. The ceramic construction guarantees durability and ease of cleaning, making this set a practical choice for daily tea rituals or special occasions. The vivid green color remains vibrant over time, ensuring that this tea set will remain a cherished part of your tea-drinking rituals for years to come.",
     "ingredients": "",
     "weight": "",
     "storage": "",
