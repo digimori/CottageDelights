@@ -688,3 +688,24 @@ h4.newslettertitle {
     }
     }
 
+@media screen and (max-width: 1141px) {
+    div.free-shipping {
+        font-size: 0.80rem;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 709px) {
+    div.free-shipping {
+        font-size: 1rem;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    div.free-shipping {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 6px;
+    }
+}

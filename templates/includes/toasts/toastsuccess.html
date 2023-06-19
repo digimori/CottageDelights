@@ -1,5 +1,12 @@
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-body position-fixed top-0 end-0 p-3" id="toast">
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div class="toast-container position-absolute p-3" id="toastPlacement">
+  <div class="toast" id="successToast" name="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">Shopping Cart:</strong>
+        <small>[Time here]</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    <div class="toast-body" id="toast">
       <div class="row">
         <div class="col">
             {{ message }}
@@ -21,4 +28,4 @@
         {% endfor %}
     </div>
   </div>
-</div></div>
+</div></div></div></div>
