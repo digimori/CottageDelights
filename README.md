@@ -123,45 +123,121 @@ I chose to use Offcanvas for my mobile navigation as it doesn't have an effect o
 ---
 Models:
 <details>
-<summary>Products</summary>
+<summary>Products - class Product</summary>
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
+| 1 | category | 'category', null=True, blank=True, on_delete=models.SET_NULL | Foreign |
+| 2 | sku | CharField, max_length | Primary |
+| 3 | name | CharField, max_length, null=True, blank=True | Primary |
+| 4 | description | TextField | Primary | 
+| 5 | ingredients | CharField, max_length | Primary |
+| 6 | weight | CharField, max_length, null=True, blank=True | Primary |
+| 7 | storage | TextField, null=True, blank=True | Primary |
+| 8 | price | DecimalField, max_digits, decimal_places | Primary |
+| 9 | rating | DecimalField, max_digits, decimal_places, null=True, blank=True | Primary |
+| 10 | image_url | URLField, max_length, null=True, blank=True | Primary |
+| 11 | image | ImageField | null=True, blank=True |
 </details>
 
 <details>
 <summary>Categories</summary>
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
-</details>
+| 1 | name | CharField, max_length | Primary |
+| 2 | friendly_name | CharField | max_length, null=True, blank=True | Primary |
 
-<details>
-<summary>Cart</summary>
-| id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+There is also a Meta class inside this mode, where Category can become "Categories" in the instance of plurals. 
+
 </details>
 
 <details>
 <summary>Checkout</summary>
+
+class OrderRecord model:  
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
+| 1 | order_number | CharField, max_length, null=False, editable=False | Primary |
+| 2 | userprofile | ForeignKey, UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders | Foreign |
+| 3 | full_name | CharField, max_length, null=False, blank=False | Primary |
+| 4 | email | CharField, max_length, null=False, blank=False | Primary |
+| 5 | phone_number | CharField, max_length, null=True, blank=True  | Primary |
+| 6 | house_name | CharField, max_length, null=True, blank=True  | Primary |
+| 7 | address_line_1 | CharField, max_length, null=False, blank=False  | Primary |
+| 8 | address_line_2 | CharField, max_length, null=True, blank=True  | Primary |
+| 9 | town_city | CharField, max_length, null=False, blank=False | Primary |
+| 10 | county | CharField, max_length, null=True, blank=True  | Primary |
+| 11 | country | CountryField, blank_label='Country *', null=False, blank=False | Primary |
+| 12 | postcode | CharField, max_length, null=False, blank=False | Primary |
+| 13 | shopping_cart | TextField, null=False, blank=False, default='' | Primary |
+| 14 | order_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 15 | delivery_cost | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 16 | grand_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 17 | date | DateTimeField, auto_now_add=True | Primary |
+| 18 | stripe_pid | CharField, max_length, null=False, blank=False, default='' | Primary | 
+
+
+class OrderLineItem model:
+
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+| 1 | order | ForeignKey, OrderRecord, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems | Foreign |
+| 2 | product | ForeignKey, Product, null=False, blank=False, on_delete=models.CASCADE | Foreign | 
+| 3 | quantity | IntegerField, null=False, blank=False, default=0 | Primary |
+| 4 | lineitem_total | DecimalField, max_digits, decimal_places, null=False, blank=False, editable=False | Primary | 
+
+
 </details>
 
 <details>
 <summary>User Profile</summary>
+
+class UserProfile model:
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
+| 1 | user | OneToOneField, User, on_delete=models.CASCADE | Primary |
+| 2 | default_phone_number | CharField, max_length, null=True, blank=True | Primary |
+| 3 | default_house_name | CharField, max_length, null=True, blank=True | Primary |
+| 4 | default_address_line_1 | CharField, max_length, null=True, blank=True | Primary |
+| 5 | default_address_line_2 | CharField, max_length, null=True, blank=True | Primary |
+| 6 | default_town_city | CharField, max_length, null=True, blank=True | Primary |
+| 7 | default_county | CharField, max_length, null=True, blank=True | Primary |
+| 8 | default_postcode | CharField, max_length, null=True, blank=True | Primary |
+| 9 | default_country | CountryField, blank_label='Country *', null=True, blank=True | Primary |
 </details>
 
 <details>
 <summary>Contact Form</summary>
+
+class ContactForm model:
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
+| 1 | name | CharField, max_length | Primary |
+| 2 | email | EmailField, null=False, blank=False | Primary |
+| 3 | order_number | CharField, max_length | Primary |
+| 4 | description | TextField, null=False, blank=False | Primary |
+
 </details>
 
 <details>
 <summary>Newsletter</summary>
+
+class Newsletter model:
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- |
+| 1 | email | EmailField, null=True | Primary |
+| 2 | date | DateTimeField, auto_now_add=True | Primary |
+
+class MailMessage model:
+| id | Name | Properties | Primary/Foreign Key |
+| ----------- | ----------- | ----------- |
+| 1 | title | CharField, max_length, null=True | Primary |
+| 2 | message | TextField, null=True | Primary |
+
+
 </details>
 
 
