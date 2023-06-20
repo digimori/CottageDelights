@@ -42,6 +42,8 @@
 
 ### Developer Goals:
 ---
+As a developer, my goal was to make an E-Commerce app with secure payment functionality and to give the user the ability to save their information such as shipping address and order history into a personal profile. 
+I also wanted to implement a contact form (in case on questions or issues with orders) and a newsletter model so that the user could sign up to be emailed promotional offers and new products.
 
 
 ### User Stories:
@@ -125,7 +127,7 @@ Models:
 <details>
 <summary>Products - class Product</summary>
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | category | 'category', null=True, blank=True, on_delete=models.SET_NULL | Foreign |
 | 2 | sku | CharField, max_length | Primary |
 | 3 | name | CharField, max_length, null=True, blank=True | Primary |
@@ -142,7 +144,7 @@ Models:
 <details>
 <summary>Categories</summary>
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | name | CharField, max_length | Primary |
 | 2 | friendly_name | CharField | max_length, null=True, blank=True | Primary |
 
@@ -156,7 +158,7 @@ There is also a Meta class inside this mode, where Category can become "Categori
 class OrderRecord model:  
 
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | order_number | CharField, max_length, null=False, editable=False | Primary |
 | 2 | userprofile | ForeignKey, UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders | Foreign |
 | 3 | full_name | CharField, max_length, null=False, blank=False | Primary |
@@ -180,7 +182,7 @@ class OrderRecord model:
 class OrderLineItem model:
 
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | order | ForeignKey, OrderRecord, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems | Foreign |
 | 2 | product | ForeignKey, Product, null=False, blank=False, on_delete=models.CASCADE | Foreign | 
 | 3 | quantity | IntegerField, null=False, blank=False, default=0 | Primary |
@@ -195,7 +197,7 @@ class OrderLineItem model:
 class UserProfile model:
 
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | user | OneToOneField, User, on_delete=models.CASCADE | Primary |
 | 2 | default_phone_number | CharField, max_length, null=True, blank=True | Primary |
 | 3 | default_house_name | CharField, max_length, null=True, blank=True | Primary |
@@ -205,6 +207,7 @@ class UserProfile model:
 | 7 | default_county | CharField, max_length, null=True, blank=True | Primary |
 | 8 | default_postcode | CharField, max_length, null=True, blank=True | Primary |
 | 9 | default_country | CountryField, blank_label='Country *', null=True, blank=True | Primary |
+
 </details>
 
 <details>
@@ -213,7 +216,7 @@ class UserProfile model:
 class ContactForm model:
 
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | name | CharField, max_length | Primary |
 | 2 | email | EmailField, null=False, blank=False | Primary |
 | 3 | order_number | CharField, max_length | Primary |
@@ -227,13 +230,13 @@ class ContactForm model:
 class Newsletter model:
 
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | email | EmailField, null=True | Primary |
 | 2 | date | DateTimeField, auto_now_add=True | Primary |
 
 class MailMessage model:
 | id | Name | Properties | Primary/Foreign Key |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 1 | title | CharField, max_length, null=True | Primary |
 | 2 | message | TextField, null=True | Primary |
 
@@ -253,7 +256,8 @@ class MailMessage model:
 
 ![Registration Page](/static/readmeimages/signup.png)  
 
-If the user is logged in as a superuser, it will display the "Product Management tab", otherwise, this will be missing with the user only able to Logout or view their Profile.
+If the user is logged in as a superuser, it will display the "Product Management tab", otherwise, this will be missing with the user only able to Logout or view their Profile.  
+
 ![Logged in Nav-bar - Index](/static/readmeimages/ifsuperusermyaccount.png) 
 
 </details>
@@ -270,8 +274,12 @@ If the user is logged in as a superuser, it will display the "Product Management
 <details>
 <summary>Profile Page</summary>
 
-Shipping details saved by user:
+The profile layout has two functions:
+ - To display Shipping details saved by user and allow them to update them:  
+
 ![Full Profile Page](/static/readmeimages/defaultdelivery.png)
+
+- To view the order history of products the user has purchased:
 
 User's order history:
 ![Order History](/static/readmeimages/orderhistory.png)
@@ -280,6 +288,9 @@ User's order history:
 
 <details>
 <summary>Search Bar</summary>
+
+The search bar is simple and filters by product name and description.  
+There is also a section that tells the user how many results were found.
 
 ![Search Bar](/static/readmeimages/searchfunction.png)
 
@@ -320,6 +331,8 @@ User's order history:
 <details>
 <summary>Product Deletion</summary>
 
+I included the implementation of defensive programming in the form of a modal in order to make sure the user/admin wanted to delete what they had clicked.
+
 ![Delete Modal](/static/readmeimages/deletionmodal.png)
 
 </details>
@@ -328,7 +341,12 @@ User's order history:
 <details>
 <summary>Off-Canvas navigation </summary>
 
+For the Off-Canvas I chose to have all of the navigation compressed onto it, including the search bar and My Account functions.  
+This just made it overall easier to manage, especially with Media Queries and aside from the toggler, they don't interfere too much with the site's layout otherwise.
+
 ![Offcanvas compressed/closed](/static/readmeimages/offcanvasclosedmobile.png)
+
+When opened, it reveals the search, account options, shopping cart and site navigation.  
 
 ![Offcanvas Opened](/static/readmeimages/offcanvasopen.png)
 
