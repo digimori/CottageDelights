@@ -71,7 +71,7 @@ def productdetails(request, product_id):
 
 def addproducts(request):
     if not request.user.is_superuser:
-        messages.error(request, 'GET TOAST WORKING.')
+        messages.error(request, 'You must be an admin to access this page.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':

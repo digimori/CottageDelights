@@ -4,8 +4,8 @@
 ---
 
 
-- [Live Preview]()
-- [Github Repository]()
+- [Live Preview](https://cottagedelights.herokuapp.com/)
+- [Github Repository](https://github.com/digimori/CottageDelights)
 
 ***
 
@@ -46,6 +46,8 @@
 
 ### User Stories:
 ---
+I have compiled the Agile User Stories in a Google Sheets document for easy reading and copying in the link below:  
+
 [User Story Google Sheets](https://docs.google.com/spreadsheets/d/1655crCqeP7uN0QqolqXEPqaM7uZFYanWhCC3R0CrUDM/edit?usp=sharing)
 
 
@@ -73,27 +75,24 @@ I chose to use Offcanvas for my mobile navigation as it doesn't have an effect o
 <details>
   <summary>Wireframes (Adobe Photoshop):</summary>
 
- ####  Desktop, Tablet, Mobile
+ ####  Desktop, Mobile
+
+ I have chosen to only include desktop vs mobile views here as the tablet versions are just sized down versions of the desktop views.
 
 - Index page:
-![Index - Not logged in/Registration]()
--- Put this in an accordian sectioned by desktop/mobile view for all pages
+![Index - Home Page](/static/readmeimages/cottagedelightshomewireframe.png)
 
-- Sign in and Registration:
-![Signin Registration]()
+- Products page:
+![Products page](/static/readmeimages/cottagedelightsproducts.png)
 
-- Registration Confirmation:
-![Registration confirmation]()
-
-- Sign out confirmation page:
-![Sign out - Do you want to Log out?]()
+- Product Details page:
+![Product details](/static/readmeimages/cottagedelightsproductsdetail.png)
 
 - Profile Page (Once Logged in, cannot be accessed prior to login):
-![Profile - Logged in]()
+![Profile - Logged in](/static/readmeimages/userprofile.png)
 
 - Add-Products page (Superuser/Admin must be logged in):
 ![Add Products]()
-</details>
 
 - Edit Products page(Superuser/Admin must be logged in):
 ![Edit Products]()
@@ -102,20 +101,21 @@ I chose to use Offcanvas for my mobile navigation as it doesn't have an effect o
 ![Delete Modal]()
 
 - Shopping Cart page:
-![Shopping Cart]()
+![Shopping Cart](/static/readmeimages/cottagedelightsshoppingcart.png)
 
 - Payment Page:
-![Payment page]()
+![Payment page](/static/readmeimages/checkoutform.png)
 
 - Order Confirmation page:
 ![Order Confirmation]()
 
 - Newsletter Signup:
-![Newsletter signup]()
+![Newsletter signup](/static/readmeimages/newsletter.png)
 
 - Contact Form:
-![Contact Form]()
+![Contact Form](/static/readmeimages/contactform.png)
 
+</details>
 
 ---
 
@@ -175,15 +175,17 @@ Models:
 <details>
 <summary>Logged In Index and Registration</summary>
 
-![Logged in Nav-bar - Index]() 
-![Registration Page]()
+![Registration Page](/static/readmeimages/signup.png)  
+
+If the user is logged in as a superuser, it will display the "Product Management tab", otherwise, this will be missing with the user only able to Logout or view their Profile.
+![Logged in Nav-bar - Index](/static/readmeimages/ifsuperusermyaccount.png) 
 
 </details>
 
 <details>
 <summary>Logout page</summary>
 
-![Logout]()
+![Logout](/static/readmeimages/confirmsignout.png)
 
 </details>
 
@@ -192,16 +194,18 @@ Models:
 <details>
 <summary>Profile Page</summary>
 
-![Full Profile Page]()
+Shipping details saved by user:
+![Full Profile Page](/static/readmeimages/defaultdelivery.png)
+
+User's order history:
+![Order History](/static/readmeimages/orderhistory.png)
 </details>
 
 
 <details>
 <summary>Search Bar</summary>
 
-
-![Search Bar]()
-![No Results]()
+![Search Bar](/static/readmeimages/searchfunction.png)
 
 </details>
 
@@ -216,6 +220,10 @@ Models:
 <details>
 <summary>Add Product Form</summary>
 
+![Add Product Form](/static/readmeimages/productmanagementform.png)
+
+![Image upload](/static/readmeimages/productmanagementimage.png)
+
 </details>
 
 
@@ -224,6 +232,9 @@ Models:
 <details>
 <summary>Edit Form for Product Management</summary>
 
+![Edit Product](/static/readmeimages/editingproductform.png)
+
+![Edit image](/static/readmeimages/editproductimage.png)
 
 </details>
 
@@ -233,11 +244,17 @@ Models:
 <details>
 <summary>Product Deletion</summary>
 
+![Delete Modal](/static/readmeimages/deletionmodal.png)
+
 </details>
 
 #### Navigation compression on mobile
 <details>
 <summary>Off-Canvas navigation </summary>
+
+![Offcanvas compressed/closed](/static/readmeimages/offcanvasclosedmobile.png)
+
+![Offcanvas Opened](/static/readmeimages/offcanvasopen.png)
 
 
 ### Testing and Validation:
@@ -270,10 +287,19 @@ Models:
 | Test | Expectation | Pass/Fail |
 | ----------- | ----------- | ----------- |
 | User Registration | User is able to register account | Pass |
-| Registration Confirmation | Confirmation Email send to user | Pass |
+| Registration Confirmation | Confirmation Email sends to user | Pass |
 | User Sign in/Out | User is able to sign in and sign back out to end session | Pass | 
 | Adding to cart | User is able to add products to cart, adjusting quantity on product page before doing so | Pass |
 | Updating cart | User is able to update and delete products from their cart page | Pass | 
+| User checkout | User is able to securely checkout using Stripe payments | - |
+| Order confirmation | User receives a confirmation email with order details | - |
+| Retain details in user account | User is able to save default shipping information to their profile page | - |
+| Order History | User is able to access a record of their order history | - |
+| Toasts | Toasts pop up throughout the site, informing the user of their actions such as adding to cart | - |
+| Newsletter | User is able to signup to a newsletter list - Detail stored in backend admin | - |
+| Newsletter message | Admin is able to compose and send newsletter to users stored in mailing list | - |
+| Contact Form | User is able to send an email to the admin as a method of contact | - | 
+
 
 
 
@@ -292,6 +318,7 @@ This was also used to test the responsiveness as I could change the breakpoints 
 | Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | Fixed by adding Logging to settings.py |
 | Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | - Still Testing | 
 | User Registration | User is able to register an account when running through Gitpod but not Heroku | PostgreSQL migration issue, remigrated database to Heroku - Fixed | 
+| Toast close | Toast close button will not close the toast notification | - |
 
 
 
