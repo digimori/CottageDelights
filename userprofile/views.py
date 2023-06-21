@@ -4,8 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
-from checkout.forms import OrderForm
-from checkout.models import OrderRecord, OrderLineItem
+from checkout.models import OrderRecord
 
 
 # Create your views here.

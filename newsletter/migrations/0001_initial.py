@@ -14,7 +14,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='MailMessage',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=90, null=True)),
                 ('message', models.TextField(null=True)),
             ],
@@ -22,7 +24,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Newsletter',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('email', models.EmailField(max_length=254, null=True)),
                 ('date', models.DateTimeField(auto_now_add=True)),
             ],
