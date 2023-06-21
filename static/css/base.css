@@ -629,7 +629,6 @@ h4.newslettertitle {
 @media screen and (min-width: 576px) {
     div.quantcontainer {
         display: flex;
-        justify-content: end;
     }
 }
 
