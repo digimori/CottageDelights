@@ -125,7 +125,10 @@ I chose to use Offcanvas for my mobile navigation as it doesn't have an effect o
 ---
 Models:
 <details>
-<summary>Products - class Product</summary>
+<summary>Products</summary>
+
+class Product model:
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- | ----------- |
 | 1 | category | 'category', null=True, blank=True, on_delete=models.SET_NULL | Foreign |
@@ -143,6 +146,9 @@ Models:
 
 <details>
 <summary>Categories</summary>
+
+class Category model:
+
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- | ----------- |
 | 1 | name | CharField, max_length | Primary |
@@ -160,7 +166,7 @@ class OrderRecord model:
 | id | Name | Properties | Primary/Foreign Key |
 | ----------- | ----------- | ----------- | ----------- |
 | 1 | order_number | CharField, max_length, null=False, editable=False | Primary |
-| 2 | userprofile | ForeignKey, UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders | Foreign |
+| 2 | userprofile | ForeignKey, UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' | Foreign |
 | 3 | full_name | CharField, max_length, null=False, blank=False | Primary |
 | 4 | email | CharField, max_length, null=False, blank=False | Primary |
 | 5 | phone_number | CharField, max_length, null=True, blank=True  | Primary |
@@ -207,6 +213,7 @@ class UserProfile model:
 | 7 | default_county | CharField, max_length, null=True, blank=True | Primary |
 | 8 | default_postcode | CharField, max_length, null=True, blank=True | Primary |
 | 9 | default_country | CountryField, blank_label='Country *', null=True, blank=True | Primary |
+
 
 </details>
 

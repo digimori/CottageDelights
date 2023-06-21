@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 from .models import OrderRecord, OrderLineItem
 from products.models import Product
@@ -15,6 +18,22 @@ class StripeHandler:
 
     def __init__(self, request):
         self.request = request
+
+    def _send_confirmation_email(self, order):
+        cust_email = order.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
 
     def handle_event(self, event):
         """
@@ -90,23 +109,25 @@ class StripeHandler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
+            self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Order Verified',
+                content=(f'Webhook received: {event["type"]} | SUCCESS: '
+                         'Verified order already in database'),
                 status=200)
         else:
             order = None
             try:
                 order = OrderRecord.objects.create(
-                    full_name__iexact=shipping_details.name,
-                    email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone_number,
-                    house_name__iexact=shipping_details.house_name,
-                    address_line_1__iexact=shipping_details.address.line1,
-                    address_line_2__iexact=shipping_details.address.line2,
-                    town_city__iexact=shipping_details.address.city,
-                    county__iexact=shipping_details.address.county,
-                    country__iexact=shipping_details.address.country,
-                    postcode__iexact=shipping_details.address.postal_code,
+                    full_name=shipping_details.name,
+                    email=billing_details.email,
+                    phone_number=shipping_details.phone_number,
+                    house_name=shipping_details.house_name,
+                    address_line_1=shipping_details.address.line1,
+                    address_line_2=shipping_details.address.line2,
+                    town_city=shipping_details.address.city,
+                    county=shipping_details.address.county,
+                    country=shipping_details.address.country,
+                    postcode=shipping_details.address.postal_code,
                     shopping_cart=cart,
                     grand_total=grand_total,
                     stripe_pid=pid,
@@ -126,6 +147,7 @@ class StripeHandler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
