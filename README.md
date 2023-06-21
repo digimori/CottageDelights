@@ -69,6 +69,7 @@ The button colours are a muted purple as I found it to be a nice contrast that w
 I chose to use Offcanvas for my mobile navigation as it doesn't have an effect on the overall content of the page and positioning compared to a collapsible nav. This makes media queries easier to separate out from a developer standpoint and gave me somewhere to comfortably put the search bar and account links without compromising the site's design.
 
 * Home page images:
+I choose images of tea, cakes and cottage themed aesthetics to continue the theme of a cottagecore themed afternoon tea. 
 
 
 ### Wireframes
@@ -366,20 +367,42 @@ When opened, it reveals the search, account options, shopping cart and site navi
 <details>
 <summary>HTML</summary>
 
+[HTML Validation using W3 Validator]()
+![Home page]()
+![Products page]()
+![Product Details page]()
+![Shopping cart page]()
+![Checkout page]()
+![Checkout Success page]()
+![User Profile page]()
+![Add Products page]()
+![Edit Products]()
 
 </details>
 
 <details>
-<summary>CSS, jQuery and Python PEP8</summary>
+<summary>CSS, JavaScript and jQuery</summary>
 
 [CSS Validation using Jigsaw](https://validator.w3.org/)
-![CSS Validation]()
-
-[PEP8 Validation using CI's Linter](https://pep8ci.herokuapp.com/)
-![Python PEP8]()
+![CSS Validation](/static/readmeimages/cssvalidation.png)
 
 [jQuery Validation using JSHint](https://jshint.com/)
 ![jQuery]()
+</details>
+
+<details>
+<summary>Python PEP8</summary>
+
+[PEP8 Validation using CI's Linter](https://pep8ci.herokuapp.com/)
+![Home views]()
+![Cart views]()
+![Products views]()
+![Checkout views]()
+![Newsletter views]()
+![Contact Form views]()
+![User profile views]()
+
+
 </details>
 
 
@@ -392,14 +415,14 @@ When opened, it reveals the search, account options, shopping cart and site navi
 | User Sign in/Out | User is able to sign in and sign back out to end session | Pass | 
 | Adding to cart | User is able to add products to cart, adjusting quantity on product page before doing so | Pass |
 | Updating cart | User is able to update and delete products from their cart page | Pass | 
-| User checkout | User is able to securely checkout using Stripe payments | - |
+| User checkout | User is able to securely checkout using Stripe payments | Pass |
 | Order confirmation | User receives a confirmation email with order details | - |
-| Retain details in user account | User is able to save default shipping information to their profile page | - |
-| Order History | User is able to access a record of their order history | - |
-| Toasts | Toasts pop up throughout the site, informing the user of their actions such as adding to cart | - |
-| Newsletter | User is able to signup to a newsletter list - Detail stored in backend admin | - |
+| Retain details in user account | User is able to save default shipping information to their profile page | Pass |
+| Order History | User is able to access a record of their order history | Pass |
+| Toasts | Toasts pop up throughout the site, informing the user of their actions such as adding to cart | Pass |
+| Newsletter | User is able to signup to a newsletter list - Detail stored in backend admin | Pass |
 | Newsletter message | Admin is able to compose and send newsletter to users stored in mailing list | - |
-| Contact Form | User is able to send an email to the admin as a method of contact | - | 
+| Contact Form | User is able to send an email to the admin as a method of contact | Pass | 
 
 
 
@@ -417,7 +440,7 @@ This was also used to test the responsiveness as I could change the breakpoints 
 | Product Redirection | Once a product has been added by the admin, the views do not seem to correctly redirect back to the product itself if an image was not uploaded, despite a placeholder being present.  | This was a typo error, I had added a link to the if statement that linked back to the product image, which if none is going to be there aside a placeholder, it will error. Fixed. |
 | SMTP Security Changes | SMTP security changes from Google now make the App password unable to link in as a third party so sending e-mails now takes too long to respond to the server in order to send | Fixed by adding Logging into settings.py | 
 | Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | Fixed by adding Logging to settings.py |
-| Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | - Still Testing | 
+| Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | Fixed - De-nested lists in Offcanvas | 
 | User Registration | User is able to register an account when running through Gitpod but not Heroku | PostgreSQL migration issue, remigrated database to Heroku - Fixed | 
 | Toast close | Toast close button will not close the toast notification | - |
 
