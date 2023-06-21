@@ -25,7 +25,8 @@ def cart_contents(request):
             product = get_object_or_404(Product, pk=item_id)
 
     if order_total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = order_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery = order_total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - order_total
     else:
         delivery = 0

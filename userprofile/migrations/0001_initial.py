@@ -18,7 +18,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UserProfile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('default_home_number', models.CharField(
                     blank=True, max_length=20, null=True)),
                 ('default_mobile_number', models.CharField(
@@ -38,7 +40,8 @@ class Migration(migrations.Migration):
                 ('default_country', django_countries.fields.CountryField(
                     blank=True, max_length=2, null=True)),
                 ('user', models.OneToOneField(
-                    on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

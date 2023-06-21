@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from products.models import Product
@@ -49,7 +49,6 @@ def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
     product = Product.objects.get(pk=item_id)
-    redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
     cart.pop(item_id)

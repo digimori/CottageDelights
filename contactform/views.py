@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render
 from django.contrib import messages
 from .models import ContactForm
 

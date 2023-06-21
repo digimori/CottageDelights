@@ -15,7 +15,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '*')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cottagedelights.herokuapp.com', 'localhost', '8000-digimori-cottagedelight-6q31rs7tzsb.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['cottagedelights.herokuapp.com',
+                 'localhost',
+                 '8000-digimori-cottagedelight-6q31rs7tzsb.ws-eu100.gitpod.io']
 
 
 # Application definition
