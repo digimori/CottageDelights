@@ -384,23 +384,55 @@ When opened, it reveals the search, account options, shopping cart and site navi
 <summary>CSS, JavaScript and jQuery</summary>
 
 [CSS Validation using Jigsaw](https://validator.w3.org/)
-![CSS Validation](/static/readmeimages/cssvalidation.png)
+![CSS Validation](/static/readmeimages/cssvalidation.png)  
 
-[jQuery Validation using JSHint](https://jshint.com/)
+[jQuery and JavaScript Validation using JSHint](https://jshint.com/)
+- I decided to put all of it into one document to save space in the readme.  
+- Stripe being an "undefined variable" is incorrect as it is pulled from the Stripe module
+  
 ![jQuery]()
+
 </details>
 
 <details>
 <summary>Python PEP8</summary>
 
 [PEP8 Validation using CI's Linter](https://pep8ci.herokuapp.com/)
-![Home views]()
-![Cart views]()
-![Products views]()
-![Checkout views]()
-![Newsletter views]()
-![Contact Form views]()
-![User profile views]()
+
+- Home Views:  
+
+![Home views](/static/readmeimages/homelinted.png)
+
+- Cart views:  
+
+![Cart views](/static/readmeimages/cartlinted.png)
+
+- Product views:  
+
+![Products views](/static/readmeimages/productslinted.png)
+
+- Checkout views:  
+![Checkout views](/static/readmeimages/checkoutlinted.png)
+
+- Webhook Handler:  
+
+![Webhook Handler](/static/readmeimages/webhookhandlerlinted.png)
+
+- Webhooks:  
+
+![Webhooks](/static/readmeimages/webhooklinted.png)
+
+- Newsletter views:  
+
+![Newsletter views](/static/readmeimages/newsletterlinted.png)
+
+- Contact Form views:  
+
+![Contact Form views](/static/readmeimages/contactformlinted.png)
+
+- User profile views:  
+
+![User profile views](/static/readmeimages/userprofilelinted.png)
 
 
 </details>
