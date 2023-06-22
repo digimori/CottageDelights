@@ -73,12 +73,11 @@ class StripeHandler:
             profile = UserProfile.objects.get(
                 user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone_number
-                profile.default_house_name = shipping_details.house_name
+                profile.default_phone_number = shipping_details.phone
                 profile.default_address_line_1 = shipping_details.address.line1
                 profile.default_address_line_2 = shipping_details.address.line2
                 profile.default_town_city = shipping_details.address.city
-                profile.default_county = shipping_details.address.county
+                profile.default_county = shipping_details.address.state
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.save()
@@ -91,12 +90,11 @@ class StripeHandler:
                     full_name__iexact=shipping_details.name,
                     userprofile=profile,
                     email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone_number,
-                    house_name__iexact=shipping_details.house_name,
+                    phone_number__iexact=shipping_details.phone,
                     address_line_1__iexact=shipping_details.address.line1,
                     address_line_2__iexact=shipping_details.address.line2,
                     town_city__iexact=shipping_details.address.city,
-                    county__iexact=shipping_details.address.county,
+                    county__iexact=shipping_details.address.state,
                     country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
                     shopping_cart=cart,
@@ -120,12 +118,11 @@ class StripeHandler:
                 order = OrderRecord.objects.create(
                     full_name=shipping_details.name,
                     email=billing_details.email,
-                    phone_number=shipping_details.phone_number,
-                    house_name=shipping_details.house_name,
+                    phone_number=shipping_details.phone,
                     address_line_1=shipping_details.address.line1,
                     address_line_2=shipping_details.address.line2,
                     town_city=shipping_details.address.city,
-                    county=shipping_details.address.county,
+                    county=shipping_details.address.state,
                     country=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
                     shopping_cart=cart,

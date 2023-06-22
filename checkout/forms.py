@@ -6,7 +6,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = OrderRecord
         fields = ('full_name', 'email',
-                  'phone_number', 'house_name',
+                  'phone_number',
                   'address_line_1', 'address_line_2', 'town_city',
                   'postcode', 'country', 'county')
 
@@ -20,7 +20,6 @@ class OrderForm(forms.ModelForm):
             'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
-            'house_name': 'House Name',
             'address_line_1': 'Address Line 1',
             'address_line_2': 'Address Line 2',
             'town_city': 'Town or City',

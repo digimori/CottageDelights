@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '*')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['cottagedelights.herokuapp.com',
                  'localhost',
@@ -111,6 +111,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'cottagedelights.wsgi.application'
 
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -129,6 +130,7 @@ LOGGING = {
         },
     },
 }
+"""
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

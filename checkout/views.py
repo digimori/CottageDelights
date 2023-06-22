@@ -97,7 +97,6 @@ def checkout(request):
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
-                    'house_name': profile.default_house_name,
                     'address_line_1': profile.default_address_line_1,
                     'address_line_2': profile.default_address_line_2,
                     'county': profile.default_county,
@@ -148,7 +147,6 @@ def checkout_success(request, order_number):
     # Saving the user information to the profile
         if save_info:
             profile_data = {
-                    'default_house_name': order.house_name,
                     'default_address_line_1': order.address_line_1,
                     'default_address_line_2': order.address_line_2,
                     'default_county': order.county,
