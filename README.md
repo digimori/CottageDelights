@@ -171,19 +171,18 @@ class OrderRecord model:
 | 3 | full_name | CharField, max_length, null=False, blank=False | Primary |
 | 4 | email | CharField, max_length, null=False, blank=False | Primary |
 | 5 | phone_number | CharField, max_length, null=True, blank=True  | Primary |
-| 6 | house_name | CharField, max_length, null=True, blank=True  | Primary |
-| 7 | address_line_1 | CharField, max_length, null=False, blank=False  | Primary |
-| 8 | address_line_2 | CharField, max_length, null=True, blank=True  | Primary |
-| 9 | town_city | CharField, max_length, null=False, blank=False | Primary |
-| 10 | county | CharField, max_length, null=True, blank=True  | Primary |
-| 11 | country | CountryField, blank_label='Country *', null=False, blank=False | Primary |
-| 12 | postcode | CharField, max_length, null=False, blank=False | Primary |
-| 13 | shopping_cart | TextField, null=False, blank=False, default='' | Primary |
-| 14 | order_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
-| 15 | delivery_cost | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
-| 16 | grand_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
-| 17 | date | DateTimeField, auto_now_add=True | Primary |
-| 18 | stripe_pid | CharField, max_length, null=False, blank=False, default='' | Primary | 
+| 6 | address_line_1 | CharField, max_length, null=False, blank=False  | Primary |
+| 7 | address_line_2 | CharField, max_length, null=True, blank=True  | Primary |
+| 8 | town_city | CharField, max_length, null=False, blank=False | Primary |
+| 9 | county | CharField, max_length, null=True, blank=True  | Primary |
+| 10 | country | CountryField, blank_label='Country *', null=False, blank=False | Primary |
+| 11 | postcode | CharField, max_length, null=False, blank=False | Primary |
+| 12 | shopping_cart | TextField, null=False, blank=False, default='' | Primary |
+| 13 | order_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 14 | delivery_cost | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 15 | grand_total | DecimalField, max_digits, decimal_places, null=False, default=0 | Primary |
+| 16 | date | DateTimeField, auto_now_add=True | Primary |
+| 17 | stripe_pid | CharField, max_length, null=False, blank=False, default='' | Primary | 
 
 
 class OrderLineItem model:
@@ -207,13 +206,12 @@ class UserProfile model:
 | ----------- | ----------- | ----------- | ----------- |
 | 1 | user | OneToOneField, User, on_delete=models.CASCADE | Primary |
 | 2 | default_phone_number | CharField, max_length, null=True, blank=True | Primary |
-| 3 | default_house_name | CharField, max_length, null=True, blank=True | Primary |
-| 4 | default_address_line_1 | CharField, max_length, null=True, blank=True | Primary |
-| 5 | default_address_line_2 | CharField, max_length, null=True, blank=True | Primary |
-| 6 | default_town_city | CharField, max_length, null=True, blank=True | Primary |
-| 7 | default_county | CharField, max_length, null=True, blank=True | Primary |
-| 8 | default_postcode | CharField, max_length, null=True, blank=True | Primary |
-| 9 | default_country | CountryField, blank_label='Country *', null=True, blank=True | Primary |
+| 3 | default_address_line_1 | CharField, max_length, null=True, blank=True | Primary |
+| 4 | default_address_line_2 | CharField, max_length, null=True, blank=True | Primary |
+| 5 | default_town_city | CharField, max_length, null=True, blank=True | Primary |
+| 6 | default_county | CharField, max_length, null=True, blank=True | Primary |
+| 7 | default_postcode | CharField, max_length, null=True, blank=True | Primary |
+| 8 | default_country | CountryField, blank_label='Country *', null=True, blank=True | Primary |
 
 
 </details>
@@ -368,12 +366,16 @@ When opened, it reveals the search, account options, shopping cart and site navi
 <summary>HTML</summary>
 
 [HTML Validation using W3 Validator]()
-![Home page]()
-![Products page]()
+![Home page](/static/readmeimages/homevalidate.png)
+![Products page](/static/readmeimages/productsvalidated.png)
 ![Product Details page]()
 ![Shopping cart page]()
 ![Checkout page]()
 ![Checkout Success page]()
+![Newsletter page](/static/readmeimages/newslettervalidated.png)
+![Contact Form](/static/readmeimages/contactformvalidated.png)
+![Account Sign in](/static/readmeimages/signinvalidated.png)
+![Account Sign up](/static/readmeimages/accountsvalidated.png)
 ![User Profile page]()
 ![Add Products page]()
 ![Edit Products]()
