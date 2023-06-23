@@ -5,7 +5,7 @@ from .models import Newsletter, MailMessage
 class NewsletterForm(forms.ModelForm):
     class Meta:
         model = Newsletter
-        fields = ['email',]
+        fields = ['email', ]
 
 
 class MailMessageForm(forms.ModelForm):
