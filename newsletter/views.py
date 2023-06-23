@@ -33,28 +33,31 @@ def MailMessage(request):
         messages.error(request, 'You must be an admin to access this page.')
         return redirect(reverse('home'))
 
-    emails = Newsletter.objects.all()
-    df = read_frame(emails, fieldnames=['email'])
-    mail_list = df['email'].values.tolist()
-    print(mail_list)
+    form = MailMessageForm()
 
     if request.method == "POST":
+        title = request.POST.get('title')
+        message = request.POST.get('message')
         form = MailMessageForm(request.POST)
         if form.is_valid():
             form.save()
-            title = form.cleaned_data.get('title')
-            message = form.cleaned_data.get('message')
-            send_mail(
-                title,
-                message,
-                '',
-                mail_list,
-                fail_silently=False,
-            )
-            messages.success(request, 'Message has been sent to subscribers!')
-            return redirect('MailMessage')
+            from_email = settings.EMAIL_HOST_USER
+            connection = mail.get_connection()
+            connection.open()
+            email_message = mail.EmailMessage(
+                f'Newsletter : {title}',
+                f'Message : {message}',
+                from_email,
+                connection=connection)
+            connection.send_messages([email_message])
+            connection.close()
+            messages.info(
+                request,
+                "Message has been sent to subscribers!")
+            return redirect('/newsletter/mailmessage')
     else:
         form = MailMessageForm()
+
     context = {
         'form': form,
     }
