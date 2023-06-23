@@ -260,16 +260,20 @@ class MailMessage model:
 <details>
 <summary>Logged In Index and Registration</summary>
 
+The registration page is adapted from the built in AllAuth templates and modified to match the rest of the UX design.
+
 ![Registration Page](/static/readmeimages/signup.png)  
 
 If the user is logged in as a superuser, it will display the "Product Management tab", otherwise, this will be missing with the user only able to Logout or view their Profile.  
 
-![Logged in Nav-bar - Index](/static/readmeimages/ifsuperusermyaccount.png) 
+![Logged in Superuser Nav-bar - Index](/static/readmeimages/ifsuperusermyaccount.png) 
 
 </details>
 
 <details>
 <summary>Logout page</summary>
+
+I implemented a logout page as a stopping point in case the user accidentally clicked and wanted to remain logged in.
 
 ![Logout](/static/readmeimages/confirmsignout.png)
 
@@ -305,6 +309,8 @@ There is also a section that tells the user how many results were found.
 <details>
 <summary>Product Cards</summary>
 
+![Product Details]()
+
 </details>
 
 
@@ -313,7 +319,11 @@ There is also a section that tells the user how many results were found.
 <details>
 <summary>Add Product Form</summary>
 
-![Add Product Form](/static/readmeimages/productmanagementform.png)
+The implementation of the Add Product form was created with the idea in mind that the Superuser can add and modify the products and their details from the live site itself without having to explicitly log into the backend Django admin.
+
+![Add Product Form](/static/readmeimages/productmanagementform.png)  
+
+The image upload allows for either image url input or direct upload from the admin's device.
 
 ![Image upload](/static/readmeimages/productmanagementimage.png)
 
@@ -325,7 +335,11 @@ There is also a section that tells the user how many results were found.
 <details>
 <summary>Edit Form for Product Management</summary>
 
+The implementation of the Edit Product form was created with the idea in mind that the Superuser can modify the products and their details from the live site itself without having to explicitly log into the backend Django admin.
+
 ![Edit Product](/static/readmeimages/editingproductform.png)
+
+The image upload allows for either image url input or direct upload from the admin's device whilst also showing what the current uploaded image is.
 
 ![Edit image](/static/readmeimages/editproductimage.png)
 
@@ -365,7 +379,7 @@ When opened, it reveals the search, account options, shopping cart and site navi
 <details>
 <summary>HTML</summary>
 
-[HTML Validation using W3 Validator]()
+[HTML Validation using W3 Validator](https://validator.w3.org/)
 ![Home page](/static/readmeimages/homevalidate.png)
 ![Products page](/static/readmeimages/productsvalidated.png)
 ![Product Details page]()
@@ -508,6 +522,12 @@ This was also used to test the responsiveness as I could change the breakpoints 
 - This dropdown can also be used to clone the code into VSCode IDE.
 - To clone into the Local IDE - in the terminal, type 'git clone' followed by the URL that can be copied from the aforementioned Code URL.
 - To fork - Follow the instructions as outlined in the Github Docs here.
+
+
+#### Stripe Deployment:
+
+
+#### AWS S3 bucket Deployment:
 
 
 #### To deploy to Heroku:
