@@ -34,17 +34,15 @@ def MailMessage(request):
         messages.error(request, 'You must be an admin to access this page.')
         return redirect(reverse('home'))
 
-    form = MailMessageForm()
+    emails = Newsletter.objects.all()
+    df = read_frame(emails, fieldnames=['email'])
+    mail_list = df['email'].values.tolist()
+    print(mail_list)
 
     if request.method == "POST":
         title = request.POST.get('title')
         message = request.POST.get('message')
         form = MailMessageForm(request.POST)
-
-        emails = NewsletterSub.objects.all()
-        df = read_frame(emails, fieldnames=['email'])
-        mail_list = df['email'].values.tolist()
-        print(mail_list)
 
         if form.is_valid():
             form.save()
