@@ -6,11 +6,12 @@ from django.core.mail import send_mail
 from django.core import mail
 from django.core.mail.message import EmailMessage
 from django.conf import settings
+from django_pandas.io import read_frame
 
 # Create your views here.
 
 
-def Newsletter(request):
+def NewsletterSub(request):
     if request.method == "POST":
         form = NewsletterForm(request.POST)
         if form.is_valid():
@@ -39,6 +40,12 @@ def MailMessage(request):
         title = request.POST.get('title')
         message = request.POST.get('message')
         form = MailMessageForm(request.POST)
+
+        emails = NewsletterSub.objects.all()
+        df = read_frame(emails, fieldnames=['email'])
+        mail_list = df['email'].values.tolist()
+        print(mail_list)
+
         if form.is_valid():
             form.save()
             from_email = settings.EMAIL_HOST_USER
@@ -48,6 +55,7 @@ def MailMessage(request):
                 f'Newsletter : {title}',
                 f'Message : {message}',
                 from_email,
+                mail_list,
                 connection=connection)
             connection.send_messages([email_message])
             connection.close()
