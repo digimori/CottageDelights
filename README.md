@@ -610,6 +610,8 @@ backports.zoneinfo==0.2.1;python_version<"3.9"
 </details>
 
 #### Stripe Deployment:
+<details>
+<summary>Stripe and Webhook installation</summary>
 
 - Create an account on the [Stripe Website]()
 - Test API keys
@@ -622,32 +624,96 @@ pip3 install Stripe
 ```
 
 In your Workspace environment variables, create the following variables:
-- Tables with STRIPE_PUBLIC_KEY/STRIPE_SECRET_KEY
-- Where to find these in Stripe
 
-Add the variables to your settings.py files as the following:
-STRIPE_PUBLIC_KEY/STRIPE_SECRET_KEY
+These can be found in the Developer tab > API keys 
 
-To install the webhooks:
-- Stripe > Developers > Webhooks > Select endpoint
-- Select all
+| Variable name | Value |
+| ------ | ------ |
+| STRIPE_PUBLIC_KEY | YOUR_STRIPE_PUBLIC_KEY |
+| STRIPE_SECRET_KEY | YOUR_STRIPE_SECRET_KEY |
 
-For workspace:
-gitpodurl/checkout/wh/
 
+Add the variables, if not already cloned, to your settings.py files as the following:
+```
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+```
+
+To install the webhooks, navigate to the following:
+- Stripe dashboard > Developers > Webhooks > Add Endpoint
+
+In the endpoint URL, if using Gitpod, input your Gitpod URL as follows:
+```
+https://8000-YOUR-GITPODWORKSPACE.gitpod.io/checkout/wh/
+```
+
+If using a live deployed site, such as Heroku:
 For Live:
-liveappurl/checkout/wh/
+```
+https://YOUR-LIVE-APP-URL/checkout/wh/
+```
 
-Get signing secret
-add to env 
-in terminal:
-export stripewhsecret=<pastesecrethere>
+Once the Webhook has been created, navigate back to the created Webhook  
+Reveal the "Signing Secret" found underneath the endpoint URL and copy it
+Add this to your environment variables under:
 
-start server: python3 manage.py runserver
+| Variable name | Value |
+| ------- | ------- | 
+| STRIPE_WH_SECRET | YOUR_SIGNING_SECRET |
 
 
+Then, ensure the following is in your settings.py file:
+```
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+```
 
-#### AWS S3 bucket Deployment:
+In the terminal:
+```
+export STRIPE_WH_SECRET=<YourSigningSecret>
+```
+
+And finally, start the server:  
+```
+python3 manage.py runserver
+```
+
+</details>
+
+#### Postgres Setup - ElephantSQL database:
+
+<details>
+<summary>Creating and setting up the database via ElephantSQL</summary>
+
+- Create an account with [ElephantSQL](https://www.elephantsql.com/) using the "TinyTurtle" plan.
+- Login with your Github account (The one you used to clone this project)
+
+In the Create new team form:
+- Add a team name (your own name is fine)
+- Read and agree to the Terms of Service
+- Select Yes for GDPR
+- Provide your email address
+- Click “Create Team”
+
+Creating the Database:
+- Navigate to your dashboard
+- Click the "Create new instance" button
+
+Set up your plan  
+- Give your plan a Name (this is commonly the name of the project)
+- Select the Tiny Turtle (Free) plan
+- You can leave the Tags field blank
+- In "Select Region", select the region closest to you
+- Click "Review"
+- Double check your inputted data
+- Click "Create instance" to proceed
+- Return to the ElephantSQL dashboard and click on the database instance name for this project
+- In the URL section, copy this URL and save it for later - You will need it for setting up your Heroku app
+</details>
+
+<details>
+<summary>Connecting the Database to your local IDE</summary>
+
+</details>
 
 
 #### To deploy to Heroku:
@@ -680,6 +746,12 @@ Login with username/password (This requires multi-factor authentication through 
 - Search the Repo (In this case, for this particular project, type in 'CottageDelights' and select the repo.)
 - Enable Automatic deploys
 - on Manual Deploy, select the Main branch and click "Deploy Branch"
+
+
+#### AWS S3 bucket Deployment:
+
+
+#### SMTP Gmail setup:
 
 
 ### Credits
