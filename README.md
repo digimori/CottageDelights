@@ -876,6 +876,56 @@ In the access control list, check the following boxes:
 - Everyone - List
 
 Identify and Access Management (IAM):
+- Navigate back to the Services menu and search for "IAM"
+- In User Groups (On the side bar) click "Create Group"
+- Do not attach the policy yet, click through to the end
+- In the new group, click Policies > Create Policy
+- Navigate to the JSON tab and select "Import managed policy"
+- Import the pre-made S3 policy
+
+In the JSON code:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::cottagedelights",
+                "arn:aws:s3:::cottagedelights/*"
+            ]
+        }
+    ]
+}
+```
+
+Ensure that the resource has your ARN set as your app name
+
+- Click Review Policy
+- Give it a name and description
+- Click Create Policy
+
+Attaching the policy:
+- Navigate back to the User Groups tab and select your group
+- Go to the "Permissions" tab
+- Open the "Add permissions" dropdown
+- Click "Attach Policy"
+- Select your policy
+- Click "Add permissions" found at the bottom of the section
+- Click through to the end and click "Create User"
+- Download the CSV file which contains the user access keys for connecting to Django
+
+Connecting Django to S3:
+Back in your IDE server terminal:
+- Install Boto and Django Storages:
+```
+```
+
+
 
 
 
