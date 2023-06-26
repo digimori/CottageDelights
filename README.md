@@ -523,8 +523,126 @@ This was also used to test the responsiveness as I could change the breakpoints 
 - To clone into the Local IDE - in the terminal, type 'git clone' followed by the URL that can be copied from the aforementioned Code URL.
 - To fork - Follow the instructions as outlined in the Github Docs here.
 
+#### Workstation setup and installation:
+<details>
+<summary>Initial Setup and Migrations</summary>
+
+In Terminal:
+```
+pip3 install Django==4.2.2 (This is the current LTS and is what is used in this project)
+```
+  
+In settings.py:
+```
+ALLOWED_HOSTS=['8000-YOUR-GITPOD-WORKSPACE', localhost, 'HEROKU-APP-URL']
+```
+
+Create a .gitignore file via terminal:
+```
+touch .gitignore
+```
+
+In the .gitignore file, ensure the code has the following:
+```
+*.sqlite3
+*.pyc
+__pycache__/
+```
+  
+Freeze requirements.txt via terminal:
+```
+pip3 freeze > requirements.txt
+```
+
+Run Initial Migrations via terminal:
+```
+pip3 manage.py makemigrations  
+pip3 manage.py migrate
+```
+
+Create superuser for admin access and follow the instructions in the terminal:
+```
+python3 manage.py createsuperuser
+```
+
+Install AllAuth package in terminal:
+```
+pip3 install django-allauth==0.41.0
+```
+
+Install Pillow in terminal:
+```
+pip3 install pillow
+```
+
+Install Django Crispyforms in terminal:
+```
+pip3 install django-crispy-forms==1.14.0
+```
+
+Install Django countries:
+```
+pip3 install django-countries==7.2.1
+```
+
+Install fixtures from models:
+```
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+```
+
+* NOTE: MAKE SURE CATEGORIES ARE ALWAYS LOADED FIRST.
+
+Make migrations again via terminal as before:
+```
+pip3 manage.py makemigrations  
+pip3 manage.py migrate
+```
+
+* Remember to freeze requirements whenever a new app or library is installed!
+* Note - Due to Heroku backport errors, please ensure that in the requirements.txt file, that the backport reads as follows:
+```
+backports.zoneinfo==0.2.1;python_version<"3.9"
+```
+
+</details>
 
 #### Stripe Deployment:
+
+- Create an account on the [Stripe Website]()
+- Test API keys
+- Doumentation
+- Accept Payment
+
+Install Stripe in your workspace terminal:
+```
+pip3 install Stripe
+```
+
+In your Workspace environment variables, create the following variables:
+- Tables with STRIPE_PUBLIC_KEY/STRIPE_SECRET_KEY
+- Where to find these in Stripe
+
+Add the variables to your settings.py files as the following:
+STRIPE_PUBLIC_KEY/STRIPE_SECRET_KEY
+
+To install the webhooks:
+- Stripe > Developers > Webhooks > Select endpoint
+- Select all
+
+For workspace:
+gitpodurl/checkout/wh/
+
+For Live:
+liveappurl/checkout/wh/
+
+Get signing secret
+add to env 
+in terminal:
+export stripewhsecret=<pastesecrethere>
+
+start server: python3 manage.py runserver
+
 
 
 #### AWS S3 bucket Deployment:
