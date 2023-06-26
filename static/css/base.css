@@ -708,3 +708,9 @@ h4.newslettertitle {
         padding-left: 6px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    div.shoppingheader {
+        margin-top: 60px;
+    }
+}

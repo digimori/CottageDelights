@@ -370,6 +370,8 @@ When opened, it reveals the search, account options, shopping cart and site navi
 
 ![Offcanvas Opened](/static/readmeimages/offcanvasopen.png)
 
+</details>
+
 
 ### Testing and Validation:
 --- 
