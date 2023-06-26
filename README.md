@@ -466,12 +466,12 @@ When opened, it reveals the search, account options, shopping cart and site navi
 | Adding to cart | User is able to add products to cart, adjusting quantity on product page before doing so | Pass |
 | Updating cart | User is able to update and delete products from their cart page | Pass | 
 | User checkout | User is able to securely checkout using Stripe payments | Pass |
-| Order confirmation | User receives a confirmation email with order details | - |
+| Order confirmation | User receives a confirmation email with order details | Pass |
 | Retain details in user account | User is able to save default shipping information to their profile page | Pass |
 | Order History | User is able to access a record of their order history | Pass |
 | Toasts | Toasts pop up throughout the site, informing the user of their actions such as adding to cart | Pass |
 | Newsletter | User is able to signup to a newsletter list - Detail stored in backend admin | Pass |
-| Newsletter message | Admin is able to compose and send newsletter to users stored in mailing list | - |
+| Newsletter message | Admin is able to compose and send newsletter to users stored in mailing list | Pass |
 | Contact Form | User is able to send an email to the admin as a method of contact | Pass | 
 
 
@@ -575,6 +575,16 @@ pip3 install django-allauth==0.41.0
 Install Pillow in terminal:
 ```
 pip3 install pillow
+```
+
+Install unicorn in terminal:
+```
+pip3 install gunicorn
+```
+
+In the Procfile, set the following:
+```
+web: gunicorn cottagedelights.wsgi:application
 ```
 
 Install Django Crispyforms in terminal:
@@ -713,6 +723,55 @@ Set up your plan
 <details>
 <summary>Connecting the Database to your local IDE</summary>
 
+- In the terminal, install dj_database_url and psycopg2, both of these are needed to connect to your external database:
+```
+pip3 install dj_database_url==0.5.0 psycopg2
+```
+
+- Update your requirements.txt file with the newly installed packages**:
+```
+pip freeze > requirements.txt
+```
+
+** Note: Make sure to update the backports as previously mentioned as each time you freeze requirements, it will overwrite it.
+
+- In settings.py, find the DATABASE object and alter it as follows:
+```
+DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
+ }
+ ```
+
+ DO NOT COMMIT YOUR DATABASE YET.
+
+ - In the terminal, run the showmigrations command to confirm you are connected to the external database:
+ ```
+  python3 manage.py showmigrations
+ ```
+
+- Migrate your database models to your new database:
+```
+python3 manage.py migrate
+```
+
+- Load in the fixtures. Please note the order is very important here. We need to load categories first and then the products:
+```
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+```
+
+- If you have not created a superuser yet, this must be done now (See initial setup)
+
+- Finally, in settings.py, ensure that the following code is there:
+```
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
+```
+
 </details>
 
 
@@ -732,11 +791,16 @@ Login with username/password (This requires multi-factor authentication through 
 
 | Key | Value | Explanation |
 | ----------- | ----------- | ----------- |
-| IP | 0.0.0.0 | Local IP |
-| PORT | |  |
+| STRIPE_PUBLIC_KEY | Your Stripe public API key | API key for access |
+| STRIPE_SECRET_KEY | Your Stripe secret API key | API key for access |
+| STRIPE_WH_SECRET | Your Stripe Signing Secret key | Key for Webhook access |
 | SECRET_KEY | Any secret key | A password for access |
-|  |  | Connection to Database |
-|  | <database_name> | Database name |
+| DATABASE_URL | Postgres URL | Connection to Database |
+| USE_AWS | TRUE | Use AWS for static storage |
+| AWS_SECRET_ACCESS_KEY | Your AWS Secret Access Key | API key for access | 
+| AWS_ACCESS_KEY_ID | Your AWS Public Access Key | API key for access |
+| EMAIL_HOST_PASS | Your app password | Allows scure access to SMTP |
+| EMAIL_HOST_USER | youremail@example.com | Email you wish to send emails from | 
 | DEVELOPMENT | FALSE | Turns the workspace off of the development state |
 | DEBUG | FALSE | Turns the Debugger off for the workspace |
 
@@ -748,7 +812,71 @@ Login with username/password (This requires multi-factor authentication through 
 - on Manual Deploy, select the Main branch and click "Deploy Branch"
 
 
+#### Connecting your Database to Heroku:
+
+- Temporarily disable collectstatic in the terminal:
+```
+heroku config:set DISABLE_COLLECTSTATIC=1 --app APP_NAME_HERE
+```
+
+- Push to both Github and Heroku main branches
+
+- Create a two Django Secret keys using [this link](https://miniwebtool.com/django-secret-key-generator/)
+
+- Add one to your Environment variables and one to your Heroku Config vars (detailed above) under SECRET_KEY
+
+
 #### AWS S3 bucket Deployment:
+
+- Create an account at [Amazon Web Services](https://aws.amazon.com/)
+- Log in to the service once account has been created and verified
+- Search through "Find Services" for S3
+- Click "Create Bucket"
+- It is recommended that the names for this bucket also match your deployed app name
+- Select Region closest to you, as with Heroku and Postgres
+- Allow public access to bucket
+- Click Create bucket
+
+Once the bucket has been created, Go to the following settings (These are conveniently on one page, just scroll):
+- Object Ownership - This needs to have ACLs enabled and Object Ownership preferred.
+- Properties - Turn on Static web hosting
+
+Under Permissions:
+- Paste the following into the CORS configuration:
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+
+In the Bucket Policy tab:
+- Select "Policy Generator" (Open it in a new tab, you will need to come back to this page)
+- The policy type will be "S3"
+- In the "Principles" input field, place an asterisk (*) to select all
+- Action dropdown - Select "Get Object"
+- Back in the bucket policy, copy the ARN and paste it into the ARN box on the Policy generator page
+- Click "Add Statement"
+- Click "Generate policy" and copy the code that opens in the modal
+- Paste this into the Bucket Policy tab and add /* to the end of your app URL found in the code
+
+The ACLS:
+In the access control list, check the following boxes:
+- Bucket Owner - List, Read, Write
+- Everyone - List
+
+Identify and Access Management (IAM):
+
 
 
 #### SMTP Gmail setup:
