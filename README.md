@@ -92,15 +92,6 @@ I choose images of tea, cakes and cottage themed aesthetics to continue the them
 - Profile Page (Once Logged in, cannot be accessed prior to login):
 ![Profile - Logged in](/static/readmeimages/userprofile.png)
 
-- Add-Products page (Superuser/Admin must be logged in):
-![Add Products]()
-
-- Edit Products page(Superuser/Admin must be logged in):
-![Edit Products]()
-
-- Delete Modal check(Superuser/Admin must be logged in):
-![Delete Modal]()
-
 - Shopping Cart page:
 ![Shopping Cart](/static/readmeimages/cottagedelightsshoppingcart.png)
 
@@ -248,7 +239,6 @@ class MailMessage model:
 </details>
 
 
-
 ### Features and Navigation
 ---
 
@@ -373,19 +363,16 @@ When opened, it reveals the search, account options, shopping cart and site navi
 <summary>HTML</summary>
 
 [HTML Validation using W3 Validator](https://validator.w3.org/)
-![Home page](/static/readmeimages/homevalidate.png)
-![Products page](/static/readmeimages/productsvalidated.png)
-![Product Details page]()
-![Shopping cart page]()
-![Checkout page]()
-![Checkout Success page]()
-![Newsletter page](/static/readmeimages/newslettervalidated.png)
-![Contact Form](/static/readmeimages/contactformvalidated.png)
-![Account Sign in](/static/readmeimages/signinvalidated.png)
-![Account Sign up](/static/readmeimages/accountsvalidated.png)
-![User Profile page]()
-![Add Products page]()
-![Edit Products]()
+[Home page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/)
+[Products page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/products/?sort=price&direction=asc)
+[Product Details page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/products/16/)
+[Shopping cart page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/cart/)
+[Newsletter page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/newsletter/)
+[Contact Form](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/contactform/)
+[Account Sign in](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/accounts/login/)
+[Account Sign up](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/accounts/signup/)
+[User Profile page](https://validator.w3.org/nu/?doc=https://cottagedelights.herokuapp.com/userprofile/)
+
 
 </details>
 
