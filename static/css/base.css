@@ -83,6 +83,10 @@ header.header-bg {
     z-index: 77777777;
 }
 
+button.navbar-toggler {
+    margin-right: 20px;
+}
+
 div.bannerlogo {
     width: 100%;
 }
@@ -136,7 +140,7 @@ button.navbar-toggler {
 }
 
 div#testimonialimage1 {
-    background-image: url('/media/indeximagery-min.jpg');
+    background-image: url('/media/ivo-raeber-pGqDtJsI4Gg-unsplash.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -147,7 +151,7 @@ div#testimonialimage1 {
 }
 
 div#testimonialimage2 {
-    background-image: url('/media/indeximagery-min.jpg');
+    background-image: url('/media/morgan-sessions-k5zv-Hv4Kpc-unsplash.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -158,7 +162,7 @@ div#testimonialimage2 {
 }
 
 div#testimonialimage3 {
-    background-image: url('/media/indeximagery-min.jpg');
+    background-image: url('/media/shashi-chaturvedula--JL4rUYIOHk-unsplash.jpg');
     background-size: cover;
     background-color: brown;
     height: 200px;
@@ -478,7 +482,7 @@ h4.newslettertitle {
 @media screen and (max-width: 400px) {
     div.free-shipping {
         font-size: 13px;
-        margin-left: 10px;
+        margin-left: 8px;
         padding-top: 12px;
     }
 }
@@ -713,5 +717,11 @@ h4.newslettertitle {
 @media screen and (max-width: 768px) {
     div.shoppingheader {
         margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imgcontainer {
+            padding: 0;
     }
 }
