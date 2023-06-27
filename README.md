@@ -9,9 +9,7 @@
 
 ***
 
-[AmIResponsive]()
-![Image for AmIResponsive]()   
-
+![Image for home](/static/readmeimages/homepagedesktop.png)   
 
 
 ### Table of Contents  
@@ -306,13 +304,6 @@ There is also a section that tells the user how many results were found.
 
 </details>
 
-<details>
-<summary>Product Cards</summary>
-
-![Product Details]()
-
-</details>
-
 
 ### Adding Products
 
@@ -405,10 +396,7 @@ When opened, it reveals the search, account options, shopping cart and site navi
 ![CSS Validation](/static/readmeimages/cssvalidation.png)  
 
 [jQuery and JavaScript Validation using JSHint](https://jshint.com/)
-- I decided to put all of it into one document to save space in the readme.  
-- Stripe being an "undefined variable" is incorrect as it is pulled from the Stripe module
-  
-![jQuery]()
+
 
 </details>
 
@@ -623,7 +611,7 @@ backports.zoneinfo==0.2.1;python_version<"3.9"
 <details>
 <summary>Stripe and Webhook installation</summary>
 
-- Create an account on the [Stripe Website]()
+- Create an account on the [Stripe Website](https://stripe.com)
 - Test API keys
 - Doumentation
 - Accept Payment
@@ -929,6 +917,9 @@ Back in your IDE server terminal:
 pip3 install boto3
 pip3 install django-storages
 ```
+
+- Remove "DISABLE_COLLECT_STATIC" variable from your environment and config vars
+- Push all code to Github and Heroku
 
 The settings.py file should already contain the correct parameters if you have cloned the repository successfully.
 
