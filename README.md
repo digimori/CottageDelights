@@ -828,6 +828,9 @@ heroku config:set DISABLE_COLLECTSTATIC=1 --app APP_NAME_HERE
 
 #### AWS S3 bucket Deployment:
 
+<details>
+<summary>Account Creation and Installation</summary>
+
 - Create an account at [Amazon Web Services](https://aws.amazon.com/)
 - Log in to the service once account has been created and verified
 - Search through "Find Services" for S3
@@ -923,15 +926,32 @@ Connecting Django to S3:
 Back in your IDE server terminal:
 - Install Boto and Django Storages:
 ```
+pip3 install boto3
+pip3 install django-storages
 ```
 
+The settings.py file should already contain the correct parameters if you have cloned the repository successfully.
 
-
-
+</details>
 
 #### SMTP Gmail setup:
+
+- Create a [Gmail account](https//gmail.com)
+- Go to Account Settings (Currently found in the top right corner)
+- Security Tab 
+- Turn on 2-step verification
+- Find the App Password section (Only accessible with 2-step)
+- Select "Mail" in the dropdown menu and give it a relevant name
+- You will be given a 16 digit password - This goes into your EMAIL_HOST_PASS config variables in your environment and config vars.
+- You will be using this email as your EMAIL_HOST_USER variable value also. 
+** Note, SMTP does not function correctly in development, you must be in production for it to send emails.
 
 
 ### Credits
 --- 
 #### Code and libraries
+
+- [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/) for images and graphics
+- [Google fonts](https://fonts.google.com/) for font library
+- [Font Awesome](https://fontawesome.com/) for icons
+- [Stack Overflow](https://stackoverflow.co/) for errors and troubleshooting
