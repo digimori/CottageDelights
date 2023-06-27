@@ -200,7 +200,8 @@ div.productcards {
 
 /* ----------------------- Toast CSS ----------------------- */
 
-.toast-body {
+.toast-body,
+.custom-toast {
     z-index: 999999;
     border-radius: 5px;
     background-color: #fff;

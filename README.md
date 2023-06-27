@@ -467,8 +467,6 @@ This was also used to test the responsiveness as I could change the breakpoints 
 | Registration Confirmation Email | Does not send to user, SMTP/AllAuth Issue | Fixed by adding Logging to settings.py |
 | Validation Issue with Offcanvas | Does not accept unordered lists inside the offcanvas divs as valid | Fixed - De-nested lists in Offcanvas | 
 | User Registration | User is able to register an account when running through Gitpod but not Heroku | PostgreSQL migration issue, remigrated database to Heroku - Fixed | 
-| Toast close | Toast close button will not close the toast notification | - |
-
 
 
 ### Deployment (Github and Heroku):
